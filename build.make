@@ -1,9 +1,9 @@
 #
 # Short cuts to make things easier
 
-SPROOT=$(MAKEDIR)\..\..\cpp-sp
-XMLROOT=$(MAKEDIR)\..\..\cpp-xmltooling
-SAMLROOT=$(MAKEDIR)\..\..\cpp-opensaml
+SPROOT=$(MAKEDIR)\..\cpp-sp
+XMLROOT=$(MAKEDIR)\..\cpp-xmltooling
+SAMLROOT=$(MAKEDIR)\..\cpp-opensaml
 
 
 #
@@ -20,12 +20,16 @@ clean:
 	cd $(SAMLROOT)
 	del/s *.dll *.exe *.msm *.lib *.obj
 
-#
-msi32: mergemodules32 exe32 
+
+msi32: exe32 mergemodules32 msi32only
+
+msi64: exe64 mergemodules64 msi64only
+
+msi32only:
 	cd $(SPROOT)
 	msbuild  /property:Platform=Win32;Configuration=Release /maxcpucount .\shibboleth.sln /t:Installers\MergeModules;Installers\Installer
 
-msi64: mergemodules32 exe32 mergemodules64 exe64
+msi64only:
 	cd $(SPROOT)
 	msbuild  /property:Platform=x64;Configuration=Release /maxcpucount .\shibboleth.sln /t:Installers\MergeModules;Installers\Installer
 
