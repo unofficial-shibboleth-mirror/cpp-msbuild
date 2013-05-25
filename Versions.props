@@ -85,7 +85,7 @@
     <Xerces64Componentd>{236B6A7F-73C0-4EBF-9C06-90C1BE160ACE}</Xerces64Componentd>
 
 
-    <XmlSecVersion>1.7.0</XmlSecVersion>
+    <XmlSecVersion>1.7.1</XmlSecVersion>
     <xmlsec>xml-security-c-$(XmlSecVersion)</xmlsec>
     <XmlSecFileVersion>1_7</XmlSecFileVersion>
     <!-- Change the 4 components below if XmlSecFileVersion changes -->
