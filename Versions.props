@@ -19,7 +19,7 @@
 
     <boost>boost_1_53_0</boost>
     
-    <Log4ShibVersion>1.0.6</Log4ShibVersion>
+    <Log4ShibVersion>1.0.7</Log4ShibVersion>
     <Log4ShibFileVersion>1_0</Log4ShibFileVersion>
     <!-- Change the 4 components below if the Log4ShibFileVersion name changes -->
     <Log4ShibComponent32>{2FDE8ED0-774A-4F44-88D5-C7089350D895}</Log4ShibComponent32>
