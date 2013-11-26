@@ -3,7 +3,7 @@
   <PropertyGroup Label="VersionMacros">
     <CxxTestRoot>$(BuildRoot)\cxxtest</CxxTestRoot>
 
-    <ShibbolethVersion>2.5.2</ShibbolethVersion>
+    <ShibbolethVersion>2.5.3</ShibbolethVersion>
 
     <!--
     Change the Ids below AT LEAST on every change to ShibbolethVersion
@@ -62,7 +62,7 @@
     <LibEay64Componentd>{D6E409C6-2F1C-42BA-8759-CF898C62C9A9}</LibEay64Componentd>
     <SSlEay64Componentd>{8FBB6D41-0044-4969-AA27-813EF2606C7A}</SSlEay64Componentd>
 
-    <ShibbolethDllVersion>1.5.2</ShibbolethDllVersion>
+    <ShibbolethDllVersion>1.5.3</ShibbolethDllVersion>
     <ShibbolethDllFileVersion>1_5</ShibbolethDllFileVersion>
     <!-- Change the 8 components below if ShibbolethDllFileVersion changes -->
     <ShibDll32Component>{9DE384BF-C286-4A72-AED9-AA34384005C0}</ShibDll32Component>
