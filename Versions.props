@@ -9,8 +9,8 @@
     Change the Ids below AT LEAST on every change to ShibbolethVersion
     and whenever producing a new installer for patch generation.
      -->
-    <ShibbolethId32>{53F5DD2F-915F-4EC2-A180-33CA5B5E464D}</ShibbolethId32>
-    <ShibbolethId64>{F19D3030-1165-4739-97D0-91EE00914BD2}</ShibbolethId64>
+    <ShibbolethId32>{1C2AC8A5-37B7-44AE-932A-7C8749C49497}</ShibbolethId32>
+    <ShibbolethId64>{33E06998-6A5C-4FD7-A937-C1F836EEF4E6}</ShibbolethId64>
     <!-- NEVER CHANGE THE UPGRADE CODE UNLESS YOU REALLY REALLY KNOW WHAT YOU ARE DOING -->
     <ShibbolethUpgradeCode>{28A4EB62-E860-49CA-BE43-44ADEB91DBF6}</ShibbolethUpgradeCode>
 
