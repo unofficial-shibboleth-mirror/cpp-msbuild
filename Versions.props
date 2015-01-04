@@ -17,9 +17,9 @@
     <CurlVersion>7.33.0</CurlVersion>
     <curl>curl-$(CurlVersion)</curl>
 
-    <boost>boost_1_53_0</boost>
+    <boost>boost_1_57_0</boost>
     
-    <Log4ShibVersion>1.0.7</Log4ShibVersion>
+    <Log4ShibVersion>1.0.8</Log4ShibVersion>
     <Log4ShibFileVersion>1_0</Log4ShibFileVersion>
     <!-- Change the 4 components below if the Log4ShibFileVersion name changes -->
     <Log4ShibComponent32>{2FDE8ED0-774A-4F44-88D5-C7089350D895}</Log4ShibComponent32>
@@ -48,8 +48,8 @@
     <XMLToolingComponent64d>{C380627F-9D45-4626-A249-3831FC7C83FC}</XMLToolingComponent64d>
     <XMLToolingLiteComponent64d>{2786A98E-763C-41A1-A6D5-363DB22F17E9}</XMLToolingLiteComponent64d>
 
-    <OpenSSLVersion>1.0.1.8</OpenSSLVersion>
-    <OpenSSLDirVersion>1.0.1h</OpenSSLDirVersion>
+    <OpenSSLVersion>1.0.1.10</OpenSSLVersion>
+    <OpenSSLDirVersion>1.0.1j</OpenSSLDirVersion>
     <openssl>openssl-$(OpenSSLDirVersion)</openssl>
     <OpenSSLFileVersion>1_0</OpenSSLFileVersion>
     <!-- Change the 8 components below if OpenSSLFileVersion changes -->
