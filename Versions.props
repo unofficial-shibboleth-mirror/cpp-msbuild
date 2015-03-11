@@ -14,7 +14,7 @@
     <!-- NEVER CHANGE THE UPGRADE CODE UNLESS YOU REALLY REALLY KNOW WHAT YOU ARE DOING -->
     <ShibbolethUpgradeCode>{28A4EB62-E860-49CA-BE43-44ADEB91DBF6}</ShibbolethUpgradeCode>
 
-    <CurlVersion>7.40.0</CurlVersion>
+    <CurlVersion>7.41.0</CurlVersion>
     <curl>curl-$(CurlVersion)</curl>
 
     <boost>boost_1_57_0</boost>
@@ -74,9 +74,8 @@
     <ShibDll64Componentd>{222ED92E-DD0B-410E-9A90-D1DD1AA878CF}</ShibDll64Componentd>
     <ShibDllLite64Componentd>{5EF6FF17-0510-484B-9F24-523B29EB416C}</ShibDllLite64Componentd>
 
-    <XercesVersion>3.1.1</XercesVersion>
-    <xerces Condition="'$(Platform)'=='x64'">xerces-c-$(XercesVersion)-x86_64-windows-vc-10.0</xerces>
-    <xerces Condition="'$(Platform)'=='win32'">xerces-c-$(XercesVersion)-x86-windows-vc-10.0</xerces>
+    <XercesVersion>3.1.2</XercesVersion>
+    <xerces>xerces-c-$(XercesVersion)</xerces>
     <XercesFileVersion>3_1</XercesFileVersion>
     <!-- Change the 4 components below if XercesFileVersion changes -->
     <Xerces32Component>{64C16FA9-685C-4612-B9C2-0B56C84A69E1}</Xerces32Component>
