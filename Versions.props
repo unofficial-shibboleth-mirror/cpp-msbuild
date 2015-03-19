@@ -48,19 +48,19 @@
     <XMLToolingComponent64d>{C380627F-9D45-4626-A249-3831FC7C83FC}</XMLToolingComponent64d>
     <XMLToolingLiteComponent64d>{2786A98E-763C-41A1-A6D5-363DB22F17E9}</XMLToolingLiteComponent64d>
 
-    <OpenSSLVersion>1.0.2.0</OpenSSLVersion>
-    <OpenSSLDirVersion>1.0.2</OpenSSLDirVersion>
+    <OpenSSLVersion>1.0.2.1</OpenSSLVersion>
+    <OpenSSLDirVersion>1.0.2a</OpenSSLDirVersion>
     <openssl>openssl-$(OpenSSLDirVersion)</openssl>
-    <OpenSSLFileVersion>1_0_2</OpenSSLFileVersion>
+    <OpenSSLFileVersion>1_0_2_1</OpenSSLFileVersion>
     <!-- Change the 8 components below if OpenSSLFileVersion changes -->
-    <LibEay32Component>{EB3F55C1-C478-4EE7-9B09-C60FB439E2A7}</LibEay32Component>
-    <SSlEay32Component>{2D236CA2-E683-4598-A83A-89974DFEE3AF}</SSlEay32Component>
-    <LibEay32Componentd>{3E8E3E41-FF9F-42A7-8EA2-37F4A6219FB7}</LibEay32Componentd>
-    <SSlEay32Componentd>{F73961FA-511D-4014-B430-E84E0284E6E7}</SSlEay32Componentd>
-    <LibEay64Component>{A3F32CA3-6C5F-4734-B225-F30DB0C3CC7B}</LibEay64Component>
-    <SSlEay64Component>{2F50B059-51FD-4048-88E6-4DCA45AC8376}</SSlEay64Component>
-    <LibEay64Componentd>{6F43BE90-F3F3-4537-8910-A44F71082C4F}</LibEay64Componentd>
-    <SSlEay64Componentd>{FAEF8CEB-AD97-4556-8D0B-87A9250D2D49}</SSlEay64Componentd>
+    <LibEay32Component>{6A1BEEB6-F357-4995-903F-17E00CA44E36}</LibEay32Component>
+    <SSlEay32Component>{C81514EB-EF0A-4072-86B3-3CD5601574B0}</SSlEay32Component>
+    <LibEay32Componentd>{2ABA0ED5-6A2B-4FD8-A579-86A0A9049953}</LibEay32Componentd>
+    <SSlEay32Componentd>{CE499191-5159-416B-A555-49DAAF26E8A7}</SSlEay32Componentd>
+    <LibEay64Component>{2B1BF6CC-8FDF-46D7-9E11-17EDE8D9C1DA}</LibEay64Component>
+    <SSlEay64Component>{A7B1D0CE-EFB8-433B-AEEE-A0DB7B6A0EE2}</SSlEay64Component>
+    <LibEay64Componentd>{66E6BD80-2EB4-46E5-8569-495C66F925CC}</LibEay64Componentd>
+    <SSlEay64Componentd>{7FD484DC-2756-4646-8609-62F92017B97A}</SSlEay64Componentd>
 
     <ShibbolethDllVersion>1.5.4</ShibbolethDllVersion>
     <ShibbolethDllFileVersion>1_5</ShibbolethDllFileVersion>
