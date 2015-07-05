@@ -3,14 +3,14 @@
   <PropertyGroup Label="VersionMacros">
     <CxxTestRoot>$(BuildRoot)\cxxtest</CxxTestRoot>
 
-    <ShibbolethVersion>2.5.4</ShibbolethVersion>
+    <ShibbolethVersion>2.5.5</ShibbolethVersion>
 
     <!--
     Change the Ids below AT LEAST on every change to ShibbolethVersion
     and whenever producing a new installer for patch generation.
      -->
-    <ShibbolethId32>{A70F49EA-84F5-4C8F-B1DA-B0CD442F40D2}</ShibbolethId32>
-    <ShibbolethId64>{05295173-E7BF-4582-ADA8-52A18A70CF6B}</ShibbolethId64>
+    <ShibbolethId32>{C4E8C720-E2DD-4B49-B552-D4F97E21F10F}</ShibbolethId32>
+    <ShibbolethId64>{8D3C9313-71A2-4AFC-97DC-E41A1BEDEB2C}</ShibbolethId64>
     <!-- NEVER CHANGE THE UPGRADE CODE UNLESS YOU REALLY REALLY KNOW WHAT YOU ARE DOING -->
     <ShibbolethUpgradeCode>{28A4EB62-E860-49CA-BE43-44ADEB91DBF6}</ShibbolethUpgradeCode>
 
@@ -28,7 +28,7 @@
     <Log4ShibComponent64d>{792E6762-70FE-418A-9336-39DDF1A6BAE7}</Log4ShibComponent64d>
     <log4shib>log4shib-$(Log4ShibVersion)</log4shib>
 
-    <OpenSAMLVersion>2.5.4</OpenSAMLVersion>
+    <OpenSAMLVersion>2.5.5</OpenSAMLVersion>
     <OpenSAMLFileVersion>2_5</OpenSAMLFileVersion>
     <!-- Change the 4 components below if the OpenSAMLFileVersion name changes -->
     <SamlComponent32>{B52F8C71-2042-4CDF-A250-BD773985A2AB}</SamlComponent32>
@@ -36,7 +36,7 @@
     <SamlComponent64>{9EE0A8D1-A6DC-4E2A-904F-BBEF70A0D67B}</SamlComponent64>
     <SamlComponent64d>{00836378-7FB9-4A09-AF49-3AA33DEF9BC6}</SamlComponent64d>
 
-    <XmlToolingVersion>1.5.4</XmlToolingVersion>
+    <XmlToolingVersion>1.5.5</XmlToolingVersion>
     <XmlToolingFileVersion>1_5</XmlToolingFileVersion>
     <!-- Change the 8 components below if the XmlToolingFileVersion name changes -->
     <XMLToolingComponent32>{53533A59-A563-439D-B13D-A4D7090C42D3}</XMLToolingComponent32>
@@ -62,7 +62,7 @@
     <LibEay64Componentd>{66E6BD80-2EB4-46E5-8569-495C66F925CC}</LibEay64Componentd>
     <SSlEay64Componentd>{7FD484DC-2756-4646-8609-62F92017B97A}</SSlEay64Componentd>
 
-    <ShibbolethDllVersion>1.5.4</ShibbolethDllVersion>
+    <ShibbolethDllVersion>1.5.5</ShibbolethDllVersion>
     <ShibbolethDllFileVersion>1_5</ShibbolethDllFileVersion>
     <!-- Change the 8 components below if ShibbolethDllFileVersion changes -->
     <ShibDll32Component>{9DE384BF-C286-4A72-AED9-AA34384005C0}</ShibDll32Component>
