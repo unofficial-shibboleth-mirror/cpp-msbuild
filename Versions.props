@@ -14,7 +14,7 @@
     <!-- NEVER CHANGE THE UPGRADE CODE UNLESS YOU REALLY REALLY KNOW WHAT YOU ARE DOING -->
     <ShibbolethUpgradeCode>{28A4EB62-E860-49CA-BE43-44ADEB91DBF6}</ShibbolethUpgradeCode>
 
-    <CurlVersion>7.42.1</CurlVersion>
+    <CurlVersion>7.43.0</CurlVersion>
     <curl>curl-$(CurlVersion)</curl>
 
     <boost>boost_1_57_0</boost>
@@ -48,19 +48,19 @@
     <XMLToolingComponent64d>{C380627F-9D45-4626-A249-3831FC7C83FC}</XMLToolingComponent64d>
     <XMLToolingLiteComponent64d>{2786A98E-763C-41A1-A6D5-363DB22F17E9}</XMLToolingLiteComponent64d>
 
-    <OpenSSLVersion>1.0.2.1</OpenSSLVersion>
-    <OpenSSLDirVersion>1.0.2a</OpenSSLDirVersion>
+    <OpenSSLVersion>1.0.2.3</OpenSSLVersion>
+    <OpenSSLDirVersion>1.0.2c</OpenSSLDirVersion>
     <openssl>openssl-$(OpenSSLDirVersion)</openssl>
-    <OpenSSLFileVersion>1_0_2_1</OpenSSLFileVersion>
+    <OpenSSLFileVersion>1_0_2_4</OpenSSLFileVersion>
     <!-- Change the 8 components below if OpenSSLFileVersion changes -->
-    <LibEay32Component>{6A1BEEB6-F357-4995-903F-17E00CA44E36}</LibEay32Component>
-    <SSlEay32Component>{C81514EB-EF0A-4072-86B3-3CD5601574B0}</SSlEay32Component>
-    <LibEay32Componentd>{2ABA0ED5-6A2B-4FD8-A579-86A0A9049953}</LibEay32Componentd>
-    <SSlEay32Componentd>{CE499191-5159-416B-A555-49DAAF26E8A7}</SSlEay32Componentd>
-    <LibEay64Component>{2B1BF6CC-8FDF-46D7-9E11-17EDE8D9C1DA}</LibEay64Component>
-    <SSlEay64Component>{A7B1D0CE-EFB8-433B-AEEE-A0DB7B6A0EE2}</SSlEay64Component>
-    <LibEay64Componentd>{66E6BD80-2EB4-46E5-8569-495C66F925CC}</LibEay64Componentd>
-    <SSlEay64Componentd>{7FD484DC-2756-4646-8609-62F92017B97A}</SSlEay64Componentd>
+    <LibEay32Component>{44CCE5C8-6D2D-4DFB-8F34-155C49878440}</LibEay32Component>
+    <SSlEay32Component>{EE848D64-DD0E-4A46-BA18-DB95C24E6E0C}</SSlEay32Component>
+    <LibEay32Componentd>{639C0A2D-8D29-4CA1-B4F2-4364EBF6242A}</LibEay32Componentd>
+    <SSlEay32Componentd>{ACACC9D6-5D4E-47F4-BEDB-531A226130CC}</SSlEay32Componentd>
+    <LibEay64Component>{F59B2D2F-8706-4C11-8E0C-8A167BB88AFF}</LibEay64Component>
+    <SSlEay64Component>{CE15CF1F-9005-438B-9B22-E57B0F2DBC2D}</SSlEay64Component>
+    <LibEay64Componentd>{D3451443-6B5E-4EF8-8EDE-AC22020405DA}</LibEay64Componentd>
+    <SSlEay64Componentd>{8FD2A1F6-B4C3-4864-A130-D4E71A3FA399}</SSlEay64Componentd>
 
     <ShibbolethDllVersion>1.5.5</ShibbolethDllVersion>
     <ShibbolethDllFileVersion>1_5</ShibbolethDllFileVersion>
@@ -93,13 +93,13 @@
     <XmlSec64Component>{DF5FEFC9-9B95-42B1-A6BD-053E0D0BD8E8}</XmlSec64Component>
     <XmlSec64Componentd>{D97E1B5C-B020-4621-94CE-F10FCFF765C5}</XmlSec64Componentd>
 
-    <ZlibVersion>1.2.7</ZlibVersion>
+    <ZlibVersion>1.2.8</ZlibVersion>
     <zlib>zlib-$(ZlibVersion)</zlib>
-    <ZlibFileVersion>1</ZlibFileVersion>
-    <Zlib32Component>{059557A8-7311-47BB-8A5F-CC85F72AE495}</Zlib32Component>
-    <Zlib32Componentd>{3DA71CD4-F204-49D5-A689-7B1B4C2D395A}</Zlib32Componentd>
-    <Zlib64Component>{792D44C3-3DCE-465D-AAFF-520AB2F20DA2}</Zlib64Component>
-    <Zlib64Componentd>{74D67C6F-655E-4E4D-A147-39F32DB6E796}</Zlib64Componentd>
+    <ZlibFileVersion>1_2</ZlibFileVersion>
+    <Zlib32Component>{337F7C97-DFA8-42C5-A08A-C430046F6D3F}</Zlib32Component>
+    <Zlib32Componentd>{52B7BFCE-B8D1-43DE-8F44-3E24E42E8753}</Zlib32Componentd>
+    <Zlib64Component>{4C06D1CF-00C8-473D-9478-0FC26493A5C3}</Zlib64Component>
+    <Zlib64Componentd>{6F7CD7DF-AB8D-4E11-8978-D954CEBE2EA1}</Zlib64Componentd>
 
     <FastCGIVersion>2.4.0</FastCGIVersion>
     <fcgi>fcgi-$(FastCGIVersion)-VC10</fcgi>
