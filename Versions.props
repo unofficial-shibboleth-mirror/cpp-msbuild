@@ -48,8 +48,8 @@
     <XMLToolingComponent64d>{C380627F-9D45-4626-A249-3831FC7C83FC}</XMLToolingComponent64d>
     <XMLToolingLiteComponent64d>{2786A98E-763C-41A1-A6D5-363DB22F17E9}</XMLToolingLiteComponent64d>
 
-    <OpenSSLVersion>1.0.2.3</OpenSSLVersion>
-    <OpenSSLDirVersion>1.0.2c</OpenSSLDirVersion>
+    <OpenSSLVersion>1.0.2.4</OpenSSLVersion>
+    <OpenSSLDirVersion>1.0.2d</OpenSSLDirVersion>
     <openssl>openssl-$(OpenSSLDirVersion)</openssl>
     <OpenSSLFileVersion>1_0_2_4</OpenSSLFileVersion>
     <!-- Change the 8 components below if OpenSSLFileVersion changes -->
