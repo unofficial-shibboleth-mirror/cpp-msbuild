@@ -4,6 +4,7 @@
     <CxxTestRoot>$(BuildRoot)\cxxtest</CxxTestRoot>
 
     <ShibbolethVersion>2.5.5</ShibbolethVersion>
+    <ShibbolethPatchVersion>0</ShibbolethPatchVersion>
 
     <!--
     Change the Ids below AT LEAST on every change to ShibbolethVersion
