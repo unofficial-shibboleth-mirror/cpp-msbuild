@@ -4,7 +4,7 @@
     <CxxTestRoot>$(BuildRoot)\cxxtest</CxxTestRoot>
 
     <ShibbolethVersion>2.5.5</ShibbolethVersion>
-    <ShibbolethPatchVersion>0</ShibbolethPatchVersion>
+    <ShibbolethPatchVersion>1</ShibbolethPatchVersion>
 
     <!--
     Provide a specific GUID if desired, or leave as '*' to generate a new
@@ -38,7 +38,7 @@
     <SamlComponent64>{9EE0A8D1-A6DC-4E2A-904F-BBEF70A0D67B}</SamlComponent64>
     <SamlComponent64d>{00836378-7FB9-4A09-AF49-3AA33DEF9BC6}</SamlComponent64d>
 
-    <XmlToolingVersion>1.5.5</XmlToolingVersion>
+    <XmlToolingVersion>1.5.6</XmlToolingVersion>
     <XmlToolingFileVersion>1_5</XmlToolingFileVersion>
     <!-- Change the 8 components below if the XmlToolingFileVersion name changes -->
     <XMLToolingComponent32>{53533A59-A563-439D-B13D-A4D7090C42D3}</XMLToolingComponent32>
