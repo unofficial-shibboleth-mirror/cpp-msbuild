@@ -4,6 +4,7 @@
 SPROOT=$(MAKEDIR)\..\cpp-sp
 XMLROOT=$(MAKEDIR)\..\cpp-xmltooling
 SAMLROOT=$(MAKEDIR)\..\cpp-opensaml
+VCVERSION=VC10
 
 
 #
@@ -15,7 +16,7 @@ clean:
 	cd $(SPROOT)
 	del/s *.dll *.exe *.msm *.lib *.obj
 	del/s *.wixobj *.lib *.wixlib  *.pdb *.wixpdb *.wixlib  *.msi 
-	cd $(XMLROOT)
+	cd $(XMLROOT)\Build\$(VCVERSION)
 	del/s *.dll *.exe *.msm *.lib *.obj
 	cd $(SAMLROOT)
 	del/s *.dll *.exe *.msm *.lib *.obj
@@ -59,12 +60,12 @@ saml64: xmltooling64
 	msbuild  /property:Platform=x64;Configuration=Debug /maxcpucount cpp-opensaml2.sln /t:saml;samlsign
 
 xmltooling32:
-	cd $(XMLROOT)
+	cd $(XMLROOT)\Projects\$(VCVERSION)
 	msbuild  /property:Platform=Win32;Configuration=Release /maxcpucount cpp-xmltooling.sln /t:xmltooling;xmltooling-lite
 	msbuild  /property:Platform=Win32;Configuration=Debug /maxcpucount cpp-xmltooling.sln /t:xmltooling;xmltooling-lite
 
 xmltooling64:
-	cd $(XMLROOT)
+	cd $(XMLROOT)\Projects\$(VCVERSION)
 	msbuild  /property:Platform=x64;Configuration=Release /maxcpucount cpp-xmltooling.sln /t:xmltooling;xmltooling-lite
 	msbuild  /property:Platform=x64;Configuration=Debug /maxcpucount cpp-xmltooling.sln /t:xmltooling;xmltooling-lite
 
