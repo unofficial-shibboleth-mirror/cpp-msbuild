@@ -18,7 +18,7 @@ clean:
 	del/s *.wixobj *.lib *.wixlib  *.pdb *.wixpdb *.wixlib  *.msi 
 	cd $(XMLROOT)\Build\$(VCVERSION)
 	del/s *.dll *.exe *.msm *.lib *.obj
-	cd $(SAMLROOT)
+	cd $(SAMLROOT)\Build\$(VCVERSION)
 	del/s *.dll *.exe *.msm *.lib *.obj
 
 
@@ -49,13 +49,13 @@ shibsp64: saml64
 	msbuild  /property:Platform=x64;Configuration=Debug /maxcpucount .\shibboleth.sln /t:shibsp;shibsp-lite
 
 saml32: xmltooling32
-	cd $(SAMLROOT)
+	cd $(SAMLROOT)\Projects\$(VCVERSION)
 	msbuild  /property:Platform=Win32;Configuration=Release /maxcpucount cpp-opensaml2.sln /t:saml;samlsign
 	msbuild  /property:Platform=Win32;Configuration=Debug /maxcpucount cpp-opensaml2.sln /t:saml;samlsign
 
 
 saml64: xmltooling64
-	cd $(SAMLROOT)
+	cd $(SAMLROOT)\Projects\$(VCVERSION)
 	msbuild  /property:Platform=x64;Configuration=Release /maxcpucount cpp-opensaml2.sln /t:saml;samlsign
 	msbuild  /property:Platform=x64;Configuration=Debug /maxcpucount cpp-opensaml2.sln /t:saml;samlsign
 
