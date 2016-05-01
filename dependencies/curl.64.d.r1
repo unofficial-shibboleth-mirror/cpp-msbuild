@@ -1,0 +1,1 @@
+s/ZLIBLIBSDLL .*$/ZLIBLIBSDLL = x64\\Debug\\.lib/ 

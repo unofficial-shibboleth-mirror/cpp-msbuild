@@ -1,0 +1,1 @@
+s/^WFLAGS .*$/& -D_DEBUG/ 

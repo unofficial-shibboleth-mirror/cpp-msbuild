@@ -1,0 +1,1 @@
+s/^CFLAGS.*MD/&d/ 

@@ -1,0 +1,1 @@
+s/^RESOURCE .*$/RESOURCE = \$(CFG)\\libcurl.res/
