@@ -32,13 +32,13 @@
     <Log4ShibComponent64d>{792E6762-70FE-418A-9336-39DDF1A6BAE7}</Log4ShibComponent64d>
     <log4shib>log4shib-$(Log4ShibVersion)</log4shib>
 
-    <OpenSAMLVersion>2.5.5</OpenSAMLVersion>
-    <OpenSAMLFileVersion>2_5</OpenSAMLFileVersion>
+    <OpenSAMLVersion>2.6.0</OpenSAMLVersion>
+    <OpenSAMLFileVersion>2_6</OpenSAMLFileVersion>
     <!-- Change the 4 components below if the OpenSAMLFileVersion name changes -->
-    <SamlComponent32>{B52F8C71-2042-4CDF-A250-BD773985A2AB}</SamlComponent32>
-    <SamlComponent32d>{7B934257-5F7F-428E-930E-A793A11573D7}</SamlComponent32d>
-    <SamlComponent64>{9EE0A8D1-A6DC-4E2A-904F-BBEF70A0D67B}</SamlComponent64>
-    <SamlComponent64d>{00836378-7FB9-4A09-AF49-3AA33DEF9BC6}</SamlComponent64d>
+    <SamlComponent32>{5CD94FCE-7533-45CD-A487-EBB3223EC72B}</SamlComponent32>
+    <SamlComponent32d>{64587694-E508-42DA-88E3-8A144CA8A103}</SamlComponent32d>
+    <SamlComponent64>{9E557403-7FDB-4CE2-B060-4F499EB5EC2F}</SamlComponent64>
+    <SamlComponent64d>{87B11F16-2E66-4EFA-881E-A9397307E9F0}</SamlComponent64d>
 
     <XmlToolingVersion>1.5.6</XmlToolingVersion>
     <XmlToolingFileVersion>1_5</XmlToolingFileVersion>
@@ -66,17 +66,17 @@
     <LibEay64Componentd>{D3451443-6B5E-4EF8-8EDE-AC22020405DA}</LibEay64Componentd>
     <SSlEay64Componentd>{8FD2A1F6-B4C3-4864-A130-D4E71A3FA399}</SSlEay64Componentd>
 
-    <ShibbolethDllVersion>1.5.6</ShibbolethDllVersion>
-    <ShibbolethDllFileVersion>1_5</ShibbolethDllFileVersion>
+    <ShibbolethDllVersion>1.6.0</ShibbolethDllVersion>
+    <ShibbolethDllFileVersion>1_6</ShibbolethDllFileVersion>
     <!-- Change the 8 components below if ShibbolethDllFileVersion changes -->
-    <ShibDll32Component>{9DE384BF-C286-4A72-AED9-AA34384005C0}</ShibDll32Component>
-    <ShibDllLite32Component>{10475E33-434D-4805-B983-195092549BED}</ShibDllLite32Component>
-    <ShibDll32Componentd>{4196D799-1162-4D62-9F7A-1F59E90F19F1}</ShibDll32Componentd>
-    <ShibDllLite32Componentd>{8E070220-2992-4D45-BF98-459022CD268F}</ShibDllLite32Componentd>
-    <ShibDll64Component>{B7DE652A-6853-4389-AD47-5DBB5AC89BDB}</ShibDll64Component>
-    <ShibDllLite64Component>{2D6A6399-62A6-4BF6-8D58-82E1EFE8C65E}</ShibDllLite64Component>
-    <ShibDll64Componentd>{222ED92E-DD0B-410E-9A90-D1DD1AA878CF}</ShibDll64Componentd>
-    <ShibDllLite64Componentd>{5EF6FF17-0510-484B-9F24-523B29EB416C}</ShibDllLite64Componentd>
+    <ShibDll32Component>{0752E11B-2B91-419F-A281-592B0181D4E0}</ShibDll32Component>
+    <ShibDllLite32Component>{5D93A0A7-1EC5-4F03-8533-FF4C85257878}</ShibDllLite32Component>
+    <ShibDll32Componentd>{6F2B6FF1-3DB5-4A5B-8BA9-BA9679FA1E83}</ShibDll32Componentd>
+    <ShibDllLite32Componentd>{FC1144B3-D3E7-4FFA-B71F-D446D1E35EAB}</ShibDllLite32Componentd>
+    <ShibDll64Component>{D58DBBBE-8ED1-4722-841D-6D745BB23A57}</ShibDll64Component>
+    <ShibDllLite64Component>{F998435B-0316-4C43-A671-05F9486FC9D2}</ShibDllLite64Component>
+    <ShibDll64Componentd>{7652F12D-7107-4D3E-AA1A-AF654BD83970}</ShibDll64Componentd>
+    <ShibDllLite64Componentd>{7F44CD6F-64F9-40AE-B06C-76A25C95F1CC}</ShibDllLite64Componentd>
 
     <XercesVersion>3.1.3</XercesVersion>
     <xerces>xerces-c-$(XercesVersion)</xerces>
