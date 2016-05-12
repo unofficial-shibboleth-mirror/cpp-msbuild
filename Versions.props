@@ -18,7 +18,7 @@
     <!-- NEVER CHANGE THE UPGRADE CODE UNLESS YOU REALLY REALLY KNOW WHAT YOU ARE DOING -->
     <ShibbolethUpgradeCode>{28A4EB62-E860-49CA-BE43-44ADEB91DBF6}</ShibbolethUpgradeCode>
 
-    <CurlVersion>7.47.1</CurlVersion>
+    <CurlVersion>7.48.0</CurlVersion>
     <curl>curl-$(CurlVersion)</curl>
 
     <boost>boost_1_60_0</boost>
@@ -52,8 +52,8 @@
     <XMLToolingComponent64d>{C380627F-9D45-4626-A249-3831FC7C83FC}</XMLToolingComponent64d>
     <XMLToolingLiteComponent64d>{2786A98E-763C-41A1-A6D5-363DB22F17E9}</XMLToolingLiteComponent64d>
 
-    <OpenSSLVersion>1.0.2.4</OpenSSLVersion>
-    <OpenSSLDirVersion>1.0.2f</OpenSSLDirVersion>
+    <OpenSSLVersion>1.0.2.8</OpenSSLVersion>
+    <OpenSSLDirVersion>1.0.2h</OpenSSLDirVersion>
     <openssl>openssl-$(OpenSSLDirVersion)</openssl>
     <OpenSSLFileVersion>1_0_2_4</OpenSSLFileVersion>
     <!-- Change the 8 components below if OpenSSLFileVersion changes -->
