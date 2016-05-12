@@ -40,17 +40,17 @@
     <SamlComponent64>{9E557403-7FDB-4CE2-B060-4F499EB5EC2F}</SamlComponent64>
     <SamlComponent64d>{87B11F16-2E66-4EFA-881E-A9397307E9F0}</SamlComponent64d>
 
-    <XmlToolingVersion>1.5.6</XmlToolingVersion>
-    <XmlToolingFileVersion>1_5</XmlToolingFileVersion>
+    <XmlToolingVersion>1.6.0</XmlToolingVersion>
+    <XmlToolingFileVersion>1_6</XmlToolingFileVersion>
     <!-- Change the 8 components below if the XmlToolingFileVersion name changes -->
-    <XMLToolingComponent32>{53533A59-A563-439D-B13D-A4D7090C42D3}</XMLToolingComponent32>
-    <XMLToolingLiteComponent32>{5045A722-D6D6-4E55-9196-CB7C50B4446F}</XMLToolingLiteComponent32>
-    <XMLToolingComponent32d>{380E59DF-24F8-4F60-97A7-CC67FB76B4CC}</XMLToolingComponent32d>
-    <XMLToolingLiteComponent32d>{DB6D8737-4E3D-4C06-87F1-C59C7D7CB47A}</XMLToolingLiteComponent32d>
-    <XMLToolingComponent64>{7BBFB3D8-A9F8-429B-96BE-C1B283EBFDFB}</XMLToolingComponent64>
-    <XMLToolingLiteComponent64>{060F61B9-36E9-4F33-9B5B-C59A43709052}</XMLToolingLiteComponent64>
-    <XMLToolingComponent64d>{C380627F-9D45-4626-A249-3831FC7C83FC}</XMLToolingComponent64d>
-    <XMLToolingLiteComponent64d>{2786A98E-763C-41A1-A6D5-363DB22F17E9}</XMLToolingLiteComponent64d>
+    <XMLToolingComponent32>{F4015CC7-DC9F-46C3-A620-F36B0AE9D39C}</XMLToolingComponent32>
+    <XMLToolingLiteComponent32>{5016EBCE-EB01-4511-9962-D538E3A4F6C2}</XMLToolingLiteComponent32>
+    <XMLToolingComponent32d>{E89088E7-7ECD-4A1B-A846-345732AD55E9}</XMLToolingComponent32d>
+    <XMLToolingLiteComponent32d>{DE721690-2C93-410E-8338-2B51AC6EA2A0}</XMLToolingLiteComponent32d>
+    <XMLToolingComponent64>{17974852-62E5-4055-B64C-1BF8AE1DDC12}</XMLToolingComponent64>
+    <XMLToolingLiteComponent64>{A315529B-3527-4F05-91DD-86353EDA1DD0}</XMLToolingLiteComponent64>
+    <XMLToolingComponent64d>{0ECB7022-919F-4585-B15B-9C73BE403CF8}</XMLToolingComponent64d>
+    <XMLToolingLiteComponent64d>{A50CA64F-4B78-4884-93FE-BE9450AFD8DE}</XMLToolingLiteComponent64d>
 
     <OpenSSLVersion>1.0.2.8</OpenSSLVersion>
     <OpenSSLDirVersion>1.0.2h</OpenSSLDirVersion>
