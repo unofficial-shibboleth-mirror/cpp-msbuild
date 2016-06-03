@@ -21,7 +21,7 @@
     <CurlVersion>7.48.0</CurlVersion>
     <curl>curl-$(CurlVersion)</curl>
 
-    <boost>boost_1_60_0</boost>
+    <boost>boost_1_61_0</boost>
     
     <Log4ShibVersion>1.0.9</Log4ShibVersion>
     <Log4ShibFileVersion>1_0</Log4ShibFileVersion>
