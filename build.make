@@ -13,7 +13,7 @@ VCVERSION=VC10
 all: msi32 msi64
 
 clean: 
-	cd $(SPROOT)
+	cd $(SPROOT)\Build\$(VCVERSION)
 	del/s *.dll *.exe *.msm *.lib *.obj
 	del/s *.wixobj *.lib *.wixlib  *.pdb *.wixpdb *.wixlib  *.msi 
 	cd $(XMLROOT)\Build\$(VCVERSION)
@@ -27,11 +27,11 @@ msi32: exe32 mergemodules32 msi32only
 msi64: exe64 mergemodules64 msi64only
 
 msi32only:
-	cd $(SPROOT)
+	cd $(SPROOT)\Projects\$(VCVERSION)
 	msbuild  /property:Platform=Win32;Configuration=Release /maxcpucount .\Shibboleth.sln /t:Installers\MergeModules;Installers\Installer
 
 msi64only:
-	cd $(SPROOT)
+	cd $(SPROOT)\Projects\$(VCVERSION)
 	msbuild  /property:Platform=x64;Configuration=Release /maxcpucount .\Shibboleth.sln /t:Installers\MergeModules;Installers\Installer
 
 mergemodules32: xmltooling32 saml32 shibsp32
@@ -39,12 +39,12 @@ mergemodules32: xmltooling32 saml32 shibsp32
 mergemodules64: xmltooling64 saml64 shibsp64
 
 shibsp32: saml32
-	cd $(SPROOT)
+	cd $(SPROOT)\Projects\$(VCVERSION)
 	msbuild  /property:Platform=Win32;Configuration=Release /maxcpucount .\shibboleth.sln /t:shibsp;shibsp-lite
 	msbuild  /property:Platform=Win32;Configuration=Debug /maxcpucount .\shibboleth.sln /t:shibsp;shibsp-lite
 
 shibsp64: saml64
-	cd $(SPROOT)
+	cd $(SPROOT)\Projects\$(VCVERSION)
 	msbuild  /property:Platform=x64;Configuration=Release /maxcpucount .\shibboleth.sln /t:shibsp;shibsp-lite
 	msbuild  /property:Platform=x64;Configuration=Debug /maxcpucount .\shibboleth.sln /t:shibsp;shibsp-lite
 
