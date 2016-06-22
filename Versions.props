@@ -78,7 +78,7 @@
     <ShibDll64Componentd>{7652F12D-7107-4D3E-AA1A-AF654BD83970}</ShibDll64Componentd>
     <ShibDllLite64Componentd>{7F44CD6F-64F9-40AE-B06C-76A25C95F1CC}</ShibDllLite64Componentd>
 
-    <XercesVersion>3.1.3</XercesVersion>
+    <XercesVersion>3.1.4</XercesVersion>
     <xerces>xerces-c-$(XercesVersion)</xerces>
     <XercesFileVersion>3_1</XercesFileVersion>
     <!-- Change the 4 components below if XercesFileVersion changes -->
