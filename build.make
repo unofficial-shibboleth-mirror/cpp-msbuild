@@ -27,7 +27,7 @@ cleanxmltooling:
 	cd $(XMLROOT)\Build\$(VCVERSION)
 	del/s *.dll *.exe *.msm *.lib *.obj
 
-cleansp:
+cleansaml:
 	cd $(SAMLROOT)\Build\$(VCVERSION)
 	del/s *.dll *.exe *.msm *.lib *.obj
 
