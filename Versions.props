@@ -5,7 +5,7 @@
 
     <CxxTestRoot>$(BuildRoot)\cxxtest</CxxTestRoot>
 
-    <ShibbolethVersion>2.5.6</ShibbolethVersion>
+    <ShibbolethVersion>2.6.0</ShibbolethVersion>
     <ShibbolethPatchVersion>0</ShibbolethPatchVersion>
 
     <!--
