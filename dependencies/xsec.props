@@ -4,7 +4,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug No Xalan|Win32'">
     <ClCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);XSEC_HAVE_OPENSSL=1</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(SolutionDir)\..\..\..\..\$(OpenSSl_dir)\inc32;$(SolutionDir)\..\..\..\..\$(Xerces_dir)\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(SolutionDir)\..\..\..\..\$(OpenSSl_dir)\inc32;$(SolutionDir)\..\..\..\..\$(OpenSSl_dir)\include;$(SolutionDir)\..\..\..\..\$(Xerces_dir)\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(SolutionDir)..\..\..\..\$(Xerces_dir)\Build\Win32\VC14\Debug;$(SolutionDir)..\..\..\..\$(Openssl_dir)\out32dll.dbg;</AdditionalLibraryDirectories>
@@ -15,7 +15,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug No Xalan|x64'">
     <ClCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);XSEC_HAVE_OPENSSL=1</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(SolutionDir)\..\..\..\..\$(OpenSSl_dir)\inc64;$(SolutionDir)\..\..\..\..\$(Xerces_dir)\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(SolutionDir)\..\..\..\..\$(OpenSSl_dir)\inc64;$(SolutionDir)\..\..\..\..\$(OpenSSl_dir)\include;$(SolutionDir)\..\..\..\..\$(Xerces_dir)\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(SolutionDir)..\..\..\..\$(Xerces_dir)\Build\Win64\VC14\Debug;$(SolutionDir)..\..\..\..\$(Openssl_dir)\out64dll.dbg;</AdditionalLibraryDirectories>
@@ -26,7 +26,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release No Xalan|Win32'">
     <ClCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);XSEC_HAVE_OPENSSL=1</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(SolutionDir)\..\..\..\..\$(OpenSSl_dir)\inc32;$(SolutionDir)\..\..\..\..\$(Xerces_dir)\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(SolutionDir)\..\..\..\..\$(OpenSSl_dir)\inc32;$(SolutionDir)\..\..\..\..\$(OpenSSl_dir)\include;$(SolutionDir)\..\..\..\..\$(Xerces_dir)\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(SolutionDir)..\..\..\..\$(Xerces_dir)\Build\Win32\VC14\Release;$(SolutionDir)..\..\..\..\$(Openssl_dir)\out32dll;</AdditionalLibraryDirectories>
@@ -37,7 +37,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release No Xalan|x64'">
     <ClCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);XSEC_HAVE_OPENSSL=1</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(SolutionDir)\..\..\..\..\$(OpenSSl_dir)\inc64;$(SolutionDir)\..\..\..\..\$(Xerces_dir)\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(SolutionDir)\..\..\..\..\$(OpenSSl_dir)\inc64;$(SolutionDir)\..\..\..\..\$(OpenSSl_dir)\include;$(SolutionDir)\..\..\..\..\$(Xerces_dir)\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(SolutionDir)..\..\..\..\$(Xerces_dir)\Build\Win64\VC14\Release;$(SolutionDir)..\..\..\..\$(Openssl_dir)\out64dll;</AdditionalLibraryDirectories>
