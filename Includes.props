@@ -1,5 +1,9 @@
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Label="Wibble">
+    <SSLLib Condition="'$(OpenSSL1_1Libs)' == '0'">ssleay32.lib;libeay32.lib</SSLLib>
+    <SSLLibD Condition="'$(OpenSSL1_1Libs)' == '0'">ssleay32D.lib;libeay32D.lib</SSLLibD>
+    <SSLLib Condition="'$(OpenSSL1_1Libs)' == '1'">libcrypto.lib;libssl.lib</SSLLib>
+    <SSLLibD Condition="'$(OpenSSL1_1Libs)' == '1'">libcrypto.lib;libssl.lib</SSLLibD>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <IncludePath Condition="'$(Platform)'=='Win32'">$(BuildRoot)\$(openssl)\inc32;$(BuildRoot)\$(openssl)\include;$(BuildRoot)\$(curl)\include;$(BuildRoot)\$(log4shib)\include;$(BuildRoot)\$(xerces)\src;$(BuildRoot)\$(xmlsec);$(BuildRoot)\nsapi\include;$(BuildRoot)\$(fcgi)\include;$(BuildRoot)\cxxtest;$(BuildRoot)\$(zlib);$(BuildRoot)\$(boost);$(IncludePath)</IncludePath>
     <IncludePath Condition="'$(Platform)'=='x64'">$(BuildRoot)\$(openssl)\inc64;$(BuildRoot)\$(openssl)\include;$(BuildRoot)\$(curl)\include;$(BuildRoot)\$(log4shib)\include;$(BuildRoot)\$(xerces)\src;$(BuildRoot)\$(xmlsec);$(BuildRoot)\nsapi\include;$(BuildRoot)\$(fcgi)\include;$(BuildRoot)\cxxtest;$(BuildRoot)\$(zlib);$(BuildRoot)\$(boost);$(IncludePath)</IncludePath>

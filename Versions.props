@@ -56,6 +56,7 @@
     <OpenSSLDirVersion>1.0.2h</OpenSSLDirVersion>
     <openssl>openssl-$(OpenSSLDirVersion)</openssl>
     <OpenSSLFileVersion>1_0_2_4</OpenSSLFileVersion>
+    <OpenSSL1_1Libs>0</OpenSSL1_1Libs>
     <!-- Change the 8 components below if OpenSSLFileVersion changes -->
     <LibEay32Component>{44CCE5C8-6D2D-4DFB-8F34-155C49878440}</LibEay32Component>
     <SSlEay32Component>{EE848D64-DD0E-4A46-BA18-DB95C24E6E0C}</SSlEay32Component>
