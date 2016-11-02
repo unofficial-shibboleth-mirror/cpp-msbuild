@@ -6,7 +6,7 @@
     <CxxTestRoot>$(BuildRoot)\cxxtest</CxxTestRoot>
 
     <ShibbolethVersion>2.6.0</ShibbolethVersion>
-    <ShibbolethPatchVersion>0</ShibbolethPatchVersion>
+    <ShibbolethPatchVersion>1</ShibbolethPatchVersion>
 
     <!--
     Provide a specific GUID if desired, or leave as '*' to generate a new
@@ -18,7 +18,7 @@
     <!-- NEVER CHANGE THE UPGRADE CODE UNLESS YOU REALLY REALLY KNOW WHAT YOU ARE DOING -->
     <ShibbolethUpgradeCode>{28A4EB62-E860-49CA-BE43-44ADEB91DBF6}</ShibbolethUpgradeCode>
 
-    <CurlVersion>7.49.1</CurlVersion>
+    <CurlVersion>7.51.0</CurlVersion>
     <curl>curl-$(CurlVersion)</curl>
 
     <boost>boost_1_61_0</boost>
@@ -52,8 +52,8 @@
     <XMLToolingComponent64d>{0ECB7022-919F-4585-B15B-9C73BE403CF8}</XMLToolingComponent64d>
     <XMLToolingLiteComponent64d>{A50CA64F-4B78-4884-93FE-BE9450AFD8DE}</XMLToolingLiteComponent64d>
 
-    <OpenSSLVersion>1.0.2.8</OpenSSLVersion>
-    <OpenSSLDirVersion>1.0.2h</OpenSSLDirVersion>
+    <OpenSSLVersion>1.0.2.10</OpenSSLVersion>
+    <OpenSSLDirVersion>1.0.2j</OpenSSLDirVersion>
     <openssl>openssl-$(OpenSSLDirVersion)</openssl>
     <OpenSSLFileVersion>1_0_2_4</OpenSSLFileVersion>
     <OpenSSL1_1Libs>0</OpenSSL1_1Libs>
