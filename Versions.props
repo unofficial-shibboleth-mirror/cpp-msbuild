@@ -18,6 +18,7 @@
     <!-- NEVER CHANGE THE UPGRADE CODE UNLESS YOU REALLY REALLY KNOW WHAT YOU ARE DOING -->
     <ShibbolethUpgradeCode>{28A4EB62-E860-49CA-BE43-44ADEB91DBF6}</ShibbolethUpgradeCode>
 
+<!--    <NewCurlBuild>1</NewCurlBuild>  -->
     <CurlVersion>7.51.0</CurlVersion>
     <curl>curl-$(CurlVersion)</curl>
 
