@@ -9,5 +9,5 @@ echo s/IMPLIB .*$/IMPLIB=%ZLIB_IMPLIB%D.lib/>zlib2.sed
 copy /y %SCRIPTS_DIR%\zlib3.sed
 copy /y %SCRIPTS_DIR%\zlib4.sed
 
-sed win32\makefile.msc -f zlib1.sed -f zlib2.sed -f zlib3.sed -f zlib4.sed > win32\makefile.shib > win32\makefile.shib.debug
+sed win32\makefile.msc -f zlib1.sed -f zlib2.sed -f zlib3.sed -f zlib4.sed > win32\makefile.shib.debug
 

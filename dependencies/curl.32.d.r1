@@ -1,1 +1,0 @@
-s/ZLIBLIBSDLL .*$/ZLIBLIBSDLL = Debug\\D.lib/ 
