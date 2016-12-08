@@ -2,7 +2,6 @@ rem GOTTA HAVE TRAILING SLASH
 
 set ROOT_DIR=H:\Perforce\devel\
 
-
 set SCRIPTS_DIR=%ROOT_DIR%cpp-msbuild\dependencies
 set VS14_DIR=c:\Program Files (x86)\Microsoft Visual Studio 14.0\
 
@@ -15,17 +14,19 @@ set LOGSHIB_DIR=log4shib-1.0.10
 set XERCES_DIR=xerces-c-3.1.3
 
 set OPENSSL_DIR=openssl-1.1
-set OPENSSL_NAME=1_0_2_4
 
 rem set SSLLib=ssleay32.lib;libeay32.lib
+rem set SSLLib_space=ssleay32.lib libeay32.lib
 rem set SSLLibD=ssleay32D.lib;libeay32D.lib
+rem set SSLLibD_space=ssleay32D.lib libeay32D.lib
+
 set SSLLib=libcrypto.lib;libssl.lib
 set SSLLib_space=libcrypto.lib libssl.lib
+
 set SSLLibD=libcrypto.lib;libssl.lib
 set SSLLibD_space=libcrypto.lib libssl.lib
 
-
-set LIBCURL_DIR=curl-7.49.1
+set LIBCURL_DIR=curl-7.49.99
 set LIBCURL_NAME=libcurl5
 
 set XSEC_DIR=xml-security-c-1.7.99-X
