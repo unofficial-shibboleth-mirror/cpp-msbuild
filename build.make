@@ -6,6 +6,19 @@ XMLROOT=$(MAKEDIR)\..\cpp-xmltooling
 SAMLROOT=$(MAKEDIR)\..\cpp-opensaml
 VCVERSION=VC10
 
+!If "$(VCVERSION)" == "VC14"
+
+SERVER_MODULES_32="Server Modules\fastcgi\shibauthorizer";"Server Modules\fastcgi\shibresponder";shibd;"Server Modules\isapi_shib";"Server Modules\mod_shib_24"
+SERVER_MODULES_64=$(SERVER_MODULES_32)
+
+!Else
+
+SERVER_MODULES_32="Server Modules\fastcgi\shibauthorizer";"Server Modules\fastcgi\shibresponder";shibd;"Server Modules\isapi_shib";"Server Modules\mod_shib_13";"Server Modules\mod_shib_20";"Server Modules\mod_shib_22";"Server Modules\mod_shib_24";"Server Modules\nsapi_shib"
+SERVER_MODULES_32="Server Modules\fastcgi\shibauthorizer";"Server Modules\fastcgi\shibresponder";shibd;"Server Modules\isapi_shib";"Server Modules\mod_shib_22";"Server Modules\mod_shib_24";"Server Modules\nsapi_shib"
+
+!Endif
+
+
 
 #
 # The targets.  We want to build the two installers
@@ -95,10 +108,12 @@ xmltooling64:
 
 exe32: shibsp32
 	cd $(SPROOT)\Projects\$(VCVERSION)
-	msbuild /property:Platform=Win32;Configuration=Release /maxcpucount .\shibboleth.sln /t:utilities\messages;utilities\resolvertest;utilities\mdquery;Extensions\adfs;Extensions\adfs-lite;Extensions\odbc-store;Extensions\plugins;Extensions\plugins-lite;"Server Modules\fastcgi\shibauthorizer";"Server Modules\fastcgi\shibresponder";shibd;"Server Modules\isapi_shib";"Server Modules\mod_shib_13";"Server Modules\mod_shib_20";"Server Modules\mod_shib_22";"Server Modules\mod_shib_24";"Server Modules\nsapi_shib"
-	msbuild   /property:Platform=Win32;Configuration=Debug /maxcpucount .\shibboleth.sln /t:utilities\messages;utilities\resolvertest;utilities\mdquery;Extensions\adfs;Extensions\adfs-lite;Extensions\odbc-store;Extensions\plugins;Extensions\plugins-lite;"Server Modules\fastcgi\shibauthorizer";"Server Modules\fastcgi\shibresponder";shibd;"Server Modules\isapi_shib";"Server Modules\mod_shib_13";"Server Modules\mod_shib_20";"Server Modules\mod_shib_22";"Server Modules\mod_shib_24";"Server Modules\nsapi_shib"
+	msbuild /property:Platform=Win32;Configuration=Release /maxcpucount .\shibboleth.sln /t:utilities\messages;utilities\resolvertest;utilities\mdquery;Extensions\adfs;Extensions\adfs-lite;Extensions\odbc-store;Extensions\plugins;Extensions\plugins-lite;$(SERVER_MODULES_32)
+	msbuild   /property:Platform=Win32;Configuration=Debug /maxcpucount .\shibboleth.sln /t:utilities\messages;utilities\resolvertest;utilities\mdquery;Extensions\adfs;Extensions\adfs-lite;Extensions\odbc-store;Extensions\plugins;Extensions\plugins-lite;$(SERVER_MODULES_32)
+
 
 exe64: shibsp64
 	cd $(SPROOT)\Projects\$(VCVERSION)
-	msbuild /property:Platform=x64;Configuration=Release /maxcpucount .\shibboleth.sln /t:utilities\messages;utilities\resolvertest;utilities\mdquery;Extensions\adfs;Extensions\adfs-lite;Extensions\odbc-store;Extensions\plugins;Extensions\plugins-lite;"Server Modules\fastcgi\shibauthorizer";"Server Modules\fastcgi\shibresponder";shibd;"Server Modules\isapi_shib";"Server Modules\mod_shib_22";"Server Modules\mod_shib_24"
-	msbuild   /property:Platform=x64;Configuration=Debug /maxcpucount .\shibboleth.sln /t:utilities\resolvertest;utilities\messages;utilities\mdquery;Extensions\adfs;Extensions\adfs-lite;Extensions\odbc-store;Extensions\plugins;Extensions\plugins-lite;"Server Modules\fastcgi\shibauthorizer";"Server Modules\fastcgi\shibresponder";shibd;"Server Modules\isapi_shib";"Server Modules\mod_shib_22";"Server Modules\mod_shib_24"
+	msbuild /property:Platform=x64;Configuration=Release /maxcpucount .\shibboleth.sln /t:utilities\messages;utilities\resolvertest;utilities\mdquery;Extensions\adfs;Extensions\adfs-lite;Extensions\odbc-store;Extensions\plugins;Extensions\plugins-lite;$(SERVER_MODULES_64)
+	msbuild   /property:Platform=x64;Configuration=Debug /maxcpucount .\shibboleth.sln /t:utilities\resolvertest;utilities\messages;utilities\mdquery;Extensions\adfs;Extensions\adfs-lite;Extensions\odbc-store;Extensions\plugins;Extensions\plugins-lite;$(SERVER_MODULES_64)
+
