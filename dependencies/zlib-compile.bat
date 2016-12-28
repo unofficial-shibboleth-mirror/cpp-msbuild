@@ -1,3 +1,5 @@
+rem USE(x86) zlib-compile.bat .
+rem USE(x64) zlib-compile.bat x64
 rem clean and create target dirs
 
 rd/s/q %1%\Release %1%\Debug
