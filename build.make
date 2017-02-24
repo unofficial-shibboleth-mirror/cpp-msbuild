@@ -8,13 +8,16 @@ VCVERSION=VC10
 
 !If "$(VCVERSION)" == "VC14"
 
-SERVER_MODULES_32="Server Modules\fastcgi\shibauthorizer";"Server Modules\fastcgi\shibresponder";shibd;"Server Modules\isapi_shib";"Server Modules\mod_shib_24"
-SERVER_MODULES_64=$(SERVER_MODULES_32)
+#SERVER_MODULES_32="Server Modules\fastcgi\shibauthorizer";"Server Modules\fastcgi\shibresponder";shibd;"Server Modules\isapi_shib";"Server Modules\mod_shib_24"
+#SERVER_MODULES_64=$(SERVER_MODULES_32)
+
+SERVER_MODULES_32="Server Modules\fastcgi\shibauthorizer";"Server Modules\fastcgi\shibresponder";shibd;"Server Modules\isapi_shib";"Server Modules\mod_shib_13";"Server Modules\mod_shib_20";"Server Modules\mod_shib_22";"Server Modules\mod_shib_24"
+SERVER_MODULES_64="Server Modules\fastcgi\shibauthorizer";"Server Modules\fastcgi\shibresponder";shibd;"Server Modules\isapi_shib";"Server Modules\mod_shib_22";"Server Modules\mod_shib_24"
 
 !Else
 
 SERVER_MODULES_32="Server Modules\fastcgi\shibauthorizer";"Server Modules\fastcgi\shibresponder";shibd;"Server Modules\isapi_shib";"Server Modules\mod_shib_13";"Server Modules\mod_shib_20";"Server Modules\mod_shib_22";"Server Modules\mod_shib_24";"Server Modules\nsapi_shib"
-SERVER_MODULES_32="Server Modules\fastcgi\shibauthorizer";"Server Modules\fastcgi\shibresponder";shibd;"Server Modules\isapi_shib";"Server Modules\mod_shib_22";"Server Modules\mod_shib_24";"Server Modules\nsapi_shib"
+SERVER_MODULES_64="Server Modules\fastcgi\shibauthorizer";"Server Modules\fastcgi\shibresponder";shibd;"Server Modules\isapi_shib";"Server Modules\mod_shib_22";"Server Modules\mod_shib_24";"Server Modules\nsapi_shib"
 
 !Endif
 
