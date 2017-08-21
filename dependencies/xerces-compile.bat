@@ -1,11 +1,14 @@
-msbuild /m projects\Win32\VC%MsVCVersionNum%\xerces-all\xerces-all.sln /p:Configuration=Debug     /t:all:clean /p:Platform=%1%
+cd /d %ROOT_DIR%%XERCES_DIR%
+cd buildx86\%MsVCVersion%
+cmake --build . --config Debug --clean-first --target install
 @if errorlevel 1 goto end
-msbuild /m projects\Win32\VC%MsVCVersionNum%\xerces-all\xerces-all.sln /p:Configuration=Release   /t:all:clean /p:Platform=%1%
+cmake --build . --config Release --clean-first --target install
 @if errorlevel 1 goto end
+cd ..\..\buildx64\%MsVCVersion%
 
-msbuild /m projects\Win32\VC%MsVCVersionNum%\xerces-all\xerces-all.sln /t:all:Rebuild /p:Configuration=Release /p:Platform=%1%
+cmake --build . --config Debug --clean-first --target install
 @if errorlevel 1 goto end
-msbuild /m projects\Win32\VC%MsVCVersionNum%\xerces-all\xerces-all.sln /t:all:Rebuild /p:Configuration=Debug   /p:Platform=%1%
+cmake --build . --config Release --clean-first --target install
 @if errorlevel 1 goto end
 
 :end
