@@ -3,21 +3,24 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug No Xalan|Win32'">
     <ClCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);XSEC_HAVE_OPENSSL=1;SUPPRESS_XSEC_HAVE_WINCAPI=1</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(SolutionDir)\..\..\..\..\$(OpenSSl_dir)\inc32.dbg;$(SolutionDir)\..\..\..\..\$(OpenSSl_dir)\x86Debug\include;$(SolutionDir)\..\..\..\..\$(Xerces_dir)\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(ROOT_DIR)$(OpenSSl_dir)\inc32.dbg;$(ROOT_DIR)$(OpenSSl_dir)\x86Debug\include;$(ROOT_DIR)$(Xerces_dir)\Install32\$(MsVCVersion)\include</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(SolutionDir)..\..\..\..\$(Xerces_dir)\Build\Win32\$(MsVCVersion)\Debug;$(SolutionDir)..\..\..\..\$(Openssl_dir)\out32dll.dbg;$(SolutionDir)\..\..\..\..\$(OpenSSl_dir)\x86Debug\lib;</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(ROOT_DIR)$(Xerces_dir)\Install32\$(MsVCVersion)\lib;$(ROOT_DIR)$(Openssl_dir)\out32dll.dbg;$(ROOT_DIR)$(OpenSSl_dir)\x86Debug\lib;</AdditionalLibraryDirectories>
       <AdditionalDependencies>%(AdditionalDependencies);$(SSLLibD)</AdditionalDependencies>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </Link>
   </ItemDefinitionGroup>
 
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug No Xalan|x64'">
     <ClCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);XSEC_HAVE_OPENSSL=1;SUPPRESS_XSEC_HAVE_WINCAPI=1</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(SolutionDir)\..\..\..\..\$(OpenSSl_dir)\inc64.dbg;$(SolutionDir)\..\..\..\..\$(OpenSSl_dir)\x64Debug\include;$(SolutionDir)\..\..\..\..\$(Xerces_dir)\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(ROOT_DIR)$(OpenSSl_dir)\inc64.dbg;$(ROOT_DIR)$(OpenSSl_dir)\x64Debug\include;$(ROOT_DIR)$(Xerces_dir)\Install64\$(MsVCVersion)\include</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(SolutionDir)..\..\..\..\$(Xerces_dir)\Build\Win64\$(MsVCVersion)\Debug;$(SolutionDir)..\..\..\..\$(Openssl_dir)\out64dll.dbg;$(SolutionDir)\..\..\..\..\$(OpenSSl_dir)\x64Debug\lib;</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(ROOT_DIR)$(Xerces_dir)\install64\$(MsVCVersion)\lib;$(ROOT_DIR)$(Openssl_dir)\out64dll.dbg;$(ROOT_DIR)$(OpenSSl_dir)\x64Debug\lib;</AdditionalLibraryDirectories>
       <AdditionalDependencies>%(AdditionalDependencies);$(SSLLibD)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -25,10 +28,11 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release No Xalan|Win32'">
     <ClCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);XSEC_HAVE_OPENSSL=1;SUPPRESS_XSEC_HAVE_WINCAPI=1</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(SolutionDir)\..\..\..\..\$(OpenSSl_dir)\inc32;$(SolutionDir)\..\..\..\..\$(OpenSSl_dir)\x86\include;$(SolutionDir)\..\..\..\..\$(Xerces_dir)\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(ROOT_DIR)$(OpenSSl_dir)\inc32;$(ROOT_DIR)$(OpenSSl_dir)\x86\include;$(ROOT_DIR)$(Xerces_dir)\Install32\$(MsVCVersion)\include</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(SolutionDir)..\..\..\..\$(Xerces_dir)\Build\Win32\$(MsVCVersion)\Release;$(SolutionDir)..\..\..\..\$(Openssl_dir)\out32dll;$(SolutionDir)\..\..\..\..\$(OpenSSl_dir)\x86\lib;</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(ROOT_DIR)$(Xerces_dir)\Install32\$(MsVCVersion)\lib;$(ROOT_DIR)$(Openssl_dir)\out32dll;$(ROOT_DIR)$(OpenSSl_dir)\x86\lib;</AdditionalLibraryDirectories>
       <AdditionalDependencies>%(AdditionalDependencies);$(SSLLib)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -36,10 +40,10 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release No Xalan|x64'">
     <ClCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);XSEC_HAVE_OPENSSL=1;SUPPRESS_XSEC_HAVE_WINCAPI=1</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(SolutionDir)\..\..\..\..\$(OpenSSl_dir)\inc64;$(SolutionDir)\..\..\..\..\$(OpenSSl_dir)\x64\include;$(SolutionDir)\..\..\..\..\$(Xerces_dir)\src</AdditionalIncludeDirectories>
-    </ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(ROOT_DIR)$(OpenSSl_dir)\inc64;$(ROOT_DIR)$(OpenSSl_dir)\x64\include;$(ROOT_DIR)$(Xerces_dir)\Install64\$(MsVCVersion)\include</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>    </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(SolutionDir)..\..\..\..\$(Xerces_dir)\Build\Win64\$(MsVCVersion)\Release;$(SolutionDir)..\..\..\..\$(Openssl_dir)\out64dll;$(SolutionDir)\..\..\..\..\$(OpenSSl_dir)\x64\lib;</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(ROOT_DIR)$(Xerces_dir)\Install64\$(MsVCVersion)\lib;$(ROOT_DIR)$(Openssl_dir)\out64dll;$(ROOT_DIR)$(OpenSSl_dir)\x64\lib;</AdditionalLibraryDirectories>
       <AdditionalDependencies>%(AdditionalDependencies);;$(SSLLib)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
