@@ -7,7 +7,7 @@
 
     <!-- These control the version of the installer -->
     <ShibbolethVersion>2.6.0</ShibbolethVersion>
-    <ShibbolethPatchVersion>1</ShibbolethPatchVersion>
+    <ShibbolethPatchVersion>256</ShibbolethPatchVersion>
 
     <!-- These control the versions in the DLLs and Executables.
          Note that the PatchVersion is left to the individual resource file.
@@ -34,7 +34,7 @@
     <CurlVersion>7.51.0</CurlVersion>
     <curl>curl-$(CurlVersion)</curl>
 
-    <boost>boost_1_61_0</boost>
+    <boost>boost_1_64_0</boost>
     
     <Log4ShibVersion>1.0.9</Log4ShibVersion>
     <Log4ShibFileVersion>1_0</Log4ShibFileVersion>
@@ -92,24 +92,24 @@
     <ShibDll64Componentd>{7652F12D-7107-4D3E-AA1A-AF654BD83970}</ShibDll64Componentd>
     <ShibDllLite64Componentd>{7F44CD6F-64F9-40AE-B06C-76A25C95F1CC}</ShibDllLite64Componentd>
 
-    <XercesVersion>3.1.4</XercesVersion>
+    <XercesVersion>3.2.0</XercesVersion>
     <xerces>xerces-c-$(XercesVersion)</xerces>
-    <XercesFileVersion>3_1</XercesFileVersion>
+    <XercesFileVersion>3_2</XercesFileVersion>
     <!-- Change the 4 components below if XercesFileVersion changes -->
-    <Xerces32Component>{64C16FA9-685C-4612-B9C2-0B56C84A69E1}</Xerces32Component>
-    <Xerces32Componentd>{3F92209F-35C7-4D7C-BAC3-B0A96DF0CBDF}</Xerces32Componentd>
-    <Xerces64Component>{5C2BA2C6-36EC-4EB3-A343-8C1C9D499B9C}</Xerces64Component>
-    <Xerces64Componentd>{236B6A7F-73C0-4EBF-9C06-90C1BE160ACE}</Xerces64Componentd>
+    <Xerces32Component>{703F33E0-715F-4301-8554-2D3F9AE2CD4B}</Xerces32Component>
+    <Xerces32Componentd>{568D5E45-9E2B-44ED-8ECE-E5E61B658733}</Xerces32Componentd>
+    <Xerces64Component>{C43D408D-ADB6-4C19-986C-18B4E5DE1315}</Xerces64Component>
+    <Xerces64Componentd>{3D0F7C56-196D-4BAA-BEF7-56A747C110DA}</Xerces64Componentd>
 
 
-    <XmlSecVersion>1.7.3</XmlSecVersion>
+    <XmlSecVersion>1.8.0</XmlSecVersion>
     <xmlsec>xml-security-c-$(XmlSecVersion)</xmlsec>
-    <XmlSecFileVersion>1_7</XmlSecFileVersion>
+    <XmlSecFileVersion>1_8</XmlSecFileVersion>
     <!-- Change the 4 components below if XmlSecFileVersion changes -->
-    <XmlSec32Component>{761CE697-2701-4149-ACD5-A693EBB45B33}</XmlSec32Component>
-    <XmlSec32Componentd>{34D437A1-3008-433F-A86F-F69E4852069F}</XmlSec32Componentd>
-    <XmlSec64Component>{DF5FEFC9-9B95-42B1-A6BD-053E0D0BD8E8}</XmlSec64Component>
-    <XmlSec64Componentd>{D97E1B5C-B020-4621-94CE-F10FCFF765C5}</XmlSec64Componentd>
+    <XmlSec32Component>{871E4060-4FE8-4D13-90B0-61F7BE798C56}</XmlSec32Component>
+    <XmlSec32Componentd>{6F20DABC-D435-4EDD-BA44-C503813EABAD}</XmlSec32Componentd>
+    <XmlSec64Component>{D22CC288-60DF-4C81-9D0D-70650224E7AE}</XmlSec64Component>
+    <XmlSec64Componentd>{3E00BB82-CA01-4F10-BCE7-DFE9D22A2BB0}</XmlSec64Componentd>
 
     <ZlibVersion>1.2.8</ZlibVersion>
     <zlib>zlib-$(ZlibVersion)</zlib>
