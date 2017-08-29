@@ -1,14 +1,10 @@
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Label="Wibble">
-    <LibCurlLib Condition="'$(NewCurlBuild)' == '1'">libcurl5.lib</LibCurlLib>
-    <LibCurlLibD Condition="'$(NewCurlBuild)' == '1'">libcurl5d.lib</LibCurlLibD>
-    <LibCurlLib Condition="'$(NewCurlBuild)' != '1'">libcurl5_imp.lib</LibCurlLib>
-    <LibCurlLibD Condition="'$(NewCurlBuild)' != '1'">libcurl5d_imp.lib</LibCurlLibD>
+    <LibCurlLib>libcurl5.lib</LibCurlLib>
+    <LibCurlLibD>libcurl5d.lib</LibCurlLibD>
 
-    <SSLLib Condition="'$(OpenSSL1_1Libs)' == '0'">ssleay32.lib;libeay32.lib</SSLLib>
-    <SSLLibD Condition="'$(OpenSSL1_1Libs)' == '0'">ssleay32D.lib;libeay32D.lib</SSLLibD>
-    <SSLLib Condition="'$(OpenSSL1_1Libs)' == '1'">libcrypto.lib;libssl.lib</SSLLib>
-    <SSLLibD Condition="'$(OpenSSL1_1Libs)' == '1'">libcrypto.lib;libssl.lib</SSLLibD>
+    <SSLLib>libcrypto.lib;libssl.lib</SSLLib>
+    <SSLLibD>libcrypto.lib;libssl.lib</SSLLibD>
     <ExecutablePath>$(ExecutablePath)</ExecutablePath>
     <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(BuildRoot)\$(openssl)\inc32;$(BuildRoot)\$(openssl)\X86Debug\include;$(BuildRoot)\$(openssl)\include;$(BuildRoot)\$(curl)\include;$(BuildRoot)\$(log4shib)\include;$(BuildRoot)\$(xerces)\Install32\$(MsVCVersion)\include;$(BuildRoot)\$(xmlsec);$(BuildRoot)\nsapi\include;$(BuildRoot)\$(fcgi)\include;$(BuildRoot)\cxxtest;$(BuildRoot)\$(zlib);$(BuildRoot)\$(boost);$(IncludePath)</IncludePath>
 
