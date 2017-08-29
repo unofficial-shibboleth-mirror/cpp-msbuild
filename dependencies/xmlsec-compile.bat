@@ -1,4 +1,4 @@
-rem xmlsec-compile x64 
+rem xmlsec-compile Win64
 rem xmlsec-compile Win32
 
 set ForceImportBeforeCppTargets=%SCRIPTS_DIR%\xsec.props
