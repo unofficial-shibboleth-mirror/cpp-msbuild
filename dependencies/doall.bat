@@ -24,13 +24,6 @@ call ..\openssl.bat
 echo OpenSSL Config Status: %errorLevel% >> ..\build.log
 @if errorlevel 1 goto end
 
-cd ..\%LIBCURL_DIR%
-call ..\libcurl.bat
-echo libcurl Config Status: %errorLevel% >> ..\build.log
-call ..\execurl.bat
-echo execurl Config Status: %errorLevel% >> ..\build.log
-@if errorlevel 1 goto end
-
 cd ..\%XSEC_DIR%
 call ..\xmlsec.bat
 echo XML Security (c) Config Status: %errorLevel% >> ..\build.log
@@ -42,7 +35,7 @@ REM
 REM Compile 32 and MsBuild
 REM
 
-call "%VS14_DIR%\VC\vcvarsall.bat"  x86
+call "%VS_DIR%vcvarsall.bat"  x86
 @echo on
 
 REM 32 bit compiles and MSBUILD compiles
@@ -74,10 +67,10 @@ echo OpenSSL Compile 32 Status: %errorLevel% >> ..\build.log
 @if errorlevel 1 goto end
 
 cd ..\%LIBCURL_DIR%
-call ..\libcurl-compile32.bat
+call ..\libcurl-new.bat
 echo LibCurl Compile 32 Status: %errorLevel% >> ..\build.log
-call ..\execurl-compile32.bat
-echo ExeCurl Compile 32 Status: %errorLevel% >> ..\build.log
+rem call ..\execurl-compile32.bat
+rem echo ExeCurl Compile 32 Status: %errorLevel% >> ..\build.log
 @if errorlevel 1 goto end
 
 cd ..\%XSEC_DIR%
@@ -91,7 +84,7 @@ REM
 REM Compile X64
 REM
 
-call "%VS14_DIR%\VC\vcvarsall.bat"  x64
+call "%VS_DIR%\vcvarsall.bat"  x64
 @echo on
 
 @if errorlevel 1 goto end
@@ -113,15 +106,13 @@ echo Open SSL (64) Compile Status: %errorLevel% >> ..\build.log
 @if errorlevel 1 goto end
 
 cd ..\%LIBCURL_DIR%
-call ..\libcurl-compile64.bat
+call ..\libcurl-new-x64.bat
 echo Libcurl (64) Compile Status: %errorLevel% >> ..\build.log
-call ..\execurl-compile64.bat
-echo Execurl (64) Compile Status: %errorLevel% >> ..\build.log
 @if errorlevel 1 goto end
 
 cd ..\%XSEC_DIR%
 REM back to 32 bit tools.  Who knows why.
-call "%VS14_DIR%\VC\vcvarsall.bat"  x86
+call "%VS_DIR%\vcvarsall.bat"  x86
 @echo on
 call ..\xmlsec-compile.bat  Win64
 echo XML Security Compile 64 Status: %errorLevel% >> ..\build.log
