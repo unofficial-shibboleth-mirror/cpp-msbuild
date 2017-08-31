@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Label="VersionMacros">
-    <MsVCVersion>vc10</MsVCVersion>
+    <MsVCVersion>vc15</MsVCVersion>
 
     <CxxTestRoot>$(BuildRoot)\cxxtest</CxxTestRoot>
 
@@ -65,7 +65,7 @@
     <XMLToolingLiteComponent64d>{2BEAF032-2403-4b10-BE06-C0418D6B645F}</XMLToolingLiteComponent64d>
 
     <OpenSSLVersion>1.1.0.5</OpenSSLVersion>
-    <OpenSSLDirVersion>1.1.0.f</OpenSSLDirVersion>
+    <OpenSSLDirVersion>1.1.0f</OpenSSLDirVersion>
     <openssl>openssl-$(OpenSSLDirVersion)</openssl>
     <OpenSSLFileVersion>1_1_0_5</OpenSSLFileVersion>
     <!-- Change the 8 components below if OpenSSLFileVersion changes -->
