@@ -1,32 +1,38 @@
 cls
-date /t > build.log
-Time /t >> build.log
-
 call config.bat
 
-cd %ZLIB_DIR%
-call ..\zlib.bat
-echo Zlib Config Status: %errorLevel% >> ..\build.log
+date /t >  %ROOT_DIR%build.log
+Time /t >> %ROOT_DIR%build.log
+
+
+cd %ROOT_DIR%\%ZLIB_DIR%
+call %ROOT_DIR%cpp-msbuild\dependencies\zlib.bat
+echo Zlib Config Status: %errorLevel% >> %ROOT_DIR%build.log
 @if errorlevel 1 goto end
 
 CD ..\%LOGSHIB_DIR%
-call ..\log4shib.bat
-echo Log4Shib Config Status: %errorLevel% >> ..\build.log
+call %ROOT_DIR%cpp-msbuild\dependencies\log4shib.bat
+echo Log4Shib Config Status: %errorLevel% >> %ROOT_DIR%build.log
 @if errorlevel 1 goto end
 
-cd ..\%XERCES_DIR%
-call ..\xerces.bat
-echo Xerces Config Status: %errorLevel% >> ..\build.log
+cd %ROOT_DIR%\%XERCES_DIR%
+call %ROOT_DIR%cpp-msbuild\dependencies\xerces.bat
+echo Xerces Config Status: %errorLevel% >> %ROOT_DIR%build.log
 @if errorlevel 1 goto end
 
-cd ..\%OPENSSL_DIR%
-call ..\openssl.bat
-echo OpenSSL Config Status: %errorLevel% >> ..\build.log
+cd %ROOT_DIR%\%LIBCURL_DIR%
+call %ROOT_DIR%cpp-msbuild\dependencies\libcurl.bat
+echo libcurl Config Status: %errorLevel% >> %ROOT_DIR%build.log
 @if errorlevel 1 goto end
 
-cd ..\%XSEC_DIR%
-call ..\xmlsec.bat
-echo XML Security (c) Config Status: %errorLevel% >> ..\build.log
+cd %ROOT_DIR%\%OPENSSL_DIR%
+call %ROOT_DIR%cpp-msbuild\dependencies\openssl.bat
+echo OpenSSL Config Status: %errorLevel% >> %ROOT_DIR%build.log
+@if errorlevel 1 goto end
+
+cd %ROOT_DIR%\%XSEC_DIR%
+call %ROOT_DIR%cpp-msbuild\dependencies\xmlsec.bat
+echo XML Security (c) Config Status: %errorLevel% >> %ROOT_DIR%build.log
 @if errorlevel 1 goto end
 
 cd ..
@@ -40,42 +46,37 @@ call "%VS_DIR%vcvarsall.bat"  x86
 
 REM 32 bit compiles and MSBUILD compiles
 
-cd %ZLIB_DIR%
-call ..\zlib-compile.bat .
-echo Zlib Compile 32 Status: %errorLevel% >> ..\build.log
+cd %ROOT_DIR%\%ZLIB_DIR%
+call %ROOT_DIR%cpp-msbuild\dependencies\zlib-compile.bat .
+echo Zlib Compile 32 Status: %errorLevel% >> %ROOT_DIR%build.log
 @if errorlevel 1 goto end
 
-CD ..\%LOGSHIB_DIR%
-call ..\log4shib-compile.bat Win32
-echo Log4Shib Compile 32 Status: %errorLevel% >> ..\build.log
+CD %ROOT_DIR%\%LOGSHIB_DIR%
+call %ROOT_DIR%cpp-msbuild\dependencies\log4shib-compile.bat Win32
+echo Log4Shib Compile 32 Status: %errorLevel% >> %ROOT_DIR%build.log
 @if errorlevel 1 goto end
-call ..\log4shib-compile.bat x64
-echo Log4Shib Compile 64 Status: %errorLevel% >> ..\build.log
-@if errorlevel 1 goto end
-
-cd ..\%XERCES_DIR%
-call ..\xerces-compile.bat  Win32
-echo Xerces Compile 32 Status: %errorLevel% >> ..\build.log
-@if errorlevel 1 goto end
-call ..\xerces-compile.bat  x64
-echo Xerces Compile 64 Status: %errorLevel% >> ..\build.log
+call %ROOT_DIR%cpp-msbuild\dependencies\log4shib-compile.bat x64
+echo Log4Shib Compile 64 Status: %errorLevel% >> %ROOT_DIR%build.log
 @if errorlevel 1 goto end
 
-cd ..\%OPENSSL_DIR%
-call ..\openssl-compile32.bat
-echo OpenSSL Compile 32 Status: %errorLevel% >> ..\build.log
+cd %ROOT_DIR%\%XERCES_DIR%
+call %ROOT_DIR%cpp-msbuild\dependencies\xerces-compile.bat
+echo Xerces Compile 32 Status: %errorLevel% >> %ROOT_DIR%build.log
 @if errorlevel 1 goto end
 
-cd ..\%LIBCURL_DIR%
-call ..\libcurl-new.bat
-echo LibCurl Compile 32 Status: %errorLevel% >> ..\build.log
-rem call ..\execurl-compile32.bat
-rem echo ExeCurl Compile 32 Status: %errorLevel% >> ..\build.log
+cd %ROOT_DIR%\%OPENSSL_DIR%
+call %ROOT_DIR%cpp-msbuild\dependencies\openssl-compile32.bat
+echo OpenSSL Compile 32 Status: %errorLevel% >> %ROOT_DIR%build.log
 @if errorlevel 1 goto end
 
-cd ..\%XSEC_DIR%
-call ..\xmlsec-compile.bat  Win32
-echo XML Security Compile 32 Status: %errorLevel% >> ..\build.log
+cd %ROOT_DIR%\%LIBCURL_DIR%
+call %ROOT_DIR%cpp-msbuild\dependencies\libcurl-new.bat
+echo LibCurl Compile 32 Status: %errorLevel% >> %ROOT_DIR%build.log
+@if errorlevel 1 goto end
+
+cd %ROOT_DIR%\%XSEC_DIR%
+call %ROOT_DIR%cpp-msbuild\dependencies\xmlsec-compile.bat  Win32
+echo XML Security Compile 32 Status: %errorLevel% >> %ROOT_DIR%build.log
 @if errorlevel 1 goto end
 
 cd ..
@@ -88,38 +89,38 @@ call "%VS_DIR%\vcvarsall.bat"  x64
 @echo on
 
 @if errorlevel 1 goto end
-cd %ZLIB_DIR%
+cd %ROOT_DIR%\%ZLIB_DIR%
 
-call ..\zlib-compile.bat x64
-echo Zlib Compile 64 Status: %errorLevel% >> ..\build.log
+call %ROOT_DIR%cpp-msbuild\dependencies\zlib-compile.bat x64
+echo Zlib Compile 64 Status: %errorLevel% >> %ROOT_DIR%build.log
 @if errorlevel 1 goto end
 
-cd ..\%LOGSHIB_DIR%
+cd %ROOT_DIR%\%LOGSHIB_DIR%
 REM Done in x86
 
-cd ..\%XERCES_DIR%
+cd %ROOT_DIR%\%XERCES_DIR%
 REM Done in x86
 
-cd ..\%OPENSSL_DIR%
-call ..\openssl-compile64.bat
-echo Open SSL (64) Compile Status: %errorLevel% >> ..\build.log
+cd %ROOT_DIR%\%OPENSSL_DIR%
+call %ROOT_DIR%cpp-msbuild\dependencies\openssl-compile64.bat
+echo Open SSL (64) Compile Status: %errorLevel% >> %ROOT_DIR%build.log
 @if errorlevel 1 goto end
 
-cd ..\%LIBCURL_DIR%
-call ..\libcurl-new-x64.bat
-echo Libcurl (64) Compile Status: %errorLevel% >> ..\build.log
+cd %ROOT_DIR%\%LIBCURL_DIR%
+call %ROOT_DIR%cpp-msbuild\dependencies\libcurl-new-x64.bat
+echo Libcurl (64) Compile Status: %errorLevel% >> %ROOT_DIR%build.log
 @if errorlevel 1 goto end
 
-cd ..\%XSEC_DIR%
+cd %ROOT_DIR%\%XSEC_DIR%
 REM back to 32 bit tools.  Who knows why.
 call "%VS_DIR%\vcvarsall.bat"  x86
 @echo on
-call ..\xmlsec-compile.bat  Win64
-echo XML Security Compile 64 Status: %errorLevel% >> ..\build.log
+call %ROOT_DIR%cpp-msbuild\dependencies\xmlsec-compile.bat  Win64
+echo XML Security Compile 64 Status: %errorLevel% >> %ROOT_DIR%build.log
 @if errorlevel 1 goto end
 
 
 cd ..
-Time /t >> build.log
+Time /t >> %ROOT_DIR%build.log
 
 :end
