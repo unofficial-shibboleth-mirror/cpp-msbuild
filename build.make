@@ -6,11 +6,10 @@ XMLROOT=$(MAKEDIR)\..\cpp-xmltooling
 SAMLROOT=$(MAKEDIR)\..\cpp-opensaml
 VCVERSION=VC15
 
-SERVER_MODULES_32=shibd;"Server Modules\isapi_shib";"Server Modules\iis7_shib";"Server Modules\mod_shib_13";"Server Modules\mod_shib_20";"Server Modules\mod_shib_22";"Server Modules\mod_shib_24"
+SERVER_MODULES_32=shibd;"Server Modules\isapi_shib";"Server Modules\iis7_shib";"Server Modules\mod_shib_22";"Server Modules\mod_shib_24"
 SERVER_MODULES_64=shibd;"Server Modules\isapi_shib";"Server Modules\iis7_shib";"Server Modules\mod_shib_22";"Server Modules\mod_shib_24"
-
-
-
+# fastCGI: "Server Modules\fastcgi\shibauthorizer";"Server Modules\fastcgi\shibresponder"
+# NSAPI: "Server Modules\nsapi_shib"
 
 #
 # The targets.  We want to build the two installers
