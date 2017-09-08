@@ -40,15 +40,15 @@
     <Log4ShibVersion>1.0.10</Log4ShibVersion>
     <Log4ShibFileVersion>1_0</Log4ShibFileVersion>
     <!-- Change the 4 components below if the Log4ShibFileVersion name changes -->
-    <Log4ShibComponent32>{CCC891C3-B838-4f04-875C-B6BEFB055457}</Log4ShibComponent32>
-    <Log4ShibComponent32d>{C7B761C3-AE25-44bd-AD2E-2A369B3ABA4E}</Log4ShibComponent32d>
-    <Log4ShibComponent64>{CC2190F3-5BE6-4f6f-805D-70A6C6ECC5D3}</Log4ShibComponent64>
-    <Log4ShibComponent64d>{BF6CD63F-3B27-481b-8922-996C9D18CFD4}</Log4ShibComponent64d>
+    <Log4ShibComponent32>{2FDE8ED0-774A-4F44-88D5-C7089350D895}</Log4ShibComponent32>
+    <Log4ShibComponent32d>{B8D2E797-F5A8-4E0D-B57F-9A7D4E699942}</Log4ShibComponent32d>
+    <Log4ShibComponent64>{DA7E5213-363E-4E13-B05D-90905BE9FB94}</Log4ShibComponent64>
+    <Log4ShibComponent64d>{792E6762-70FE-418A-9336-39DDF1A6BAE7}</Log4ShibComponent64d>
     <log4shib>log4shib-$(Log4ShibVersion)</log4shib>
 
     <OpenSAMLVersion>2.7.0</OpenSAMLVersion>
     <OpenSAMLFileVersion>2_7</OpenSAMLFileVersion>
-    <!-- Change the 4 components below if the OpenSAMLFileVersion name changes -->
+    <!-- Change the 4 components below iff the OpenSAMLFileVersion name changes -->
     <SamlComponent32>{45CC4BFF-E1C4-4d2a-BF05-6A4D69191F55}</SamlComponent32>
     <SamlComponent32d>{BE1F0EDC-9D41-48c5-BB99-9684BD1D278B}</SamlComponent32d>
     <SamlComponent64>{81B9CBBD-24E7-49be-A380-1CFE52041EA3}</SamlComponent64>
@@ -56,7 +56,7 @@
 
     <XmlToolingVersion>2.7.0</XmlToolingVersion>
     <XmlToolingFileVersion>2_7</XmlToolingFileVersion>
-    <!-- Change the 8 components below if the XmlToolingFileVersion name changes -->
+    <!-- Change the 8 components below iff the XmlToolingFileVersion name changes -->
     <XMLToolingComponent32>{A168C4C0-BCA9-4b69-BC5F-6EEBCA650739}</XMLToolingComponent32>
     <XMLToolingLiteComponent32>{CC2DFCEF-1A25-4379-BD6B-48D159AE7160}</XMLToolingLiteComponent32>
     <XMLToolingComponent32d>{8F4EE4F9-1284-4ca6-B315-8644AB33EF47}</XMLToolingComponent32d>
@@ -70,7 +70,7 @@
     <OpenSSLDirVersion>1.1.0f</OpenSSLDirVersion>
     <openssl>openssl-$(OpenSSLDirVersion)</openssl>
     <OpenSSLFileVersion>1_1</OpenSSLFileVersion>
-    <!-- Change the 8 components below if OpenSSLFileVersion changes -->
+    <!-- Change the 8 components below iff OpenSSLFileVersion changes -->
     <LibEay32Component>{1E2D9B00-84CD-4fc4-9CE4-BEBE390AE692}</LibEay32Component>
     <SSlEay32Component>{94DE34A7-B404-494a-AAF1-EF5D4A8A448F}</SSlEay32Component>
     <LibEay32Componentd>{21E6CA27-1B37-4c7d-AEB1-68A45702B56E}</LibEay32Componentd>
@@ -82,7 +82,7 @@
 
     <ShibbolethDllVersion>2.7.0</ShibbolethDllVersion>
     <ShibbolethDllFileVersion>2_7</ShibbolethDllFileVersion>
-    <!-- Change the 8 components below if ShibbolethDllFileVersion changes -->
+    <!-- Change the 8 components below iff ShibbolethDllFileVersion changes -->
     <ShibDll32Component>{9205F595-5AF4-4bb0-B26E-CEAB1D071CCE}</ShibDll32Component>
     <ShibDllLite32Component>{6093FBF9-D6C1-4dca-9FF3-693ED53FEDC1}</ShibDllLite32Component>
     <ShibDll32Componentd>{36229A4B-1739-4fc6-BDE6-7175E1A050C3}</ShibDll32Componentd>
@@ -95,7 +95,7 @@
     <XercesVersion>3.2.0</XercesVersion>
     <xerces>xerces-c-$(XercesVersion)</xerces>
     <XercesFileVersion>3_2</XercesFileVersion>
-    <!-- Change the 4 components below if XercesFileVersion changes -->
+    <!-- Change the 4 components below iff XercesFileVersion changes -->
     <Xerces32Component>{703F33E0-715F-4301-8554-2D3F9AE2CD4B}</Xerces32Component>
     <Xerces32Componentd>{568D5E45-9E2B-44ED-8ECE-E5E61B658733}</Xerces32Componentd>
     <Xerces64Component>{C43D408D-ADB6-4C19-986C-18B4E5DE1315}</Xerces64Component>
@@ -105,7 +105,7 @@
     <XmlSecVersion>1.8.0</XmlSecVersion>
     <xmlsec>xml-security-c-$(XmlSecVersion)</xmlsec>
     <XmlSecFileVersion>1_8</XmlSecFileVersion>
-    <!-- Change the 4 components below if XmlSecFileVersion changes -->
+    <!-- Change the 4 components below iff XmlSecFileVersion changes -->
     <XmlSec32Component>{74006C7B-92FC-4a53-864A-6753EA09EAD6}</XmlSec32Component>
     <XmlSec32Componentd>{48235DA7-0FA9-46b8-AE9F-0BE4B90BDF04}</XmlSec32Componentd>
     <XmlSec64Component>{1102DB82-BDFB-4921-8AE0-C2CE99CDB651}</XmlSec64Component>
@@ -114,10 +114,11 @@
     <ZlibVersion>1.2.11</ZlibVersion>
     <zlib>zlib-$(ZlibVersion)</zlib>
     <ZlibFileVersion>1_2</ZlibFileVersion>
-    <Zlib32Component>{99997C6B-71F5-4917-A547-872CE4C4F2DF}</Zlib32Component>
-    <Zlib32Componentd>{B169C29C-F6C2-48d6-A61C-980026BD5305}</Zlib32Componentd>
-    <Zlib64Component>{4B3F770E-3B98-4d17-9D09-D112207217E9}</Zlib64Component>
-    <Zlib64Componentd>{87F65AFA-FCB0-4b77-BDCF-920C5B36B645}</Zlib64Componentd>
+    <!-- Change the 4 components below iff ZlibFileVersion changes -->
+    <Zlib32Component>{337F7C97-DFA8-42C5-A08A-C430046F6D3F}</Zlib32Component>
+    <Zlib32Componentd>{52B7BFCE-B8D1-43DE-8F44-3E24E42E8753}</Zlib32Componentd>
+    <Zlib64Component>{4C06D1CF-00C8-473D-9478-0FC26493A5C3}</Zlib64Component>
+    <Zlib64Componentd>{6F7CD7DF-AB8D-4E11-8978-D954CEBE2EA1}</Zlib64Componentd>
 
     <FastCGIVersion>2.4.0</FastCGIVersion>
     <fcgi>fcgi-$(FastCGIVersion)-VC10</fcgi>
