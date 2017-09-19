@@ -9,7 +9,7 @@
 
     <!-- These control the version of the installer -->
     <ShibbolethVersion>2.7.0</ShibbolethVersion>
-    <ShibbolethPatchVersion>256</ShibbolethPatchVersion>
+    <ShibbolethPatchVersion>255</ShibbolethPatchVersion>
 
     <!-- These control the versions in the DLLs and Executables.
          Note that the PatchVersion is left to the individual resource file.
@@ -102,14 +102,14 @@
     <Xerces64Componentd>{3D0F7C56-196D-4BAA-BEF7-56A747C110DA}</Xerces64Componentd>
 
 
-    <XmlSecVersion>1.8.0</XmlSecVersion>
+    <XmlSecVersion>2.0.0</XmlSecVersion>
     <xmlsec>xml-security-c-$(XmlSecVersion)</xmlsec>
-    <XmlSecFileVersion>1_8</XmlSecFileVersion>
+    <XmlSecFileVersion>2</XmlSecFileVersion>
     <!-- Change the 4 components below iff XmlSecFileVersion changes -->
-    <XmlSec32Component>{74006C7B-92FC-4a53-864A-6753EA09EAD6}</XmlSec32Component>
-    <XmlSec32Componentd>{48235DA7-0FA9-46b8-AE9F-0BE4B90BDF04}</XmlSec32Componentd>
-    <XmlSec64Component>{1102DB82-BDFB-4921-8AE0-C2CE99CDB651}</XmlSec64Component>
-    <XmlSec64Componentd>{E5AFD662-5581-492c-8158-49AF7181EBFD}</XmlSec64Componentd>
+    <XmlSec32Component>{2B72E5CE-8E02-4AE6-AD0B-6AFDC4CFB49E}</XmlSec32Component>
+    <XmlSec32Componentd>{05507D35-7B52-414B-8162-869C608A5AA9}</XmlSec32Componentd>
+    <XmlSec64Component>{47FED010-3C5F-4940-A355-BDF8B621EBAD}</XmlSec64Component>
+    <XmlSec64Componentd>{4C52E1DA-F04E-4479-9D8E-B4F97AF63805}</XmlSec64Componentd>
 
     <ZlibVersion>1.2.11</ZlibVersion>
     <zlib>zlib-$(ZlibVersion)</zlib>
