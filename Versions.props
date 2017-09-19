@@ -104,7 +104,7 @@
 
     <XmlSecVersion>2.0.0</XmlSecVersion>
     <xmlsec>xml-security-c-$(XmlSecVersion)</xmlsec>
-    <XmlSecFileVersion>2</XmlSecFileVersion>
+    <XmlSecFileVersion>2_0</XmlSecFileVersion>
     <!-- Change the 4 components below iff XmlSecFileVersion changes -->
     <XmlSec32Component>{2B72E5CE-8E02-4AE6-AD0B-6AFDC4CFB49E}</XmlSec32Component>
     <XmlSec32Componentd>{05507D35-7B52-414B-8162-869C608A5AA9}</XmlSec32Componentd>
