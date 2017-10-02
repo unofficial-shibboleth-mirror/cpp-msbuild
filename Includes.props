@@ -5,7 +5,17 @@
 
     <SSLLib>libcrypto.lib;libssl.lib</SSLLib>
     <SSLLibD>libcrypto.lib;libssl.lib</SSLLibD>
-    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+
+    <ShibRunPath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(BuildRoot)\cpp-xmltooling\build\$(MsVcVersion)\$(Platform)\$(Configuration);$(BuildRoot)\cpp-opensaml\build\$(MsVcVersion)\$(Platform)\$(Configuration);$(BuildRoot)$(openssl)\x64Debug\bin;$(BuildRoot)$(xerces)\install64\$(MsVCVersion)\bin;$(BuildRoot)$(log4shib)\ms$(MsVCVersion)\$(platform)\$(Configuration);$(BuildRoot)\$(xmlsec)\Build\$(Platform)\$(MsVCVersion)\$(Configuration) Minimal;$(BuildRoot)$(zlib)\$(Platform)\$(Configuration);$(BuildRoot)$(curl)/builds/libcurl-$(MsVCVersion)-$(Platform)-$(Configuration)-dll-ssl-dll-zlib-dll-ipv6-sspi/bin</ShibRunPath>
+
+    <ShibRunPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(BuildRoot)\cpp-xmltooling\build\$(MsVcVersion)\$(Configuration);$(BuildRoot)\cpp-opensaml\build\$(MsVcVersion)\$(Configuration);$(BuildRoot)$(openssl)\x86Debug\bin;$(BuildRoot)$(xerces)\install32\$(MsVCVersion)\bin;$(BuildRoot)$(log4shib)\ms$(MsVCVersion)\$(Configuration);$(BuildRoot)\$(xmlsec)\Build\$(Platform)\$(MsVCVersion)\$(Configuration) Minimal;$(BuildRoot)$(zlib)\$(Configuration);$(BuildRoot)$(curl)/builds/libcurl-$(MsVCVersion)-x86-$(Configuration)-dll-ssl-dll-zlib-dll-ipv6-sspi/bin</ShibRunPath>
+
+    <ShibRunPath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(BuildRoot)\cpp-xmltooling\build\$(MsVcVersion)\$(Platform)\$(Configuration);$(BuildRoot)\cpp-opensaml\build\$(MsVcVersion)\$(Platform)\$(Configuration);$(BuildRoot)$(openssl)\x64Debug\bin;$(BuildRoot)$(xerces)\install64\$(MsVCVersion)\bin;$(BuildRoot)$(log4shib)\ms$(MsVCVersion)\$(platform)\$(Configuration);$(BuildRoot)\$(xmlsec)\Build\$(Platform)\$(MsVCVersion)\$(Configuration) Minimal;$(BuildRoot)$(zlib)\$(Platform)\$(Configuration);$(BuildRoot)$(curl)/builds/libcurl-$(MsVCVersion)-$(Platform)-$(Configuration)-dll-ssl-dll-zlib-dll-ipv6-sspi/bin</ShibRunPath>
+
+    <ShibRunPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(BuildRoot)\cpp-xmltooling\build\$(MsVcVersion)\$(Configuration);$(BuildRoot)\cpp-opensaml\build\$(MsVcVersion)\$(Configuration);$(BuildRoot)$(openssl)\x86Debug\bin;$(BuildRoot)$(xerces)\install32\$(MsVCVersion)\bin;$(BuildRoot)$(log4shib)\ms$(MsVCVersion)\$(Configuration);$(BuildRoot)\$(xmlsec)\Build\$(Platform)\$(MsVCVersion)\$(Configuration) Minimal;$(BuildRoot)$(zlib)\$(Configuration);$(BuildRoot)$(curl)/builds/libcurl-$(MsVCVersion)-x86-$(Configuration)-dll-ssl-dll-zlib-dll-ipv6-sspi/bin</ShibRunPath>
+
+
+
     <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(BuildRoot)\$(openssl)\X86Debug\include;$(BuildRoot)\$(curl)\include;$(BuildRoot)\$(log4shib)\include;$(BuildRoot)\$(xerces)\Install32\$(MsVCVersion)\include;$(BuildRoot)\$(xmlsec);$(BuildRoot)\nsapi\include;$(BuildRoot)\$(fcgi)\include;$(BuildRoot)\cxxtest;$(BuildRoot)\$(zlib);$(BuildRoot)\$(boost);$(IncludePath)</IncludePath>
 
     <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(BuildRoot)\$(openssl)\x86\include;$(BuildRoot)\$(openssl)\include;$(BuildRoot)\$(curl)\include;$(BuildRoot)\$(log4shib)\include;$(BuildRoot)\$(xerces)\Install32\$(MsVCVersion)\include;$(BuildRoot)\$(xmlsec);$(BuildRoot)\nsapi\include;$(BuildRoot)\$(fcgi)\include;$(BuildRoot)\cxxtest;$(BuildRoot)\$(zlib);$(BuildRoot)\$(boost);$(IncludePath)</IncludePath>
