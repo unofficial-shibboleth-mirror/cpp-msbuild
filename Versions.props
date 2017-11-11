@@ -65,20 +65,20 @@
     <XMLToolingComponent64d>{0ECB7022-919F-4585-B15B-9C73BE403CF8}</XMLToolingComponent64d>
     <XMLToolingLiteComponent64d>{A50CA64F-4B78-4884-93FE-BE9450AFD8DE}</XMLToolingLiteComponent64d>
 
-    <OpenSSLVersion>1.0.2.10</OpenSSLVersion>
-    <OpenSSLDirVersion>1.0.2j</OpenSSLDirVersion>
+    <OpenSSLVersion>1.0.2.13</OpenSSLVersion>
+    <OpenSSLDirVersion>1.0.2m</OpenSSLDirVersion>
     <openssl>openssl-$(OpenSSLDirVersion)</openssl>
-    <OpenSSLFileVersion>1_0_2_4</OpenSSLFileVersion>
+    <OpenSSLFileVersion>1_0_2_13</OpenSSLFileVersion>
     <OpenSSL1_1Libs>0</OpenSSL1_1Libs>
     <!-- Change the 8 components below if OpenSSLFileVersion changes -->
-    <LibEay32Component>{44CCE5C8-6D2D-4DFB-8F34-155C49878440}</LibEay32Component>
-    <SSlEay32Component>{EE848D64-DD0E-4A46-BA18-DB95C24E6E0C}</SSlEay32Component>
-    <LibEay32Componentd>{639C0A2D-8D29-4CA1-B4F2-4364EBF6242A}</LibEay32Componentd>
-    <SSlEay32Componentd>{ACACC9D6-5D4E-47F4-BEDB-531A226130CC}</SSlEay32Componentd>
-    <LibEay64Component>{F59B2D2F-8706-4C11-8E0C-8A167BB88AFF}</LibEay64Component>
-    <SSlEay64Component>{CE15CF1F-9005-438B-9B22-E57B0F2DBC2D}</SSlEay64Component>
-    <LibEay64Componentd>{D3451443-6B5E-4EF8-8EDE-AC22020405DA}</LibEay64Componentd>
-    <SSlEay64Componentd>{8FD2A1F6-B4C3-4864-A130-D4E71A3FA399}</SSlEay64Componentd>
+    <LibEay32Component>{4F0CE4EB-9C2B-49FB-9B8B-3EFEF8BA3F82}</LibEay32Component>
+    <SSlEay32Component>{B1F4B92F-1E12-4156-82C9-41E3797575E6}</SSlEay32Component>
+    <LibEay32Componentd>{C6EEC663-2D04-4881-A212-B676CB6DEBF0}</LibEay32Componentd>
+    <SSlEay32Componentd>{C9372861-E087-4527-A9D8-6BA8A1F0CC01}</SSlEay32Componentd>
+    <LibEay64Component>{D680073F-D40A-4F2C-8718-09328E4986DB}</LibEay64Component>
+    <SSlEay64Component>{380A5A62-AA62-4A06-806E-4087BB2F4E3A}</SSlEay64Component>
+    <LibEay64Componentd>{9F1F56BE-ECB5-4781-AA61-7FC6D32088DA}</LibEay64Componentd>
+    <SSlEay64Componentd>{2E89918B-D5B7-43EC-AE3F-8076C76229A9}</SSlEay64Componentd>
 
     <ShibbolethDllVersion>1.6.0</ShibbolethDllVersion>
     <ShibbolethDllFileVersion>1_6</ShibbolethDllFileVersion>
