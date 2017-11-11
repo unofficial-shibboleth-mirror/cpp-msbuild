@@ -111,13 +111,13 @@
     <XmlSec64Component>{DF5FEFC9-9B95-42B1-A6BD-053E0D0BD8E8}</XmlSec64Component>
     <XmlSec64Componentd>{D97E1B5C-B020-4621-94CE-F10FCFF765C5}</XmlSec64Componentd>
 
-    <ZlibVersion>1.2.8</ZlibVersion>
+    <ZlibVersion>1.2.11</ZlibVersion>
     <zlib>zlib-$(ZlibVersion)</zlib>
-    <ZlibFileVersion>1_2</ZlibFileVersion>
-    <Zlib32Component>{337F7C97-DFA8-42C5-A08A-C430046F6D3F}</Zlib32Component>
-    <Zlib32Componentd>{52B7BFCE-B8D1-43DE-8F44-3E24E42E8753}</Zlib32Componentd>
-    <Zlib64Component>{4C06D1CF-00C8-473D-9478-0FC26493A5C3}</Zlib64Component>
-    <Zlib64Componentd>{6F7CD7DF-AB8D-4E11-8978-D954CEBE2EA1}</Zlib64Componentd>
+    <ZlibFileVersion>1_2_11</ZlibFileVersion>
+    <Zlib32Component>{D594352E-4BB8-49D3-B4F0-B4343F16D8D9}</Zlib32Component>
+    <Zlib32Componentd>{242B3DCA-86BA-4109-A156-7C1AD3A4AC04}</Zlib32Componentd>
+    <Zlib64Component>{D3174E03-4AED-4C32-BC6F-10ADB189B46B}</Zlib64Component>
+    <Zlib64Componentd>{F06717CA-04C3-48B0-BB5B-E7F832D0B7E7}</Zlib64Componentd>
 
     <FastCGIVersion>2.4.0</FastCGIVersion>
     <fcgi>fcgi-$(FastCGIVersion)-VC10</fcgi>
