@@ -6,16 +6,16 @@
     <CxxTestRoot>$(BuildRoot)\cxxtest</CxxTestRoot>
 
     <!-- These control the version of the installer -->
-    <ShibbolethVersion>2.6.0</ShibbolethVersion>
-    <ShibbolethPatchVersion>1</ShibbolethPatchVersion>
+    <ShibbolethVersion>2.6.1</ShibbolethVersion>
+    <ShibbolethPatchVersion>0</ShibbolethPatchVersion>
 
     <!-- These control the versions in the DLLs and Executables.
          Note that the PatchVersion is left to the individual resource file.
          If you change this you probably need to change ../cpp-sp/util/resourceCommon.rci
       -->
-    <SPFileVersion>2,6,0</SPFileVersion>       <!-- FILEVERSION in the SP projects -->
-    <SPFileVersionSP>1,6,0</SPFileVersionSP>   <!-- Special for ShibSp.dll -->
-    <SPProductVersion>2,6,0</SPProductVersion> <!-- PRODUCTVERSION  in the SP projects -->
+    <SPFileVersion>2,6,1</SPFileVersion>       <!-- FILEVERSION in the SP projects -->
+    <SPFileVersionSP>1,6,1</SPFileVersionSP>   <!-- Special for ShibSp.dll -->
+    <SPProductVersion>2,6,1</SPProductVersion> <!-- PRODUCTVERSION  in the SP projects -->
 
     <!-- XML Tooling only has one RC file.  Edit that by hand -->
     <!-- OpemSAML has two RC files (saml.rc and samlsign.rc).  Edit them by hand -->
@@ -31,7 +31,7 @@
     <ShibbolethUpgradeCode>{28A4EB62-E860-49CA-BE43-44ADEB91DBF6}</ShibbolethUpgradeCode>
 
 <!--    <NewCurlBuild>1</NewCurlBuild>  -->
-    <CurlVersion>7.51.0</CurlVersion>
+    <CurlVersion>7.52.1</CurlVersion>
     <curl>curl-$(CurlVersion)</curl>
 
     <boost>boost_1_61_0</boost>
