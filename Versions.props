@@ -6,8 +6,8 @@
     <CxxTestRoot>$(BuildRoot)\cxxtest</CxxTestRoot>
 
     <!-- These control the version of the installer -->
-    <ShibbolethVersion>2.6.1</ShibbolethVersion>
-    <ShibbolethPatchVersion>0</ShibbolethPatchVersion>
+    <ShibbolethVersion>2.6.0</ShibbolethVersion>
+    <ShibbolethPatchVersion>1</ShibbolethPatchVersion>
 
     <!-- These control the versions in the DLLs and Executables.
          Note that the PatchVersion is left to the individual resource file.
@@ -80,7 +80,7 @@
     <LibEay64Componentd>{9F1F56BE-ECB5-4781-AA61-7FC6D32088DA}</LibEay64Componentd>
     <SSlEay64Componentd>{2E89918B-D5B7-43EC-AE3F-8076C76229A9}</SSlEay64Componentd>
 
-    <ShibbolethDllVersion>1.6.0</ShibbolethDllVersion>
+    <ShibbolethDllVersion>1.6.1</ShibbolethDllVersion>
     <ShibbolethDllFileVersion>1_6</ShibbolethDllFileVersion>
     <!-- Change the 8 components below if ShibbolethDllFileVersion changes -->
     <ShibDll32Component>{0752E11B-2B91-419F-A281-592B0181D4E0}</ShibDll32Component>
@@ -92,14 +92,14 @@
     <ShibDll64Componentd>{7652F12D-7107-4D3E-AA1A-AF654BD83970}</ShibDll64Componentd>
     <ShibDllLite64Componentd>{7F44CD6F-64F9-40AE-B06C-76A25C95F1CC}</ShibDllLite64Componentd>
 
-    <XercesVersion>3.2.0</XercesVersion>
+    <XercesVersion>3.1.4</XercesVersion>
     <xerces>xerces-c-$(XercesVersion)</xerces>
-    <XercesFileVersion>3_2</XercesFileVersion>
+    <XercesFileVersion>3_1</XercesFileVersion>
     <!-- Change the 4 components below if XercesFileVersion changes -->
-    <Xerces32Component>{5CBC069E-2B95-45ED-9622-FC355CBDF622}</Xerces32Component>
-    <Xerces32Componentd>{74A8681A-D917-4FBA-A823-CD63FC1015D5}</Xerces32Componentd>
-    <Xerces64Component>{AB0C9967-EF54-42ED-BD27-7BC027339F59}</Xerces64Component>
-    <Xerces64Componentd>{5ADDC198-B03F-41EC-86E6-512D5EC50D3F}</Xerces64Componentd>
+    <Xerces32Component>{64C16FA9-685C-4612-B9C2-0B56C84A69E1}</Xerces32Component>
+    <Xerces32Componentd>{3F92209F-35C7-4D7C-BAC3-B0A96DF0CBDF}</Xerces32Componentd>
+    <Xerces64Component>{5C2BA2C6-36EC-4EB3-A343-8C1C9D499B9C}</Xerces64Component>
+    <Xerces64Componentd>{236B6A7F-73C0-4EBF-9C06-90C1BE160ACE}</Xerces64Componentd>
 
 
     <XmlSecVersion>1.7.3</XmlSecVersion>
