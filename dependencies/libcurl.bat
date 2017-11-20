@@ -1,2 +1,2 @@
-rd/s/q builds
+@if EXIST builds rd/s/q builds
 
