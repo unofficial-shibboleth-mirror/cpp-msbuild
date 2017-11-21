@@ -9,16 +9,16 @@
     <CxxTestRoot>$(BuildRoot)\cxxtest</CxxTestRoot>
 
     <!-- These control the version of the installer -->
-    <ShibbolethVersion>2.7.0</ShibbolethVersion>
+    <ShibbolethVersion>2.9.9</ShibbolethVersion>
     <ShibbolethPatchVersion>255</ShibbolethPatchVersion>
 
     <!-- These control the versions in the DLLs and Executables.
          Note that the PatchVersion is left to the individual resource file.
          If you change this you probably need to change ../cpp-sp/util/resourceCommon.rci
       -->
-    <SPFileVersion>2,7,0</SPFileVersion>       <!-- FILEVERSION in the SP projects -->
-    <SPFileVersionSP>2,7,0</SPFileVersionSP>   <!-- Special for ShibSp.dll -->
-    <SPProductVersion>2,7,0</SPProductVersion> <!-- PRODUCTVERSION  in the SP projects -->
+    <SPFileVersion>3,0,0</SPFileVersion>       <!-- FILEVERSION in the SP projects -->
+    <SPFileVersionSP>3,0,0</SPFileVersionSP>   <!-- Special for ShibSp.dll -->
+    <SPProductVersion>3,0,0</SPProductVersion> <!-- PRODUCTVERSION  in the SP projects -->
 
     <!-- XML Tooling only has one RC file.  Edit that by hand -->
     <!-- OpemSAML has two RC files (saml.rc and samlsign.rc).  Edit them by hand -->
@@ -81,17 +81,17 @@
     <LibEay64Componentd>{00A10097-8FF3-44f8-AFEC-2399A0958CD9}</LibEay64Componentd>
     <SSlEay64Componentd>{2512F0D0-CD50-4071-BECD-530EA83A4CCA}</SSlEay64Componentd>
 
-    <ShibbolethDllVersion>2.7.0</ShibbolethDllVersion>
-    <ShibbolethDllFileVersion>2_7</ShibbolethDllFileVersion>
+    <ShibbolethDllVersion>3.0.0</ShibbolethDllVersion>
+    <ShibbolethDllFileVersion>8_0</ShibbolethDllFileVersion>
     <!-- Change the 8 components below iff ShibbolethDllFileVersion changes -->
-    <ShibDll32Component>{9205F595-5AF4-4bb0-B26E-CEAB1D071CCE}</ShibDll32Component>
-    <ShibDllLite32Component>{6093FBF9-D6C1-4dca-9FF3-693ED53FEDC1}</ShibDllLite32Component>
-    <ShibDll32Componentd>{36229A4B-1739-4fc6-BDE6-7175E1A050C3}</ShibDll32Componentd>
-    <ShibDllLite32Componentd>{8E5C90A7-F46E-47ec-96F1-B290379A8357}</ShibDllLite32Componentd>
-    <ShibDll64Component>{F4FC403A-7423-4a98-B8DB-DB27601E895B}</ShibDll64Component>
-    <ShibDllLite64Component>{39A12CB6-141B-4c93-8C27-C381F1964B17}</ShibDllLite64Component>
-    <ShibDll64Componentd>{F0EE83DA-0054-4a47-9A16-D67C299C1113}</ShibDll64Componentd>
-    <ShibDllLite64Componentd>{E2028E27-CBA6-4538-A602-05AD2ABA2177}</ShibDllLite64Componentd>
+    <ShibDll32Component>{94B5CADC-299E-41A3-9653-DFD948800E0F}</ShibDll32Component>
+    <ShibDllLite32Component>{1C544100-7BD3-4531-A35B-0CD3020B0F3F}</ShibDllLite32Component>
+    <ShibDll32Componentd>{36B94560-F162-4036-B043-973B9905D8B0}</ShibDll32Componentd>
+    <ShibDllLite32Componentd>{3C63638D-747F-4CA1-BA97-8550A637F473}</ShibDllLite32Componentd>
+    <ShibDll64Component>{19E720DA-9B02-4082-BE3D-87E6DC296044}</ShibDll64Component>
+    <ShibDllLite64Component>{D4674F0B-3B58-47AD-8155-45CCBD44CFAA}</ShibDllLite64Component>
+    <ShibDll64Componentd>{53AE4EDF-5E73-4728-81B6-532E383FE2E0}</ShibDll64Componentd>
+    <ShibDllLite64Componentd>{DE702022-B4A3-47B0-8DEF-664897127808}</ShibDllLite64Componentd>
 
     <XercesVersion>3.2.0</XercesVersion>
     <xerces>xerces-c-$(XercesVersion)</xerces>
