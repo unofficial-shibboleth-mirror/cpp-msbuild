@@ -47,13 +47,13 @@
     <Log4ShibComponent64d>{792E6762-70FE-418A-9336-39DDF1A6BAE7}</Log4ShibComponent64d>
     <log4shib>cpp-log4shib</log4shib>
 
-    <OpenSAMLVersion>2.7.0</OpenSAMLVersion>
-    <OpenSAMLFileVersion>2_7</OpenSAMLFileVersion>
+    <OpenSAMLVersion>3.0.0</OpenSAMLVersion>
+    <OpenSAMLFileVersion>10_0</OpenSAMLFileVersion>
     <!-- Change the 4 components below iff the OpenSAMLFileVersion name changes -->
-    <SamlComponent32>{45CC4BFF-E1C4-4d2a-BF05-6A4D69191F55}</SamlComponent32>
-    <SamlComponent32d>{BE1F0EDC-9D41-48c5-BB99-9684BD1D278B}</SamlComponent32d>
-    <SamlComponent64>{81B9CBBD-24E7-49be-A380-1CFE52041EA3}</SamlComponent64>
-    <SamlComponent64d>{C9097740-D139-45d7-A7CA-2DEC32EBB638}</SamlComponent64d>
+    <SamlComponent32>{3444DBA9-C1E9-4F64-83AB-8C808E783F38}</SamlComponent32>
+    <SamlComponent32d>{A9D338B1-CE63-43C4-A4DA-27BD62836F59}</SamlComponent32d>
+    <SamlComponent64>{E935A801-7D01-4996-A69D-46AF25D8C817}</SamlComponent64>
+    <SamlComponent64d>{C453CD74-4CAE-4506-9695-F2BF0649CD9D}</SamlComponent64d>
 
     <XmlToolingVersion>3.0.0</XmlToolingVersion>
     <XmlToolingFileVersion>8_0</XmlToolingFileVersion>
