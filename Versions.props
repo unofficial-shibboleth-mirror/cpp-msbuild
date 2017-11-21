@@ -45,7 +45,7 @@
     <Log4ShibComponent32d>{B8D2E797-F5A8-4E0D-B57F-9A7D4E699942}</Log4ShibComponent32d>
     <Log4ShibComponent64>{DA7E5213-363E-4E13-B05D-90905BE9FB94}</Log4ShibComponent64>
     <Log4ShibComponent64d>{792E6762-70FE-418A-9336-39DDF1A6BAE7}</Log4ShibComponent64d>
-    <log4shib>log4shib-$(Log4ShibVersion)</log4shib>
+    <log4shib>cpp-log4shib</log4shib>
 
     <OpenSAMLVersion>2.7.0</OpenSAMLVersion>
     <OpenSAMLFileVersion>2_7</OpenSAMLFileVersion>
@@ -104,7 +104,7 @@
 
 
     <XmlSecVersion>2.0.0</XmlSecVersion>
-    <xmlsec>xml-security-c-$(XmlSecVersion)</xmlsec>
+    <xmlsec>xml-security-cpp</xmlsec>
     <XmlSecFileVersion>2_0</XmlSecFileVersion>
     <!-- Change the 4 components below iff XmlSecFileVersion changes -->
     <XmlSec32Component>{2B72E5CE-8E02-4AE6-AD0B-6AFDC4CFB49E}</XmlSec32Component>
@@ -116,10 +116,10 @@
     <zlib>zlib-$(ZlibVersion)</zlib>
     <ZlibFileVersion>1_2</ZlibFileVersion>
     <!-- Change the 4 components below iff ZlibFileVersion changes -->
-    <Zlib32Component>{337F7C97-DFA8-42C5-A08A-C430046F6D3F}</Zlib32Component>
-    <Zlib32Componentd>{52B7BFCE-B8D1-43DE-8F44-3E24E42E8753}</Zlib32Componentd>
-    <Zlib64Component>{4C06D1CF-00C8-473D-9478-0FC26493A5C3}</Zlib64Component>
-    <Zlib64Componentd>{6F7CD7DF-AB8D-4E11-8978-D954CEBE2EA1}</Zlib64Componentd>
+    <Zlib32Component>{13B4CBAF-D317-4982-BBF8-E32D57FACB14}</Zlib32Component>
+    <Zlib32Componentd>{ADEF973A-F7B8-40EF-80E8-C78B502AADB6}</Zlib32Componentd>
+    <Zlib64Component>{BEB38A55-FC0E-46E4-8B91-C650B9B6CA24}</Zlib64Component>
+    <Zlib64Componentd>{2DA91B41-CF31-473A-AF7B-BC13999654E6}</Zlib64Componentd>
 
     <FastCGIVersion>2.4.0</FastCGIVersion>
     <fcgi>fcgi-$(FastCGIVersion)-VC10</fcgi>
