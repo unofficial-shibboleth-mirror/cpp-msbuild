@@ -48,7 +48,7 @@
     <log4shib>cpp-log4shib</log4shib>
 
     <OpenSAMLVersion>3.0.0</OpenSAMLVersion>
-    <OpenSAMLFileVersion>10_0</OpenSAMLFileVersion>
+    <OpenSAMLFileVersion>3_0</OpenSAMLFileVersion>
     <!-- Change the 4 components below iff the OpenSAMLFileVersion name changes -->
     <SamlComponent32>{3444DBA9-C1E9-4F64-83AB-8C808E783F38}</SamlComponent32>
     <SamlComponent32d>{A9D338B1-CE63-43C4-A4DA-27BD62836F59}</SamlComponent32d>
@@ -56,7 +56,7 @@
     <SamlComponent64d>{C453CD74-4CAE-4506-9695-F2BF0649CD9D}</SamlComponent64d>
 
     <XmlToolingVersion>3.0.0</XmlToolingVersion>
-    <XmlToolingFileVersion>8_0</XmlToolingFileVersion>
+    <XmlToolingFileVersion>3_0</XmlToolingFileVersion>
     <!-- Change the 8 components below iff the XmlToolingFileVersion name changes -->
     <XMLToolingComponent32>{07395646-06CE-436E-B57A-1420924257BC}</XMLToolingComponent32>
     <XMLToolingLiteComponent32>{EA3788D6-B903-4E33-A276-05C421B1852A}</XMLToolingLiteComponent32>
@@ -82,7 +82,7 @@
     <SSlEay64Componentd>{2512F0D0-CD50-4071-BECD-530EA83A4CCA}</SSlEay64Componentd>
 
     <ShibbolethDllVersion>3.0.0</ShibbolethDllVersion>
-    <ShibbolethDllFileVersion>8_0</ShibbolethDllFileVersion>
+    <ShibbolethDllFileVersion>3_0</ShibbolethDllFileVersion>
     <!-- Change the 8 components below iff ShibbolethDllFileVersion changes -->
     <ShibDll32Component>{94B5CADC-299E-41A3-9653-DFD948800E0F}</ShibDll32Component>
     <ShibDllLite32Component>{1C544100-7BD3-4531-A35B-0CD3020B0F3F}</ShibDllLite32Component>
