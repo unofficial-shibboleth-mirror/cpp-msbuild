@@ -9,10 +9,12 @@
 !message Building x86
 OpenSSLName=WIN32
 ZlibTargetDir=.
+MsBuildArch=Win32
 !elseif "$(VSCMD_ARG_TGT_ARCH)" == "x64"
 !message Building x64
 OpenSSLName=WIN64A
 ZlibTargetDir=x64
+MsBuildArch=x64
 !else
 !error "Target architecture must be x86 or x64"
 !endif
@@ -25,6 +27,10 @@ ZlibTargetDir=x64
 !error this code only known to work with VC15
 !endif
 
+!if "$(ZLIB_DIR)" == ""
+!error ZLIB_DIR not defined
+!endif
+
 !if "$(ZLIB_SHAREDLIB)" == ""
 !error ZLIB_SHAREDLIB not defined
 !endif
@@ -32,6 +38,11 @@ ZlibTargetDir=x64
 !if "$(ZLIB_IMPLIB)" == ""
 !error ZLIB_IMPLIB not defined
 !endif
+
+!if "$(LOGSHIB_DIR)" == ""
+!error LOGSHIB_DIR not defined
+!endif
+
 
 
 ##
@@ -41,14 +52,18 @@ help:
 	@cls
 	@echo "TARGETS: clean all
 	@echo "         openssl targets:  openssl, openssl-(clean|debug|release)[-configure]
+	@echo "         zlib targets: zlib zlib-(clean|debug|release)
+	@echo "	        log4shib targets: log4shib log4shib-(clean|debug|release)
 	@echo "
 	@echo "REQUIRED VARIABLES
 	@echo "			ROOT_DIR
 	@echo "			OPENSSL_DIR
+	@echo "
+	@echo " See also https://wiki.shibboleth.net/confluence/display/SP3/WindowsBuild
 
-clean: openssl-clean zlib-clean
+clean: openssl-clean zlib-clean log4shib-clean
 
-all: openssl zlib
+all: openssl zlib log4shib
 
 test-env:
 
@@ -106,8 +121,6 @@ $(ROOT_DIR)\$(ZLIB_DIR)\zlib2.sed:
 
 $(ROOT_DIR)\$(ZLIB_DIR)\zlib3.sed	$(ROOT_DIR)\$(ZLIB_DIR)\zlib4.sed: $$(@F)
 	copy $(@F) $(ROOT_DIR)\$(ZLIB_DIR)
-
-test: $(ROOT_DIR)\$(ZLIB_DIR)\zlib3.sed
 
 $(ROOT_DIR)\$(ZLIB_DIR)\zlib1d.sed:
 	echo s/SHAREDLIB =.*$$/SHAREDLIB=$(ZLIB_SHAREDLIB)D.dll/ > $@
@@ -181,6 +194,21 @@ openssl-build: $(ROOT_DIR)\$(OPENSSL_DIR)\makefile
 	cd $(ROOT_DIR)\$(OPENSSL_DIR)
 	nmake install_sw
 
+#
+# log4shib
+#
+log4shib: log4shib-debug log4shib-release
 
+log4shib-clean: log4shib-test
+	msbuild /m  $(ROOT_DIR)\$(LOGSHIB_DIR)\msvc15\msvc15.sln  /p:Configuration=Debug   /t:clean /p:Platform=Win32
+	msbuild /m  $(ROOT_DIR)\$(LOGSHIB_DIR)\msvc15\msvc15.sln  /p:Configuration=Debug   /t:clean /p:Platform=x64
+	msbuild /m  $(ROOT_DIR)\$(LOGSHIB_DIR)\msvc15\msvc15.sln  /p:Configuration=Release /t:clean /p:Platform=Win32
+	msbuild /m  $(ROOT_DIR)\$(LOGSHIB_DIR)\msvc15\msvc15.sln  /p:Configuration=Release /t:clean /p:Platform=x64
 
+log4shib-test: test-env $(ROOT_DIR)\$(LOGSHIB_DIR)\msvc15\msvc15.sln
 
+log4shib-debug: log4shib-test
+	msbuild /m  $(ROOT_DIR)\$(LOGSHIB_DIR)\msvc15\msvc15.sln  /p:Configuration=Debug /t:build /p:Platform=$(MsBuildArch)
+
+log4shib-release: log4shib-test
+	msbuild /m  $(ROOT_DIR)\$(LOGSHIB_DIR)\msvc15\msvc15.sln  /p:Configuration=Release /t:build /p:Platform=$(MsBuildArch)
