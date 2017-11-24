@@ -10,11 +10,17 @@
 OpenSSLName=WIN32
 ZlibTargetDir=.
 MsBuildArch=Win32
+CMakeArch=
+XercesBuildDir=Buildx86
+XercesInstallDir=Install86\VC15
 !elseif "$(VSCMD_ARG_TGT_ARCH)" == "x64"
 !message Building x64
 OpenSSLName=WIN64A
 ZlibTargetDir=x64
+CMakeArch=Win64
 MsBuildArch=x64
+XercesBuildDir=Buildx64
+XercesInstallDir=Install64\VC15
 !else
 !error "Target architecture must be x86 or x64"
 !endif
@@ -43,7 +49,9 @@ MsBuildArch=x64
 !error LOGSHIB_DIR not defined
 !endif
 
-
+!if "$(XERCES_DIR)" == ""
+!error XERCES_DIR not defined
+!endif
 
 ##
 ## TARGETS
@@ -61,9 +69,9 @@ help:
 	@echo "
 	@echo " See also https://wiki.shibboleth.net/confluence/display/SP3/WindowsBuild
 
-clean: openssl-clean zlib-clean log4shib-clean
+clean: openssl-clean zlib-clean log4shib-clean xerces-clean
 
-all: openssl zlib log4shib
+all: openssl zlib log4shib xerces
 
 test-env:
 
@@ -212,3 +220,41 @@ log4shib-debug: log4shib-test
 
 log4shib-release: log4shib-test
 	msbuild /m  $(ROOT_DIR)\$(LOGSHIB_DIR)\msvc15\msvc15.sln  /p:Configuration=Release /t:build /p:Platform=$(MsBuildArch)
+
+#
+# log4shib
+#
+xerces: xerces-debug xerces-release 
+
+xerces-debug: xerces-test $(ROOT_DIR)\$(XERCES_DIR)\$(XercesInstallDir)\bin\xerces-c_3_2D.dll
+
+xerces-release: xerces-test $(ROOT_DIR)\$(XERCES_DIR)\$(XercesInstallDir)\bin\xerces-c_3_2.dll
+
+xerces-test: test-env $(ROOT_DIR)\$(XERCES_DIR)\CMakeLists.txt
+
+xerces-clean:
+	-2 rd/s/q $(ROOT_DIR)\$(XERCES_DIR)\Buildx64
+	-2 rd/s/q $(ROOT_DIR)\$(XERCES_DIR)\Buildx86
+	-2 rd/s/q $(ROOT_DIR)\$(XERCES_DIR)\Install32
+	-2 rd/s/q $(ROOT_DIR)\$(XERCES_DIR)\Install64
+
+$(ROOT_DIR)\$(XERCES_DIR)\$(XercesInstallDir)\bin\xerces-c_3_2D.dll: $(ROOT_DIR)\$(XERCES_DIR)\$(XercesBuildDir)\ALL_BUILD.vcxproj
+	title Build zlib $(VSCMD_ARG_TGT_ARCH) Debug
+	cd $(ROOT_DIR)\$(XERCES_DIR)\$(XercesBuildDir)
+	cmake --build . --config Debug --clean-first --target install
+
+$(ROOT_DIR)\$(XERCES_DIR)\$(XercesInstallDir)\bin\xerces-c_3_2.dll: $(ROOT_DIR)\$(XERCES_DIR)\$(XercesBuildDir)\ALL_BUILD.vcxproj
+	title Build xerces $(VSCMD_ARG_TGT_ARCH) Release
+	cd $(ROOT_DIR)\$(XERCES_DIR)\$(XercesBuildDir)
+	cmake --build . --config Release --clean-first --target install
+
+$(ROOT_DIR)\$(XERCES_DIR)\$(XercesBuildDir)\ALL_BUILD.vcxproj:
+	title Configure xerces $(VSCMD_ARG_TGT_ARCH)
+	-2 mkdir $(ROOT_DIR)\$(XERCES_DIR)\$(XercesBuildDir)
+	cd  $(ROOT_DIR)\$(XERCES_DIR)\$(XercesBuildDir)
+	set CXXFLAGS=/MP
+	cmake -G "Visual Studio 15 2017" $(CMakeArch) -DCMAKE_INSTALL_PREFIX=$(ROOT_DIR)\$(XERCES_DIR)\$(XercesInstallDir) ..
+	set CXXFLAGS=
+
+
+
