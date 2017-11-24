@@ -46,7 +46,7 @@ help:
 	@echo "			ROOT_DIR
 	@echo "			OPENSSL_DIR
 
-clean: openssl-clean
+clean: openssl-clean zlib-clean
 
 all: openssl zlib
 
@@ -107,6 +107,8 @@ $(ROOT_DIR)\$(ZLIB_DIR)\zlib2.sed:
 $(ROOT_DIR)\$(ZLIB_DIR)\zlib3.sed	$(ROOT_DIR)\$(ZLIB_DIR)\zlib4.sed: $$(@F)
 	copy $(@F) $(ROOT_DIR)\$(ZLIB_DIR)
 
+test: $(ROOT_DIR)\$(ZLIB_DIR)\zlib3.sed
+
 $(ROOT_DIR)\$(ZLIB_DIR)\zlib1d.sed:
 	echo s/SHAREDLIB =.*$$/SHAREDLIB=$(ZLIB_SHAREDLIB)D.dll/ > $@
 
@@ -122,32 +124,32 @@ $(ROOT_DIR)\$(ZLIB_DIR)\$(ZlibTargetDir)\Release\$(ZLIB_IMPLIB).lib: $$(@D)\$(ZL
 $(ROOT_DIR)\$(ZLIB_DIR)\$(ZlibTargetDir)\Debug\$(ZLIB_IMPLIB)D.lib: $$(@D)\$(ZLIB_SHAREDLIB)D.dll
 	copy $(ROOT_DIR)\$(ZLIB_DIR)\$(ZLIB_IMPLIB)D.lib $(@D)
 
-
 $(ROOT_DIR)\$(ZLIB_DIR)\$(ZlibTargetDir)\release\$(ZLIB_SHAREDLIB).dll: $(ROOT_DIR)\$(ZLIB_DIR)\win32\makefile.shib
+	title Build zlib $(VSCMD_ARG_TGT_ARCH) Release
 	cd $(ROOT_DIR)\$(ZLIB_DIR)
 	nmake/f win32\makefile.shib clean
 	nmake/f win32\makefile.shib
 	copy $(@F) $@
 
 $(ROOT_DIR)\$(ZLIB_DIR)\$(ZlibTargetDir)\debug\$(ZLIB_SHAREDLIB)D.dll: $(ROOT_DIR)\$(ZLIB_DIR)\win32\makefile.shib.debug
+	title Build zlib $(VSCMD_ARG_TGT_ARCH) Debug
 	cd $(ROOT_DIR)\$(ZLIB_DIR)
 	nmake/f win32\makefile.shib.debug clean
 	nmake/f win32\makefile.shib.debug
 	copy $(@F) $@
-
 
 #
 # OpenSSL
 #
 openssl: openssl-debug openssl-release
 
-openssl-release: openssl-test openssl-release-configure openssl-build
+openssl-release: openssl-test $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)\include\openssl\opensslconf.h
 
-openssl-debug: openssl-test openssl-debug-configure openssl-build
+openssl-debug: openssl-test $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)Debug\include\openssl\opensslconf.h
 
 openssl-test: test-env $(ROOT_DIR)\$(OPENSSL_DIR)
 
-openssl-clean: openssl-test openssl-clean-configure 
+openssl-clean: openssl-test
 	cd $(ROOT_DIR)\$(OPENSSL_DIR)
 	-2 nmake distclean
 	-2 rd/s/q x64
@@ -159,15 +161,21 @@ openssl-clean-configure: openssl-test
 	cd $(ROOT_DIR)\$(OPENSSL_DIR)
 	-2 nmake distclean
 
-openssl-release-configure: openssl-test $(ROOT_DIR)\$(OPENSSL_DIR)\Configure openssl-clean-configure
+$(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)\include\openssl\opensslconf.h:
+	nmake /f dependency.make openssl-clean-configure openssl-release-configure openssl-build
+
+$(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)Debug\include\openssl\opensslconf.h: 
+	nmake /f dependency.make openssl-clean-configure openssl-debug-configure openssl-build
+
+openssl-release-configure: openssl-test $(ROOT_DIR)\$(OPENSSL_DIR)\Configure
 	title Build OpenSSL $(VSCMD_ARG_TGT_ARCH) Release
 	cd $(ROOT_DIR)\$(OPENSSL_DIR)
-	perl Configure VC-$(OpenSSLName) --prefix=%ROOT_DIR%\%OPENSSL_DIR%\$(VSCMD_ARG_TGT_ARCH)
+	perl Configure VC-$(OpenSSLName) --prefix=$(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)
 
-openssl-debug-configure: openssl-test $(ROOT_DIR)\$(OPENSSL_DIR)\ConfigureD openssl-clean-configure
+openssl-debug-configure: openssl-test $(ROOT_DIR)\$(OPENSSL_DIR)\ConfigureD
 	title Build OpenSSL $(VSCMD_ARG_TGT_ARCH) Debug
 	cd $(ROOT_DIR)\$(OPENSSL_DIR)
-	perl ConfigureD debug-VC-$(OpenSSLName) --prefix=%ROOT_DIR%\%OPENSSL_DIR%\$(VSCMD_ARG_TGT_ARCH)Debug
+	perl ConfigureD debug-VC-$(OpenSSLName) --prefix=$(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)Debug
 
 openssl-build: $(ROOT_DIR)\$(OPENSSL_DIR)\makefile
 	cd $(ROOT_DIR)\$(OPENSSL_DIR)
