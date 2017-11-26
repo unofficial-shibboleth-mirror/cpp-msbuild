@@ -53,6 +53,10 @@ XercesInstallDir=Install64\VC15
 !error XERCES_DIR not defined
 !endif
 
+!if "$(LIBCURL_DIR)" == ""
+!error LIBCURL_DIR not defined
+!endif
+
 ##
 ## TARGETS
 ##
@@ -69,9 +73,9 @@ help:
 	@echo "
 	@echo " See also https://wiki.shibboleth.net/confluence/display/SP3/WindowsBuild
 
-clean: openssl-clean zlib-clean log4shib-clean xerces-clean
+clean: openssl-clean zlib-clean log4shib-clean xerces-clean curl-clean
 
-all: openssl zlib log4shib xerces
+all: openssl zlib log4shib xerces curl
 
 test-env:
 
@@ -140,10 +144,8 @@ $(ROOT_DIR)\$(ZLIB_DIR)\$(ZlibTargetDir)\Release $(ROOT_DIR)\$(ZLIB_DIR)\$(ZlibT
 	mkdir $@
 
 $(ROOT_DIR)\$(ZLIB_DIR)\$(ZlibTargetDir)\Release\$(ZLIB_IMPLIB).lib: $$(@D)\$(ZLIB_SHAREDLIB).dll
-	copy $(ROOT_DIR)\$(ZLIB_DIR)\$(ZLIB_IMPLIB).lib $(@D)
 
 $(ROOT_DIR)\$(ZLIB_DIR)\$(ZlibTargetDir)\Debug\$(ZLIB_IMPLIB)D.lib: $$(@D)\$(ZLIB_SHAREDLIB)D.dll
-	copy $(ROOT_DIR)\$(ZLIB_DIR)\$(ZLIB_IMPLIB)D.lib $(@D)
 
 $(ROOT_DIR)\$(ZLIB_DIR)\$(ZlibTargetDir)\release\$(ZLIB_SHAREDLIB).dll: $(ROOT_DIR)\$(ZLIB_DIR)\win32\makefile.shib
 	title Build zlib $(VSCMD_ARG_TGT_ARCH) Release
@@ -151,6 +153,7 @@ $(ROOT_DIR)\$(ZLIB_DIR)\$(ZlibTargetDir)\release\$(ZLIB_SHAREDLIB).dll: $(ROOT_D
 	nmake/f win32\makefile.shib clean
 	nmake/f win32\makefile.shib
 	copy $(@F) $@
+	copy $(ROOT_DIR)\$(ZLIB_DIR)\$(ZLIB_IMPLIB).lib $(@D)
 
 $(ROOT_DIR)\$(ZLIB_DIR)\$(ZlibTargetDir)\debug\$(ZLIB_SHAREDLIB)D.dll: $(ROOT_DIR)\$(ZLIB_DIR)\win32\makefile.shib.debug
 	title Build zlib $(VSCMD_ARG_TGT_ARCH) Debug
@@ -158,6 +161,7 @@ $(ROOT_DIR)\$(ZLIB_DIR)\$(ZlibTargetDir)\debug\$(ZLIB_SHAREDLIB)D.dll: $(ROOT_DI
 	nmake/f win32\makefile.shib.debug clean
 	nmake/f win32\makefile.shib.debug
 	copy $(@F) $@
+	copy $(ROOT_DIR)\$(ZLIB_DIR)\$(ZLIB_IMPLIB)D.lib $(@D)
 
 #
 # OpenSSL
@@ -222,7 +226,7 @@ log4shib-release: log4shib-test
 	msbuild /m  $(ROOT_DIR)\$(LOGSHIB_DIR)\msvc15\msvc15.sln  /p:Configuration=Release /t:build /p:Platform=$(MsBuildArch)
 
 #
-# log4shib
+# Xerces
 #
 xerces: xerces-debug xerces-release 
 
@@ -256,5 +260,33 @@ $(ROOT_DIR)\$(XERCES_DIR)\$(XercesBuildDir)\ALL_BUILD.vcxproj:
 	cmake -G "Visual Studio 15 2017" $(CMakeArch) -DCMAKE_INSTALL_PREFIX=$(ROOT_DIR)\$(XERCES_DIR)\$(XercesInstallDir) ..
 	set CXXFLAGS=
 
+#
+# libcurl
+#
+curl: curl-test curl-debug curl-release
+
+curl-test: test-env $(ROOT_DIR)\$(LIBCURL_DIR)\CMakeLists.txt
+
+curl-debug: test-env openssl-debug zlib-debug
+	title Build curl $(VSCMD_ARG_TGT_ARCH) Debug
+	cd $(ROOT_DIR)\$(LIBCURL_DIR)\winbuild
+	Nmake /f Makefile.vc mode=dll WITH_DEVEL=$(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)Debug	\
+			WITH_SSL=dll WITH_ZLIB=dll ENABLE_WINSSL=no VC=15 DEBUG=yes MAKE="NMAKE /e"				\
+			ZLIB_LFLAGS=/libpath:$(ROOT_DIR)$(ZLIB_DIR)\$(ZlibTargetDir)\DEBUG 						\
+			ZLIB_CFLAGS="/DHAVE_ZLIB_H /DHAVE_ZLIB /DHAVE_LIBZ /I$(ROOT_DIR)$(ZLIB_DIR)" 			\
+			ZLIB_LIBS=$(ZLIB_IMPLIB)D.lib SSL_LIBS="libcrypto.lib libssl.lib" 						\
+			BASE_NAME=libcurl5 BASE_NAME_DEBUG=libcurl5d
+
+curl-release: test-env openssl-release zlib-release
+	title Build curl $(VSCMD_ARG_TGT_ARCH) Release
+	cd $(ROOT_DIR)\$(LIBCURL_DIR)\winbuild
+	Nmake /f Makefile.vc mode=dll WITH_DEVEL=$(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)		\
+			WITH_SSL=dll WITH_ZLIB=dll ENABLE_WINSSL=no VC=15 MAKE="NMAKE /e"						\
+			ZLIB_LFLAGS=/libpath:$(ROOT_DIR)$(ZLIB_DIR)\$(ZlibTargetDir)\Release					\
+			ZLIB_CFLAGS="/DHAVE_ZLIB_H /DHAVE_ZLIB /DHAVE_LIBZ /I$(ROOT_DIR)$(ZLIB_DIR)" 			\
+			ZLIB_LIBS=$(ZLIB_IMPLIB).lib SSL_LIBS="libcrypto.lib libssl.lib" 						\
+			BASE_NAME=libcurl5 BASE_NAME_DEBUG=libcurl5d
 
 
+curl-clean: curl-test
+	-2 rd/s/q $(ROOT_DIR)\$(LIBCURL_DIR)\builds
