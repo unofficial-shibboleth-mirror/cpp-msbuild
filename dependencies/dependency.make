@@ -10,15 +10,17 @@
 OpenSSLName=WIN32
 ZlibTargetDir=.
 MsBuildArch=Win32
-CMakeArch=
+XsecBuildArch=Win32
+CMakeArch=Visual Studio 15 2017
 XercesBuildDir=Buildx86
 XercesInstallDir=Install86\VC15
 !elseif "$(VSCMD_ARG_TGT_ARCH)" == "x64"
 !message Building x64
 OpenSSLName=WIN64A
 ZlibTargetDir=x64
-CMakeArch=Win64
+CMakeArch=Visual Studio 15 2017 Win64
 MsBuildArch=x64
+XsecBuildArch=Win64
 XercesBuildDir=Buildx64
 XercesInstallDir=Install64\VC15
 !else
@@ -31,6 +33,10 @@ XercesInstallDir=Install64\VC15
 
 !if "$(VISUALSTUDIOVERSION)" != "15.0"
 !error this code only known to work with VC15
+!endif
+
+!if "$(OPENSSL_DIR)" == ""
+!error OPENSSL_DIR not defined
 !endif
 
 !if "$(ZLIB_DIR)" == ""
@@ -57,6 +63,10 @@ XercesInstallDir=Install64\VC15
 !error LIBCURL_DIR not defined
 !endif
 
+!if "$(XSEC_DIR)" == ""
+!error XSEC_DIR not defined
+!endif
+
 ##
 ## TARGETS
 ##
@@ -70,12 +80,18 @@ help:
 	@echo "REQUIRED VARIABLES
 	@echo "			ROOT_DIR
 	@echo "			OPENSSL_DIR
+	@echo "			SLIB_DIR, ZLIB_SHAREDLIB, ZLIB_IMPLIB
+	@echo "			LOGSHIB_DIR (sic)
+	@echo "			XERCES_DIR
+	@echo "			LIBCURL_DIR
+	@echo "			XSEC_DIR
+	@echo "
 	@echo "
 	@echo " See also https://wiki.shibboleth.net/confluence/display/SP3/WindowsBuild
 
-clean: openssl-clean zlib-clean log4shib-clean xerces-clean curl-clean
+clean: openssl-clean zlib-clean log4shib-clean xerces-clean curl-clean xsec-clean
 
-all: openssl zlib log4shib xerces curl
+all: openssl zlib log4shib xerces curl xsec
 
 test-env:
 
@@ -95,6 +111,9 @@ zlib-clean: zlib-test
 	-2 nmake /f win32\makefile.shib clean
 	-2 nmake /f win32\makefile.shib.debug clean
 	-2 del zlib1.sed zlib2.sed zlib3.sed zlib4.sed zlib1d.sed zlib2d.sed
+	-92 rd /s /q Debug
+	-92 rd /s /q Release
+	-92 rd /s /q x64
 	-2 rd /s /q Debug
 	-2 rd /s /q Release
 	-2 rd /s /q x64
@@ -177,6 +196,10 @@ openssl-test: test-env $(ROOT_DIR)\$(OPENSSL_DIR)
 openssl-clean: openssl-test
 	cd $(ROOT_DIR)\$(OPENSSL_DIR)
 	-2 nmake distclean
+	-92 rd/s/q x64
+	-92 rd/s/q x64Debug
+	-92 rd/s/q x86
+	-92 rd/s/q x86Debug
 	-2 rd/s/q x64
 	-2 rd/s/q x64Debug
 	-2 rd/s/q x86
@@ -230,20 +253,25 @@ log4shib-release: log4shib-test
 #
 xerces: xerces-debug xerces-release 
 
-xerces-debug: xerces-test $(ROOT_DIR)\$(XERCES_DIR)\$(XercesInstallDir)\bin\xerces-c_3_2D.dll
+xerces-debug: xerces-test $(ROOT_DIR)\$(XERCES_DIR)\$(XercesBuildDir)\ALL_BUILD.vcxproj $(ROOT_DIR)\$(XERCES_DIR)\$(XercesInstallDir)\bin\xerces-c_3_2D.dll
 
-xerces-release: xerces-test $(ROOT_DIR)\$(XERCES_DIR)\$(XercesInstallDir)\bin\xerces-c_3_2.dll
+xerces-release: xerces-test $(ROOT_DIR)\$(XERCES_DIR)\$(XercesBuildDir)\ALL_BUILD.vcxproj $(ROOT_DIR)\$(XERCES_DIR)\$(XercesInstallDir)\bin\xerces-c_3_2.dll
 
 xerces-test: test-env $(ROOT_DIR)\$(XERCES_DIR)\CMakeLists.txt
 
 xerces-clean:
+	-92 rd/s/q $(ROOT_DIR)\$(XERCES_DIR)\Buildx64
+	-92 rd/s/q $(ROOT_DIR)\$(XERCES_DIR)\Buildx86
+	-92 rd/s/q $(ROOT_DIR)\$(XERCES_DIR)\Install86
+	-92 rd/s/q $(ROOT_DIR)\$(XERCES_DIR)\Install64
+# twice because of AV's making directories not empty fast enough - so this can fail
 	-2 rd/s/q $(ROOT_DIR)\$(XERCES_DIR)\Buildx64
 	-2 rd/s/q $(ROOT_DIR)\$(XERCES_DIR)\Buildx86
-	-2 rd/s/q $(ROOT_DIR)\$(XERCES_DIR)\Install32
+	-2 rd/s/q $(ROOT_DIR)\$(XERCES_DIR)\Install86
 	-2 rd/s/q $(ROOT_DIR)\$(XERCES_DIR)\Install64
 
 $(ROOT_DIR)\$(XERCES_DIR)\$(XercesInstallDir)\bin\xerces-c_3_2D.dll: $(ROOT_DIR)\$(XERCES_DIR)\$(XercesBuildDir)\ALL_BUILD.vcxproj
-	title Build zlib $(VSCMD_ARG_TGT_ARCH) Debug
+	title Build zlib xerces $(VSCMD_ARG_TGT_ARCH) Debug
 	cd $(ROOT_DIR)\$(XERCES_DIR)\$(XercesBuildDir)
 	cmake --build . --config Debug --clean-first --target install
 
@@ -257,7 +285,7 @@ $(ROOT_DIR)\$(XERCES_DIR)\$(XercesBuildDir)\ALL_BUILD.vcxproj:
 	-2 mkdir $(ROOT_DIR)\$(XERCES_DIR)\$(XercesBuildDir)
 	cd  $(ROOT_DIR)\$(XERCES_DIR)\$(XercesBuildDir)
 	set CXXFLAGS=/MP
-	cmake -G "Visual Studio 15 2017" $(CMakeArch) -DCMAKE_INSTALL_PREFIX=$(ROOT_DIR)\$(XERCES_DIR)\$(XercesInstallDir) ..
+	cmake -G "$(CMakeArch)" -DCMAKE_INSTALL_PREFIX=$(ROOT_DIR)\$(XERCES_DIR)\$(XercesInstallDir) ..
 	set CXXFLAGS=
 
 #
@@ -289,4 +317,32 @@ curl-release: test-env openssl-release zlib-release
 
 
 curl-clean: curl-test
+	-92 rd/s/q $(ROOT_DIR)\$(LIBCURL_DIR)\builds
 	-2 rd/s/q $(ROOT_DIR)\$(LIBCURL_DIR)\builds
+
+#
+# XmlSecurity
+#
+xsec: xsec-release xsec-debug
+
+xsec-test: test-env $(ROOT_DIR)\$(XSEC_DIR)\projects\VC15.0\xsec\xsec.sln
+
+xsec-clean: xsec-test
+#	msbuild /m projects\VC15.0\xsec\xsec.sln /p:Configuration="Debug Minimal" /m    /t:clean /p:Platform=Win32
+#	msbuild /m projects\VC15.0\xsec\xsec.sln /p:Configuration="Debug Minimal" /m    /t:clean /p:Platform=Win64
+#	msbuild /m projects\VC15.0\xsec\xsec.sln /p:Configuration="Release Minimal" /m    /t:clean /p:Platform=Win32
+#	msbuild /m projects\VC15.0\xsec\xsec.sln /p:Configuration="Release Minimal" /m    /t:clean /p:Platform=Win64
+	-92 rd/s/q $(ROOT_DIR)\$(XSEC_DIR)\build
+	-2 rd/s/q $(ROOT_DIR)\$(XSEC_DIR)\build
+
+xsec-debug: test-env openssl-debug xerces-debug
+	title Build XmlSecurity $(VSCMD_ARG_TGT_ARCH) Debug
+	cd $(ROOT_DIR)\$(XSEC_DIR)
+	set ForceImportBeforeCppTargets=$(ROOT_DIR)\cpp-msbuild\dependencies\xsec.props
+	msbuild /m projects\VC15.0\xsec\xsec.sln /p:Configuration="Debug Minimal" /m  /t:Build /p:Platform=$(XsecBuildArch)
+
+xsec-release: test-env openssl-release xerces-release
+	title Build XmlSecurity $(VSCMD_ARG_TGT_ARCH) Release
+	cd $(ROOT_DIR)\$(XSEC_DIR)
+	set ForceImportBeforeCppTargets=$(ROOT_DIR)\cpp-msbuild\dependencies\xsec.props
+	msbuild /m projects\VC15.0\xsec\xsec.sln /p:Configuration="Debug Minimal" /m  /t:Build /p:Platform=$(XsecBuildArch)
