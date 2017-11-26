@@ -13,7 +13,7 @@ MsBuildArch=Win32
 XsecBuildArch=Win32
 CMakeArch=Visual Studio 15 2017
 XercesBuildDir=Buildx86
-XercesInstallDir=Install86\VC15
+XercesInstallDir=Install32\VC15
 !elseif "$(VSCMD_ARG_TGT_ARCH)" == "x64"
 !message Building x64
 OpenSSLName=WIN64A
@@ -262,12 +262,12 @@ xerces-test: test-env $(ROOT_DIR)\$(XERCES_DIR)\CMakeLists.txt
 xerces-clean:
 	-92 rd/s/q $(ROOT_DIR)\$(XERCES_DIR)\Buildx64
 	-92 rd/s/q $(ROOT_DIR)\$(XERCES_DIR)\Buildx86
-	-92 rd/s/q $(ROOT_DIR)\$(XERCES_DIR)\Install86
+	-92 rd/s/q $(ROOT_DIR)\$(XERCES_DIR)\Install32
 	-92 rd/s/q $(ROOT_DIR)\$(XERCES_DIR)\Install64
 # twice because of AV's making directories not empty fast enough - so this can fail
 	-2 rd/s/q $(ROOT_DIR)\$(XERCES_DIR)\Buildx64
 	-2 rd/s/q $(ROOT_DIR)\$(XERCES_DIR)\Buildx86
-	-2 rd/s/q $(ROOT_DIR)\$(XERCES_DIR)\Install86
+	-2 rd/s/q $(ROOT_DIR)\$(XERCES_DIR)\Install32
 	-2 rd/s/q $(ROOT_DIR)\$(XERCES_DIR)\Install64
 
 $(ROOT_DIR)\$(XERCES_DIR)\$(XercesInstallDir)\bin\xerces-c_3_2D.dll: $(ROOT_DIR)\$(XERCES_DIR)\$(XercesBuildDir)\ALL_BUILD.vcxproj
@@ -345,4 +345,4 @@ xsec-release: test-env openssl-release xerces-release
 	title Build XmlSecurity $(VSCMD_ARG_TGT_ARCH) Release
 	cd $(ROOT_DIR)\$(XSEC_DIR)
 	set ForceImportBeforeCppTargets=$(ROOT_DIR)\cpp-msbuild\dependencies\xsec.props
-	msbuild /m projects\VC15.0\xsec\xsec.sln /p:Configuration="Debug Minimal" /m  /t:Build /p:Platform=$(XsecBuildArch)
+	msbuild /m projects\VC15.0\xsec\xsec.sln /p:Configuration="Release Minimal" /m  /t:Build /p:Platform=$(XsecBuildArch)
