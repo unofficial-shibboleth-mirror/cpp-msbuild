@@ -3,10 +3,12 @@ rem GOTTA HAVE TRAILING SLASH
 Rod...
 rem set ROOT_DIR=H:\Perforce\VS2017\
 rem set VS_DIR=d:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\
+rem set SED=sed
 
 Scott...
 set ROOT_DIR=C:\Users\cantor.2\Shibboleth\
 set VS_DIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build
+set SED=C:\cygwin64\bin\sed.exe
 
 set ZLIB_DIR=zlib-1.2.11
 set ZLIB_IMPLIB=zlib1

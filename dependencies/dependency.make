@@ -85,6 +85,7 @@ help:
 	@echo "			XERCES_DIR
 	@echo "			LIBCURL_DIR
 	@echo "			XSEC_DIR
+	@echo "			SED
 	@echo "
 	@echo "
 	@echo " See also https://wiki.shibboleth.net/confluence/display/SP3/WindowsBuild
@@ -135,14 +136,14 @@ $(ROOT_DIR)\$(ZLIB_DIR)\win32\makefile.shib: $(ROOT_DIR)\$(ZLIB_DIR)\zlib1.sed \
 	$(ROOT_DIR)\$(ZLIB_DIR)\zlib3.sed \
 	$(ROOT_DIR)\$(ZLIB_DIR)\zlib4.sed
 	cd $(ROOT_DIR)\$(ZLIB_DIR)
-	sed win32\makefile.msc -f zlib1.sed -f zlib2.sed  > $@
+	$(SED) win32\makefile.msc -f zlib1.sed -f zlib2.sed  > $@
 
 $(ROOT_DIR)\$(ZLIB_DIR)\win32\makefile.shib.debug: $(ROOT_DIR)\$(ZLIB_DIR)\zlib1d.sed \
 	$(ROOT_DIR)\$(ZLIB_DIR)\zlib2d.sed \
 	$(ROOT_DIR)\$(ZLIB_DIR)\zlib3.sed \
 	$(ROOT_DIR)\$(ZLIB_DIR)\zlib4.sed
 	cd $(ROOT_DIR)\$(ZLIB_DIR)
-	sed win32\makefile.msc -f zlib1d.sed -f zlib2d.sed -f zlib3.sed -f zlib4.sed > $@
+	$(SED) win32\makefile.msc -f zlib1d.sed -f zlib2d.sed -f zlib3.sed -f zlib4.sed > $@
 
 $(ROOT_DIR)\$(ZLIB_DIR)\zlib1.sed:
 	echo s/SHAREDLIB =.*$$/SHAREDLIB=$(ZLIB_SHAREDLIB).dll/ > $@
