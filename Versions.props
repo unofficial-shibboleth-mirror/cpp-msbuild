@@ -35,7 +35,7 @@
     <!-- NEVER CHANGE THE UPGRADE CODE UNLESS YOU REALLY REALLY KNOW WHAT YOU ARE DOING -->
     <ShibbolethUpgradeCode>{28A4EB62-E860-49CA-BE43-44ADEB91DBF6}</ShibbolethUpgradeCode>
 
-    <CurlVersion>7.56.1</CurlVersion>
+    <CurlVersion>7.57.0</CurlVersion>
     <curl>curl-$(CurlVersion)</curl>
 
     <boost>boost_1_65_1</boost>

@@ -25,7 +25,7 @@ set SSLLib_space=libcrypto.lib libssl.lib
 set SSLLibD=libcrypto.lib;libssl.lib
 set SSLLibD_space=libcrypto.lib libssl.lib
 
-set LIBCURL_DIR=curl-7.56.1
+set LIBCURL_DIR=curl-7.57.0
 set LIBCURL_NAME=libcurl5
 
 set XSEC_DIR=xml-security-cpp
