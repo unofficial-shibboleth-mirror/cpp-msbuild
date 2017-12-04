@@ -27,9 +27,7 @@ XercesInstallDir=Install64\VC15
 !error "Target architecture must be x86 or x64"
 !endif
 
-!if "$(ROOT_DIR)" == ""
-!error ROOT_DIR not defined
-!endif
+!Include ..\env.make
 
 !if "$(VISUALSTUDIOVERSION)" != "15.0"
 !error this code only known to work with VC15

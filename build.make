@@ -1,9 +1,11 @@
+!Include ..\env.make
 #
 # Short cuts to make things easier
+#
 
-SPROOT=$(MAKEDIR)\..\cpp-sp
-XMLROOT=$(MAKEDIR)\..\cpp-xmltooling
-SAMLROOT=$(MAKEDIR)\..\cpp-opensaml
+SPROOT=$(ROOT_DIR)\cpp-sp
+XMLROOT=$(ROOT_DIR)\cpp-xmltooling
+SAMLROOT=$(ROOT_DIR)\cpp-opensaml
 VCVERSION=VC15
 
 SERVER_MODULES_32=shibd;"Server Modules\isapi_shib";"Server Modules\iis7_shib";"Server Modules\mod_shib_22";"Server Modules\mod_shib_24"

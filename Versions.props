@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Label="VersionMacros">
+	<BuildRoot Condition="'$(BuildRoot)'==''">$(ROOT_DIR)\</BuildRoot>
+
     <MsVCVersion>vc15</MsVCVersion>
     <!-- NO TRAILING '\' for the following.  Default value is C:\Program Files (x86)\Common Files\Merge Modules -->
     <CppMmDir>D:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Redist\MSVC\14.11.25325\MergeModules</CppMmDir>
