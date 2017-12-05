@@ -1,14 +1,44 @@
-rem GOTTA HAVE TRAILING SLASH
+rem ROOT_DIR HAS TO HAVE TRAILING SLASH
 
-Rod...
-rem set ROOT_DIR=H:\Perforce\VS2017\
-rem set VS_DIR=d:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\
-rem set SED=sed
-
-Scott...
+if "%1" NEQ "" goto %1%
 set ROOT_DIR=C:\Users\cantor.2\Shibboleth\
 set VS_DIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build
 set SED=C:\cygwin64\bin\sed.exe
+goto path_done
+
+:ROD
+set ROOT_DIR=H:\Perforce\VS2017\
+set VS_DIR=d:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Auxiliary\Build\
+set SED=sed
+
+##
+## Apache Config
+##
+SET APACHE_13_ROOT=%ROOT_DIR%apache\VC10\Apache
+SET APACHE_20_ROOT=%ROOT_DIR%apache\VC10\Apache2.0.63\Apache
+SET APACHE_22_ROOT=%ROOT_DIR%apache\VC10\Apache2
+SET APACHE_22_ROOT64=%ROOT_DIR%apache\VC10\Apache22-64
+SET APACHE_24_ROOT=%ROOT_DIR%apache\VC10\Apache24
+SET APACHE_24_ROOT64=%ROOT_DIR%apache\VC10\Apache24-64
+goto path_done
+
+:ROD_LAPTOP
+set ROOT_DIR=H:\Perforce\VS2017\
+set SED=D:\downloads\cygwin\bin\sed.exe
+set PERL=C:\Strawberry\perl\bin\perl.exe
+
+##
+## Apache Config
+##
+SET APACHE_13_ROOT=%ROOT_DIR%apache\VC10\Apache
+SET APACHE_20_ROOT=%ROOT_DIR%apache\VC10\Apache2.0.63\Apache
+SET APACHE_22_ROOT=%ROOT_DIR%apache\VC10\Apache2
+SET APACHE_22_ROOT64=%ROOT_DIR%apache\VC10\Apache22-64
+SET APACHE_24_ROOT=%ROOT_DIR%apache\VC10\Apache24
+SET APACHE_24_ROOT64=%ROOT_DIR%apache\VC10\Apache24-64
+goto path_done
+
+:path_done
 
 set ZLIB_DIR=zlib-1.2.11
 set ZLIB_IMPLIB=zlib1
