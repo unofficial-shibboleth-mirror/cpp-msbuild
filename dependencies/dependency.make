@@ -83,7 +83,6 @@ help:
 	@echo "			XERCES_DIR
 	@echo "			LIBCURL_DIR
 	@echo "			XSEC_DIR
-	@echo "			SED
 	@echo "
 	@echo "
 	@echo " See also https://wiki.shibboleth.net/confluence/display/SP3/WindowsBuild
