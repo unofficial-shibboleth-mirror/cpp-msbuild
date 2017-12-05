@@ -6,7 +6,9 @@
 !error ROOT_DIR not defined
 !endif
 
-
+!if "$(PERL)" == ""
+PERL=perl
+!endif
 
 !if "$(SED)" == ""
 SED=sed
