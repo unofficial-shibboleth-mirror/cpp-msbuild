@@ -59,8 +59,14 @@ set OPENSSL_DIR=openssl-1.1.0g
 set OPENSSL_MM_VERSION=1.1.0.7
 set OPENSSL_FILE_VERSION=1_1
 
-set LIBCURL_DIR=curl-7.57.0
-set LIBCURL_NAME=libcurl5
+##
+## CURL CONFIG
+##
+## CURL_DIR             is the directory name
+## CURL_VERSION         is the version
+##
+Set LIBCURL_VERSION=7.57.0
+set LIBCURL_DIR=curl-%LIBCURL_VERSION%
 
 set XSEC_DIR=xml-security-cpp
 

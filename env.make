@@ -30,15 +30,21 @@ SED=sed
 !error OPENSSL_FILE_VERSION not defined
 !endif
 
+!if "$(LIBCURL_DIR)" == ""
+!error LIBCURL_DIR not defined
+!endif
+
+!if "$(LIBCURL_VERSION)" == ""
+!error LIBCURL_VERSION not defined
+!endif
 
 
 environment:
 	@echo ROOT_DIR	 			$(ROOT_DIR)
 	@echo SED             		$(SED)
     @echo PERL            		$(PERL)
-    @echo
     @echo OPENSSL_DIR			$(OPENSSL_DIR)
     @echo OPENSSL_FILE_VERSION	$(OPENSSL_FILE_VERSION)
     @echo OPENSSL_MM_VERSION	$(OPENSSL_MM_VERSION)
-	@echo
-	@echo
+	@echo LIBCURL_VERSION       $(LIBCURL_VERSION)
+	@echo LIBCURL_DIR           $(LIBCURL_DIR)
