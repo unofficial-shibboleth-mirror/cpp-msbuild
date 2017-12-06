@@ -38,6 +38,17 @@ SED=sed
 !error LIBCURL_VERSION not defined
 !endif
 
+!if "$(XSEC_DIR)" == ""
+!error XSEC_DIR not defined
+!endif
+
+!if "$(XSEC_FILE_VERSION)" == ""
+!error XSEC_FILE_VERSION not defined
+!endif
+
+!if "$(XSEC_MM_VERSION)" == ""
+!error XSEC_MM_VERSION not defined
+!endif
 
 environment:
 	@echo ROOT_DIR	 			$(ROOT_DIR)
@@ -48,3 +59,7 @@ environment:
     @echo OPENSSL_MM_VERSION	$(OPENSSL_MM_VERSION)
 	@echo LIBCURL_VERSION       $(LIBCURL_VERSION)
 	@echo LIBCURL_DIR           $(LIBCURL_DIR)
+    @echo XSEC_DIR              $(XSEC_DIR)
+    @echo XSEC_FILE_VERSION     $(XSEC_FILE_VERSION)
+    @echo XSEC_MM_VERSION       $(XSEC_MM_VERSION)
+

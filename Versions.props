@@ -94,15 +94,6 @@
     <Xerces64Componentd>{3D0F7C56-196D-4BAA-BEF7-56A747C110DA}</Xerces64Componentd>
 
 
-    <XmlSecVersion>2.0.0</XmlSecVersion>
-    <xmlsec>xml-security-cpp</xmlsec>
-    <XmlSecFileVersion>2_0</XmlSecFileVersion>
-    <!-- Change the 4 components below iff XmlSecFileVersion changes -->
-    <XmlSec32Component>{2B72E5CE-8E02-4AE6-AD0B-6AFDC4CFB49E}</XmlSec32Component>
-    <XmlSec32Componentd>{05507D35-7B52-414B-8162-869C608A5AA9}</XmlSec32Componentd>
-    <XmlSec64Component>{47FED010-3C5F-4940-A355-BDF8B621EBAD}</XmlSec64Component>
-    <XmlSec64Componentd>{4C52E1DA-F04E-4479-9D8E-B4F97AF63805}</XmlSec64Componentd>
-
     <ZlibVersion>1.2.11</ZlibVersion>
     <zlib>zlib-$(ZlibVersion)</zlib>
     <ZlibFileVersion>1_2</ZlibFileVersion>
@@ -137,5 +128,25 @@
     <LibEay64Componentd>{00A10097-8FF3-44f8-AFEC-2399A0958CD9}</LibEay64Componentd>
     <SSlEay64Componentd>{2512F0D0-CD50-4071-BECD-530EA83A4CCA}</SSlEay64Componentd>
   </PropertyGroup>
+
+  <PropertyGroup Label="XSecGeneral">
+    <!-- Just for now -->
+    <XSEC_FILE_VERSION Condition="'$(XSEC_FILE_VERSION)' == ''">2_0</XSEC_FILE_VERSION>
+    <XmlSecVersion Condition="'$(XSEC_MM_VERSION)'==''">2.0.0</XmlSecVersion>
+    <XmlSecVersion Condition="'$(XSEC_MM_VERSION)'!=''">$(XSEC_MM_VERSION)</XmlSecVersion>
+    <xmlsec Condition="'$(XSEC_DIR)'==''">xml-security-cpp</xmlsec>
+    <xmlsec Condition="'$(XSEC_DIR)'!=''">$(XSEC_DIR)</xmlsec>
+  </PropertyGroup>
+
+  <PropertyGroup Label="XSecGuids " Condition="'$(XSEC_FILE_VERSION)' == '2_0'">
+    <XmlSecFileVersion>$(XSEC_FILE_VERSION)</XmlSecFileVersion>
+
+    <!-- Change the 4 components below iff XmlSecFileVersion changes -->
+    <XmlSec32Component>{2B72E5CE-8E02-4AE6-AD0B-6AFDC4CFB49E}</XmlSec32Component>
+    <XmlSec32Componentd>{05507D35-7B52-414B-8162-869C608A5AA9}</XmlSec32Componentd>
+    <XmlSec64Component>{47FED010-3C5F-4940-A355-BDF8B621EBAD}</XmlSec64Component>
+    <XmlSec64Componentd>{4C52E1DA-F04E-4479-9D8E-B4F97AF63805}</XmlSec64Componentd>
+  </PropertyGroup>
+
 
 </Project>

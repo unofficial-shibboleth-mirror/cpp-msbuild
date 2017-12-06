@@ -8,7 +8,7 @@
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(ROOT_DIR)$(Xerces_dir)\Install32\$(MsVCVersion)\lib;$(ROOT_DIR)$(Openssl_dir)\out32dll.dbg;$(ROOT_DIR)$(OpenSSl_dir)\x86Debug\lib;</AdditionalLibraryDirectories>
-      <AdditionalDependencies>%(AdditionalDependencies);libcrypto.lib;libssl.lib)</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies);libcrypto.lib;libssl.lib</AdditionalDependencies>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </Link>
   </ItemDefinitionGroup>

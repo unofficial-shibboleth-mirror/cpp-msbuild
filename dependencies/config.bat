@@ -52,7 +52,7 @@ set XERCES_DIR=xerces-c-3.2.0
 ## OPENSSL CONFIG
 ##
 ## OPENSSL_DIR          is the directory name
-## OPENSSL_MM_VERSION   is the Merge Module version (and so have to be 4 dir separated numbers)
+## OPENSSL_MM_VERSION   is the Merge Module version (and so have to be 3 or 4 dot separated numbers)
 ## OPENSSL_FILE_VERSION is the distinction on the name of the DLLS
 ##                      if it changes you *MUST* change Version.props
 set OPENSSL_DIR=openssl-1.1.0g
@@ -68,7 +68,16 @@ set OPENSSL_FILE_VERSION=1_1
 Set LIBCURL_VERSION=7.57.0
 set LIBCURL_DIR=curl-%LIBCURL_VERSION%
 
+##
+## XML SECURITY CONFIG
+##
+## XSEC_DIR              is the directory name
+## XSEC_MM_VERSION       is the Merge Module version (and so have to be 3 or 4 dot separated numbers)
+## XSEC_FILE_VERSION     is the distinction on the name of the DLLS
+##                       if it changes you *MUST* change Version.props
 set XSEC_DIR=xml-security-cpp
+SET XSEC_FILE_VERSION=2_0
+SET XSEC_MM_VERSION=2.0.0
 
 SET MsVCVersionNum=15
 

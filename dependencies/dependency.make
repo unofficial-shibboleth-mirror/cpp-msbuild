@@ -49,9 +49,6 @@ XercesInstallDir=Install64\VC15
 !error XERCES_DIR not defined
 !endif
 
-!if "$(XSEC_DIR)" == ""
-!error XSEC_DIR not defined
-!endif
 
 ##
 ## TARGETS
