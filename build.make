@@ -1,4 +1,4 @@
-!Include ..\env.make
+!Include env.make
 #
 # Short cuts to make things easier
 #

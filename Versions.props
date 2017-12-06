@@ -108,6 +108,15 @@
 
   </PropertyGroup>
 
+  <PropertyGroup Label="Apache">
+        <Apache13Root Condition="'$(Apache13Root)'==''">$(APACHE_13_ROOT)</Apache13Root>
+        <Apache20Root Condition="'$(Apache20Root)'==''">$(APACHE_20_ROOT)</Apache20Root>
+        <Apache22Root Condition="'$(Apache22Root)'==''">$(APACHE_22_ROOT)</Apache22Root>
+        <Apache22Root64 Condition="'$(Apache22Root64)'==''">$(APACHE_22_ROOT64)</Apache22Root64>
+        <Apache24Root Condition="'$(Apache24Root)'==''">$(APACHE_24_ROOT)</Apache24Root>
+        <Apache24Root64 Condition="'$(Apache24Root64)'==''">$(APACHE_24_ROOT64)</Apache24Root64>
+  </PropertyGroup>
+
   <PropertyGroup Label="OpenSSLGeneral">
     <!-- Just for now -->
     <OPENSSL_FILE_VERSION Condition="'$(OPENSSL_FILE_VERSION)' == ''">1_1</OPENSSL_FILE_VERSION>

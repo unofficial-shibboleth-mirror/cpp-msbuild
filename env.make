@@ -5,7 +5,6 @@
 !error this code only known to work with VC15
 !endif
 
-
 !if "$(ROOT_DIR)" == ""
 !error ROOT_DIR not defined
 !endif
@@ -50,6 +49,30 @@ SED=sed
 !error XSEC_MM_VERSION not defined
 !endif
 
+#!if "$(APACHE_13_ROOT)" == ""
+#!error APACHE_13_ROOT not defined
+#!endif
+
+!if "$(APACHE_20_ROOT)" == ""
+!error APACHE_20_ROOT not defined
+!endif
+
+!if "$(APACHE_22_ROOT)" == ""
+!error APACHE_22_ROOT not defined
+!endif
+
+!if "$(APACHE_22_ROOT64)" == ""
+!error APACHE_22_ROOT64 not defined
+!endif
+
+!if "$(APACHE_24_ROOT)" == ""
+!error APACHE_24_ROOT not defined
+!endif
+
+!if "$(APACHE_24_ROOT64)" == ""
+!error APACHE_24_ROOT64 not defined
+	!endif
+
 environment:
 	@echo ROOT_DIR	 			$(ROOT_DIR)
 	@echo SED             		$(SED)
@@ -62,4 +85,20 @@ environment:
     @echo XSEC_DIR              $(XSEC_DIR)
     @echo XSEC_FILE_VERSION     $(XSEC_FILE_VERSION)
     @echo XSEC_MM_VERSION       $(XSEC_MM_VERSION)
+	@echo APACHE_13_ROOT		$(APACHE_13_ROOT)
+	@echo APACHE_20_ROOT		$(APACHE_20_ROOT)
+	@echo APACHE_22_ROOT		$(APACHE_22_ROOT)
+	@echo APACHE_22_ROOT64		$(APACHE_22_ROOT64)
+	@echo APACHE_24_ROOT		$(APACHE_24_ROOT)
+	@echo APACHE_24_ROOT64		$(APACHE_24_ROOT64)
+	@echo ZLIB_DIR				$(ZLIB_DIR)
+	@echo ZLIB_IMPLIB			$(ZLIB_IMPLIB)
+	@echo ZLIB_FILE_VERSION		$(ZLIB_FILE_VERSION)
+	@echo ZLIB_MM_VERSION		$(ZLIB_MM_VERSION)
+    @echo XERCES_DIR            $(XERCES_DIR)
+    @echo XERCES_FILE_VERSION   $(XERCES_FILE_VERSION)
+    @echo XERCES_MM_VERSION     $(XERCES_MM_VERSION)
+    @echo LOG4SHIB_DIR          $(LOG4SHIB_DIR)
+    @echo LOG4SHIB_FILE_VERSION $(LOG4SHIB_FILE_VERSION)
+    @echo LOG4SHIB_MM_VERSION   $(LOG4SHIB_MM_VERSION)
 

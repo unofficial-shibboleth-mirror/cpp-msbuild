@@ -1,9 +1,26 @@
 rem ROOT_DIR HAS TO HAVE TRAILING SLASH
 
 if "%1" NEQ "" goto %1%
+
+#
+# DEFAULT SETTINGS (for Scott)
+#
+
 set ROOT_DIR=C:\Users\cantor.2\Shibboleth\
 set VS_DIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build
 set SED=C:\cygwin64\bin\sed.exe
+
+
+#
+# Apache Config
+#
+SET APACHE_13_ROOT=%ROOT_DIR%apache\VC10\Apache
+SET APACHE_20_ROOT=%ROOT_DIR%apache\VC10\Apache2.0.63\Apache
+SET APACHE_22_ROOT=%ROOT_DIR%apache\VC10\Apache2
+SET APACHE_22_ROOT64=%ROOT_DIR%apache\VC10\Apache22-64
+SET APACHE_24_ROOT=%ROOT_DIR%apache\VC10\Apache24
+SET APACHE_24_ROOT64=%ROOT_DIR%apache\VC10\Apache24-64
+
 goto path_done
 
 :ROD
