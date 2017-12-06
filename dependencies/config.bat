@@ -59,12 +59,6 @@ set OPENSSL_DIR=openssl-1.1.0g
 set OPENSSL_MM_VERSION=1.1.0.7
 set OPENSSL_FILE_VERSION=1_1
 
-
-set SSLLib=libcrypto.lib;libssl.lib
-set SSLLib_space=libcrypto.lib libssl.lib
-set SSLLibD=libcrypto.lib;libssl.lib
-set SSLLibD_space=libcrypto.lib libssl.lib
-
 set LIBCURL_DIR=curl-7.57.0
 set LIBCURL_NAME=libcurl5
 

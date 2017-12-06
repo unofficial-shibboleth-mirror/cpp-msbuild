@@ -8,7 +8,7 @@
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(ROOT_DIR)$(Xerces_dir)\Install32\$(MsVCVersion)\lib;$(ROOT_DIR)$(Openssl_dir)\out32dll.dbg;$(ROOT_DIR)$(OpenSSl_dir)\x86Debug\lib;</AdditionalLibraryDirectories>
-      <AdditionalDependencies>%(AdditionalDependencies);$(SSLLibD)</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies);libcrypto.lib;libssl.lib)</AdditionalDependencies>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </Link>
   </ItemDefinitionGroup>
@@ -21,7 +21,7 @@
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(ROOT_DIR)$(Xerces_dir)\install64\$(MsVCVersion)\lib;$(ROOT_DIR)$(Openssl_dir)\out64dll.dbg;$(ROOT_DIR)$(OpenSSl_dir)\x64Debug\lib;</AdditionalLibraryDirectories>
-      <AdditionalDependencies>%(AdditionalDependencies);$(SSLLibD)</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies);libcrypto.lib;libssl.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
 
@@ -33,7 +33,7 @@
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(ROOT_DIR)$(Xerces_dir)\Install32\$(MsVCVersion)\lib;$(ROOT_DIR)$(Openssl_dir)\out32dll;$(ROOT_DIR)$(OpenSSl_dir)\x86\lib;</AdditionalLibraryDirectories>
-      <AdditionalDependencies>%(AdditionalDependencies);$(SSLLib)</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies);libcrypto.lib;libssl.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
 
@@ -44,7 +44,7 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>    </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(ROOT_DIR)$(Xerces_dir)\Install64\$(MsVCVersion)\lib;$(ROOT_DIR)$(Openssl_dir)\out64dll;$(ROOT_DIR)$(OpenSSl_dir)\x64\lib;</AdditionalLibraryDirectories>
-      <AdditionalDependencies>%(AdditionalDependencies);;$(SSLLib)</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies);libcrypto.lib;libssl.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
 
