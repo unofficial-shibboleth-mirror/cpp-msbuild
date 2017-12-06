@@ -48,7 +48,17 @@ set LOGSHIB_DIR=cpp-log4shib
 
 set XERCES_DIR=xerces-c-3.2.0
 
+##
+## OPENSSL CONFIG
+##
+## OPENSSL_DIR          is the directory name
+## OPENSSL_MM_VERSION   is the Merge Module version (and so have to be 4 dir separated numbers)
+## OPENSSL_FILE_VERSION is the distinction on the name of the DLLS
+##                      if it changes you *MUST* change Version.props
 set OPENSSL_DIR=openssl-1.1.0g
+set OPENSSL_MM_VERSION=1.1.0.7
+set OPENSSL_FILE_VERSION=1_1
+
 
 set SSLLib=libcrypto.lib;libssl.lib
 set SSLLib_space=libcrypto.lib libssl.lib

@@ -69,19 +69,6 @@
     <XMLToolingComponent64d>{E4A7E0DE-7A88-4617-88A5-7FE499664B61}</XMLToolingComponent64d>
     <XMLToolingLiteComponent64d>{356BA4A0-2C00-489F-8274-18692A237DDB}</XMLToolingLiteComponent64d>
 
-    <OpenSSLVersion>1.1.0.6</OpenSSLVersion>
-    <OpenSSLDirVersion>1.1.0g</OpenSSLDirVersion>
-    <openssl>openssl-$(OpenSSLDirVersion)</openssl>
-    <OpenSSLFileVersion>1_1</OpenSSLFileVersion>
-    <!-- Change the 8 components below iff OpenSSLFileVersion changes -->
-    <LibEay32Component>{1E2D9B00-84CD-4fc4-9CE4-BEBE390AE692}</LibEay32Component>
-    <SSlEay32Component>{94DE34A7-B404-494a-AAF1-EF5D4A8A448F}</SSlEay32Component>
-    <LibEay32Componentd>{21E6CA27-1B37-4c7d-AEB1-68A45702B56E}</LibEay32Componentd>
-    <SSlEay32Componentd>{F5EB9E01-BE1E-4d68-97F5-504A0673F896}</SSlEay32Componentd>
-    <LibEay64Component>{E0522445-DA09-43dc-BEEF-46823B19BB48}</LibEay64Component>
-    <SSlEay64Component>{2676AE3A-941F-4eff-AEFD-9649AD70C919}</SSlEay64Component>
-    <LibEay64Componentd>{00A10097-8FF3-44f8-AFEC-2399A0958CD9}</LibEay64Componentd>
-    <SSlEay64Componentd>{2512F0D0-CD50-4071-BECD-530EA83A4CCA}</SSlEay64Componentd>
 
     <ShibbolethDllVersion>3.0.0</ShibbolethDllVersion>
     <ShibbolethDllFileVersion>3_0</ShibbolethDllFileVersion>
@@ -127,4 +114,26 @@
     <fcgi>fcgi-$(FastCGIVersion)-VC10</fcgi>
 
   </PropertyGroup>
+
+  <PropertyGroup Label="OpenSSLGeneral">
+    <!-- Just for now -->
+    <OPENSSL_FILE_VERSION Condition="'$(OPENSSL_FILE_VERSION)' == ''">1_1</OPENSSL_FILE_VERSION>
+
+    <openssl Condition="'$(OPENSSL_DIR)'==''">openssl-1.1.0g</openssl>
+    <openssl Condition="'$(OPENSSL_DIR)'!=''">$(OPENSSL_DIR)</openssl>
+  </PropertyGroup>
+
+  <PropertyGroup Label="OpenSSLGuids " Condition="'$(OPENSSL_FILE_VERSION)' == '1_1'">
+    <OpenSSLFileVersion>$(OPENSSL_FILE_VERSION)</OpenSSLFileVersion>
+    <!-- Change the 8 components below iff OpenSSLFileVersion changes -->
+    <LibEay32Component>{1E2D9B00-84CD-4fc4-9CE4-BEBE390AE692}</LibEay32Component>
+    <SSlEay32Component>{94DE34A7-B404-494a-AAF1-EF5D4A8A448F}</SSlEay32Component>
+    <LibEay32Componentd>{21E6CA27-1B37-4c7d-AEB1-68A45702B56E}</LibEay32Componentd>
+    <SSlEay32Componentd>{F5EB9E01-BE1E-4d68-97F5-504A0673F896}</SSlEay32Componentd>
+    <LibEay64Component>{E0522445-DA09-43dc-BEEF-46823B19BB48}</LibEay64Component>
+    <SSlEay64Component>{2676AE3A-941F-4eff-AEFD-9649AD70C919}</SSlEay64Component>
+    <LibEay64Componentd>{00A10097-8FF3-44f8-AFEC-2399A0958CD9}</LibEay64Componentd>
+    <SSlEay64Componentd>{2512F0D0-CD50-4071-BECD-530EA83A4CCA}</SSlEay64Componentd>
+  </PropertyGroup>
+
 </Project>

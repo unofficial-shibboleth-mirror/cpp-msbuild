@@ -29,14 +29,6 @@ XercesInstallDir=Install64\VC15
 
 !Include ..\env.make
 
-!if "$(VISUALSTUDIOVERSION)" != "15.0"
-!error this code only known to work with VC15
-!endif
-
-!if "$(OPENSSL_DIR)" == ""
-!error OPENSSL_DIR not defined
-!endif
-
 !if "$(ZLIB_DIR)" == ""
 !error ZLIB_DIR not defined
 !endif
