@@ -44,6 +44,8 @@ help:
 	@echo "         openssl targets:  openssl, openssl-(clean|debug|release)[-configure]
 	@echo "         zlib targets: zlib zlib-(clean|debug|release)
 	@echo "	        log4shib targets: log4shib log4shib-(clean|debug|release)
+	@echo "			xerces targets: xerces xerces-(clean|debug|release)
+	@echo "			xsec targets: xsec xsec-(clean|debug|release)
 	@echo "
 	@echo " See also https://wiki.shibboleth.net/confluence/display/SP3/WindowsBuild
 
