@@ -84,15 +84,6 @@
     <ShibDll64Componentd>{53AE4EDF-5E73-4728-81B6-532E383FE2E0}</ShibDll64Componentd>
     <ShibDllLite64Componentd>{DE702022-B4A3-47B0-8DEF-664897127808}</ShibDllLite64Componentd>
 
-    <XercesVersion>3.2.0</XercesVersion>
-    <xerces>xerces-c-$(XercesVersion)</xerces>
-    <XercesFileVersion>3_2</XercesFileVersion>
-    <!-- Change the 4 components below iff XercesFileVersion changes -->
-    <Xerces32Component>{703F33E0-715F-4301-8554-2D3F9AE2CD4B}</Xerces32Component>
-    <Xerces32Componentd>{568D5E45-9E2B-44ED-8ECE-E5E61B658733}</Xerces32Componentd>
-    <Xerces64Component>{C43D408D-ADB6-4C19-986C-18B4E5DE1315}</Xerces64Component>
-    <Xerces64Componentd>{3D0F7C56-196D-4BAA-BEF7-56A747C110DA}</Xerces64Componentd>
-
 
     <FastCGIVersion>2.4.0</FastCGIVersion>
     <fcgi>fcgi-$(FastCGIVersion)-VC10</fcgi>
@@ -154,7 +145,7 @@
     <ZlibVersion Condition="'$(ZLIB_MM_VERSION)'==''">1.2.11</ZlibVersion>
     <ZLibVersion Condition="'$(ZLIB_MM_VERSION)'!=''">$(ZLIB_MM_VERSION)</ZLibVersion>
     <zlib Condition="'$(ZLIB_DIR)'==''">zlib-1.2.11</zlib>
-    <zlib Condition="'$(ZLIB_DIR)'!=''">$(ZLIB_DIR)</zlib>
+    <zlib Condition="'$(ZLIB_DIR)'!=''">'$(ZLIB_DIR)</zlib>
   </PropertyGroup>
 
   <PropertyGroup Label="ZLibGuids " Condition="'$(ZLIB_FILE_VERSION)' == '1_2_11'">
@@ -164,6 +155,24 @@
     <Zlib32Componentd>{D81C8108-F83F-4621-96C8-F48464E184AA}</Zlib32Componentd>
     <Zlib64Component>{65F8ED60-06A0-4C50-B208-8B9900CC981A}</Zlib64Component>
     <Zlib64Componentd>{4FEB4C6E-E96E-4C63-94C6-6EE4C84AC0C5}</Zlib64Componentd>
+  </PropertyGroup>
+
+  <PropertyGroup Label="XercesGeneral">
+    <!-- Just for now -->
+	<XERCES_FILE_VERSION Condition="'$(XERCES_FILE_VERSION)' == ''">3_2</XERCES_FILE_VERSION>
+    <XercesVersion Condition="'$(ZLIB_MM_VERSION)'==''">1.2.11</XercesVersion>
+    <XercesVersion Condition="'$(ZLIB_MM_VERSION)'!=''">$(ZLIB_MM_VERSION)</XercesVersion>
+    <xerces Condition="'$(XERCES_DIR)'==''">xerces-c-3.2.0</xerces>
+    <xerces Condition="'$(XERCES_DIR)'!=''">$(XERCES_DIR)</xerces>
+  </PropertyGroup>
+
+  <PropertyGroup Label="XercesGuids " Condition="'$(XERCES_FILE_VERSION)' == '3_2'">
+    <XsercesFileVersion>$(XERCES_FILE_VERSION)</ZlibFileVersion>
+    <!-- Change the 4 components below iff XercesFileVersion changes -->
+    <Xerces32Component>{703F33E0-715F-4301-8554-2D3F9AE2CD4B}</Xerces32Component>
+    <Xerces32Componentd>{568D5E45-9E2B-44ED-8ECE-E5E61B658733}</Xerces32Componentd>
+    <Xerces64Component>{C43D408D-ADB6-4C19-986C-18B4E5DE1315}</Xerces64Component>
+    <Xerces64Componentd>{3D0F7C56-196D-4BAA-BEF7-56A747C110DA}</Xerces64Componentd>
   </PropertyGroup>
 
 

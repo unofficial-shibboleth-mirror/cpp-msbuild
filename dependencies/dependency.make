@@ -35,11 +35,6 @@ ZLIB_SHAREDLIB=zlib$(ZLIB_FILE_VERSION)
 !error LOGSHIB_DIR not defined
 !endif
 
-!if "$(XERCES_DIR)" == ""
-!error XERCES_DIR not defined
-!endif
-
-
 ##
 ## TARGETS
 ##
@@ -49,16 +44,6 @@ help:
 	@echo "         openssl targets:  openssl, openssl-(clean|debug|release)[-configure]
 	@echo "         zlib targets: zlib zlib-(clean|debug|release)
 	@echo "	        log4shib targets: log4shib log4shib-(clean|debug|release)
-	@echo "
-	@echo "REQUIRED VARIABLES
-	@echo "			ROOT_DIR
-	@echo "			OPENSSL_DIR
-	@echo "			SLIB_DIR, ZLIB_SHAREDLIB, ZLIB_IMPLIB
-	@echo "			LOGSHIB_DIR (sic)
-	@echo "			XERCES_DIR
-	@echo "			LIBCURL_DIR
-	@echo "			XSEC_DIR
-	@echo "
 	@echo "
 	@echo " See also https://wiki.shibboleth.net/confluence/display/SP3/WindowsBuild
 

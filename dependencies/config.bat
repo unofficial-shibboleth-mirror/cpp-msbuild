@@ -57,10 +57,6 @@ goto path_done
 
 :path_done
 
-set LOGSHIB_DIR=cpp-log4shib
-
-set XERCES_DIR=xerces-c-3.2.0
-
 ##
 ## OPENSSL CONFIG
 ##
@@ -99,6 +95,20 @@ set ZLIB_DIR=zlib-1.2.11
 set ZLIB_MM_VERSION=1.2.11
 set ZLIB_IMPLIB=zlib1
 set ZLIB_FILE_VERSION=1_2_11
+
+##
+## LOG4SHIB CONFIG
+##
+set LOGSHIB_DIR=cpp-log4shib
+
+##
+## XERCES CONFIG
+##
+set XERCES_DIR=xerces-c-3.2.0
+set XERCES_FILE_VERSION=3_2
+set XERCES_MM_VERSION=3.2.0
+
+
 
 
 SET MsVCVersionNum=15

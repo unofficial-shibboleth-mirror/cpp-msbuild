@@ -71,7 +71,8 @@ SED=sed
 
 !if "$(APACHE_24_ROOT64)" == ""
 !error APACHE_24_ROOT64 not defined
-	!endif
+!endif
+
 
 !if "$(ZLIB_DIR)" == ""
 !error ZLIB_DIR not defined
@@ -87,6 +88,19 @@ SED=sed
 
 !if "$(ZLIB_MM_VERSION)" == ""
 !error ZLIB_MM_VERSION not defined
+!endif
+
+
+!if "$(XERCES_DIR)" == ""
+!error XERCES_DIR not defined
+!endif
+
+!if "$(XERCES_MM_VERSION)" == ""
+!error XERCES_MM_VERSION not defined
+!endif
+
+!if "$(XERCES_FILE_VERSION)" == ""
+!error XERCES_FILE_VERSION not defined
 !endif
 
 
@@ -118,3 +132,4 @@ environment:
     @echo LOG4SHIB_DIR          $(LOG4SHIB_DIR)
     @echo LOG4SHIB_FILE_VERSION $(LOG4SHIB_FILE_VERSION)
     @echo LOG4SHIB_MM_VERSION   $(LOG4SHIB_MM_VERSION)
+
