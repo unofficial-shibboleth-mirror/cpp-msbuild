@@ -42,15 +42,6 @@
 
     <boost>boost_1_65_1</boost>
     
-    <Log4ShibVersion>1.0.10</Log4ShibVersion>
-    <Log4ShibFileVersion>1_0</Log4ShibFileVersion>
-    <!-- Change the 4 components below if the Log4ShibFileVersion name changes -->
-    <Log4ShibComponent32>{2FDE8ED0-774A-4F44-88D5-C7089350D895}</Log4ShibComponent32>
-    <Log4ShibComponent32d>{B8D2E797-F5A8-4E0D-B57F-9A7D4E699942}</Log4ShibComponent32d>
-    <Log4ShibComponent64>{DA7E5213-363E-4E13-B05D-90905BE9FB94}</Log4ShibComponent64>
-    <Log4ShibComponent64d>{792E6762-70FE-418A-9336-39DDF1A6BAE7}</Log4ShibComponent64d>
-    <log4shib>cpp-log4shib</log4shib>
-
     <OpenSAMLVersion>3.0.0</OpenSAMLVersion>
     <OpenSAMLFileVersion>3_0</OpenSAMLFileVersion>
     <!-- Change the 4 components below iff the OpenSAMLFileVersion name changes -->
@@ -141,7 +132,7 @@
 
   <PropertyGroup Label="ZLibGeneral">
     <!-- Just for now -->
-	<ZLIB_FILE_VERSION Condition="'$(ZSEC_FILE_VERSION)' == ''">1_2_11</ZLIB_FILE_VERSION>
+	<ZLIB_FILE_VERSION Condition="'$(ZLIB_FILE_VERSION)' == ''">1_2_11</ZLIB_FILE_VERSION>
     <ZlibVersion Condition="'$(ZLIB_MM_VERSION)'==''">1.2.11</ZlibVersion>
     <ZLibVersion Condition="'$(ZLIB_MM_VERSION)'!=''">$(ZLIB_MM_VERSION)</ZLibVersion>
     <zlib Condition="'$(ZLIB_DIR)'==''">zlib-1.2.11</zlib>
@@ -160,14 +151,14 @@
   <PropertyGroup Label="XercesGeneral">
     <!-- Just for now -->
 	<XERCES_FILE_VERSION Condition="'$(XERCES_FILE_VERSION)' == ''">3_2</XERCES_FILE_VERSION>
-    <XercesVersion Condition="'$(ZLIB_MM_VERSION)'==''">1.2.11</XercesVersion>
-    <XercesVersion Condition="'$(ZLIB_MM_VERSION)'!=''">$(ZLIB_MM_VERSION)</XercesVersion>
+    <XercesVersion Condition="'$(XERCES_MM_VERSION)'==''">1.2.11</XercesVersion>
+    <XercesVersion Condition="'$(XERCES_MM_VERSION)'!=''">$(ZLIB_MM_VERSION)</XercesVersion>
     <xerces Condition="'$(XERCES_DIR)'==''">xerces-c-3.2.0</xerces>
     <xerces Condition="'$(XERCES_DIR)'!=''">$(XERCES_DIR)</xerces>
   </PropertyGroup>
 
   <PropertyGroup Label="XercesGuids " Condition="'$(XERCES_FILE_VERSION)' == '3_2'">
-    <XsercesFileVersion>$(XERCES_FILE_VERSION)</ZlibFileVersion>
+    <XercesFileVersion>$(XERCES_FILE_VERSION)</XercesFileVersion>
     <!-- Change the 4 components below iff XercesFileVersion changes -->
     <Xerces32Component>{703F33E0-715F-4301-8554-2D3F9AE2CD4B}</Xerces32Component>
     <Xerces32Componentd>{568D5E45-9E2B-44ED-8ECE-E5E61B658733}</Xerces32Componentd>
@@ -175,5 +166,22 @@
     <Xerces64Componentd>{3D0F7C56-196D-4BAA-BEF7-56A747C110DA}</Xerces64Componentd>
   </PropertyGroup>
 
+  <PropertyGroup Label="Log4ShibGeneral">
+    <!-- Just for now -->
+	<LOG4SHIB_FILE_VERSION Condition="'$(LOG4SHIB_FILE_VERSION)' == ''">1_0</LOG4SHIB_FILE_VERSION>
+    <Log4ShibVersion Condition="'$(LOG4SHIB_MM_VERSION)' == ''">1.0.10</Log4ShibVersion>
+    <Log4ShibVersion Condition="'$(LOG4SHIB_MM_VERSION)' != ''">$(LOG4SHIB_MM_VERSION)</Log4ShibVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Log4ShibGuids" Condition="'$(LOG4SHIB_FILE_VERSION)' == '1_0'">
+    <Log4ShibFileVersion>$(LOG4SHIB_FILE_VERSION)</Log4ShibFileVersion>
+    <!-- Change the 4 components below if the Log4ShibFileVersion name changes -->
+    <Log4ShibComponent32>{2FDE8ED0-774A-4F44-88D5-C7089350D895}</Log4ShibComponent32>
+    <Log4ShibComponent32d>{B8D2E797-F5A8-4E0D-B57F-9A7D4E699942}</Log4ShibComponent32d>
+    <Log4ShibComponent64>{DA7E5213-363E-4E13-B05D-90905BE9FB94}</Log4ShibComponent64>
+    <Log4ShibComponent64d>{792E6762-70FE-418A-9336-39DDF1A6BAE7}</Log4ShibComponent64d>
+    <log4shib>cpp-log4shib</log4shib>
+  </PropertyGroup>
 
 </Project>
+

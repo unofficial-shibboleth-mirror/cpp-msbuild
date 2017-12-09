@@ -104,6 +104,18 @@ SED=sed
 !endif
 
 
+!if "$(LOG4SHIB_DIR)" == ""
+!error LOG4SHIB_DIR not defined
+!endif
+
+!if "$(LOG4SHIB_MM_VERSION)" == ""
+!error LOG4SHIB_MM_VERSION not defined
+!endif
+
+!if "$(LOG4SHIB_FILE_VERSION)" == ""
+!error LOG4SHIB_FILE_VERSION not defined
+!endif
+
 environment:
 	@echo ROOT_DIR	 			$(ROOT_DIR)
 	@echo SED             		$(SED)

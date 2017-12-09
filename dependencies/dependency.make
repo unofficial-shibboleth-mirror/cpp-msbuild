@@ -30,11 +30,6 @@ XercesInstallDir=Install64\VC15
 !Include ..\env.make
 ZLIB_SHAREDLIB=zlib$(ZLIB_FILE_VERSION)
 
-
-!if "$(LOGSHIB_DIR)" == ""
-!error LOGSHIB_DIR not defined
-!endif
-
 ##
 ## TARGETS
 ##
@@ -195,18 +190,18 @@ openssl-build: $(ROOT_DIR)\$(OPENSSL_DIR)\makefile
 log4shib: log4shib-debug log4shib-release
 
 log4shib-clean: log4shib-test
-	msbuild /m  $(ROOT_DIR)\$(LOGSHIB_DIR)\msvc15\msvc15.sln  /p:Configuration=Debug   /t:clean /p:Platform=Win32
-	msbuild /m  $(ROOT_DIR)\$(LOGSHIB_DIR)\msvc15\msvc15.sln  /p:Configuration=Debug   /t:clean /p:Platform=x64
-	msbuild /m  $(ROOT_DIR)\$(LOGSHIB_DIR)\msvc15\msvc15.sln  /p:Configuration=Release /t:clean /p:Platform=Win32
-	msbuild /m  $(ROOT_DIR)\$(LOGSHIB_DIR)\msvc15\msvc15.sln  /p:Configuration=Release /t:clean /p:Platform=x64
+	msbuild /m  $(ROOT_DIR)\$(LOG4SHIB_DIR)\msvc15\msvc15.sln  /p:Configuration=Debug   /t:clean /p:Platform=Win32
+	msbuild /m  $(ROOT_DIR)\$(LOG4SHIB_DIR)\msvc15\msvc15.sln  /p:Configuration=Debug   /t:clean /p:Platform=x64
+	msbuild /m  $(ROOT_DIR)\$(LOG4SHIB_DIR)\msvc15\msvc15.sln  /p:Configuration=Release /t:clean /p:Platform=Win32
+	msbuild /m  $(ROOT_DIR)\$(LOG4SHIB_DIR)\msvc15\msvc15.sln  /p:Configuration=Release /t:clean /p:Platform=x64
 
-log4shib-test: test-env $(ROOT_DIR)\$(LOGSHIB_DIR)\msvc15\msvc15.sln
+log4shib-test: test-env $(ROOT_DIR)\$(LOG4SHIB_DIR)\msvc15\msvc15.sln
 
 log4shib-debug: log4shib-test
-	msbuild /m  $(ROOT_DIR)\$(LOGSHIB_DIR)\msvc15\msvc15.sln  /p:Configuration=Debug /t:build /p:Platform=$(MsBuildArch)
+	msbuild /m  $(ROOT_DIR)\$(LOG4SHIB_DIR)\msvc15\msvc15.sln  /p:Configuration=Debug /t:build /p:Platform=$(MsBuildArch)
 
 log4shib-release: log4shib-test
-	msbuild /m  $(ROOT_DIR)\$(LOGSHIB_DIR)\msvc15\msvc15.sln  /p:Configuration=Release /t:build /p:Platform=$(MsBuildArch)
+	msbuild /m  $(ROOT_DIR)\$(LOG4SHIB_DIR)\msvc15\msvc15.sln  /p:Configuration=Release /t:build /p:Platform=$(MsBuildArch)
 
 #
 # Xerces

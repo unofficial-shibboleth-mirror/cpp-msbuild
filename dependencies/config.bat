@@ -99,7 +99,9 @@ set ZLIB_FILE_VERSION=1_2_11
 ##
 ## LOG4SHIB CONFIG
 ##
-set LOGSHIB_DIR=cpp-log4shib
+set LOG4SHIB_DIR=cpp-log4shib
+set LOG4SHIB_MM_VERSION=1.0.10
+set LOG4SHIB_FILE_VERSION=1_0
 
 ##
 ## XERCES CONFIG
@@ -107,8 +109,6 @@ set LOGSHIB_DIR=cpp-log4shib
 set XERCES_DIR=xerces-c-3.2.0
 set XERCES_FILE_VERSION=3_2
 set XERCES_MM_VERSION=3.2.0
-
-
 
 
 SET MsVCVersionNum=15
