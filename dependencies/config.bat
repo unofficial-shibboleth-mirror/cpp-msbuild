@@ -57,10 +57,6 @@ goto path_done
 
 :path_done
 
-set ZLIB_DIR=zlib-1.2.11
-set ZLIB_IMPLIB=zlib1
-set ZLIB_SHAREDLIB=zlib1_2_11
-
 set LOGSHIB_DIR=cpp-log4shib
 
 set XERCES_DIR=xerces-c-3.2.0
@@ -95,6 +91,15 @@ set LIBCURL_DIR=curl-%LIBCURL_VERSION%
 set XSEC_DIR=xml-security-cpp
 SET XSEC_FILE_VERSION=2_0
 SET XSEC_MM_VERSION=2.0.0
+
+##
+## ZLIB CONFIG
+##
+set ZLIB_DIR=zlib-1.2.11
+set ZLIB_MM_VERSION=1.2.11
+set ZLIB_IMPLIB=zlib1
+set ZLIB_FILE_VERSION=1_2_11
+
 
 SET MsVCVersionNum=15
 

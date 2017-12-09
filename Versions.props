@@ -94,15 +94,6 @@
     <Xerces64Componentd>{3D0F7C56-196D-4BAA-BEF7-56A747C110DA}</Xerces64Componentd>
 
 
-    <ZlibVersion>1.2.11</ZlibVersion>
-    <zlib>zlib-$(ZlibVersion)</zlib>
-    <ZlibFileVersion>1_2</ZlibFileVersion>
-    <!-- Change the 4 components below iff ZlibFileVersion changes -->
-    <Zlib32Component>{13B4CBAF-D317-4982-BBF8-E32D57FACB14}</Zlib32Component>
-    <Zlib32Componentd>{ADEF973A-F7B8-40EF-80E8-C78B502AADB6}</Zlib32Componentd>
-    <Zlib64Component>{BEB38A55-FC0E-46E4-8B91-C650B9B6CA24}</Zlib64Component>
-    <Zlib64Componentd>{2DA91B41-CF31-473A-AF7B-BC13999654E6}</Zlib64Componentd>
-
     <FastCGIVersion>2.4.0</FastCGIVersion>
     <fcgi>fcgi-$(FastCGIVersion)-VC10</fcgi>
 
@@ -155,6 +146,24 @@
     <XmlSec32Componentd>{05507D35-7B52-414B-8162-869C608A5AA9}</XmlSec32Componentd>
     <XmlSec64Component>{47FED010-3C5F-4940-A355-BDF8B621EBAD}</XmlSec64Component>
     <XmlSec64Componentd>{4C52E1DA-F04E-4479-9D8E-B4F97AF63805}</XmlSec64Componentd>
+  </PropertyGroup>
+
+  <PropertyGroup Label="ZLibGeneral">
+    <!-- Just for now -->
+	<ZLIB_FILE_VERSION Condition="'$(ZSEC_FILE_VERSION)' == ''">1_2_11</ZLIB_FILE_VERSION>
+    <ZlibVersion Condition="'$(ZLIB_MM_VERSION)'==''">1.2.11</ZlibVersion>
+    <ZLibVersion Condition="'$(ZLIB_MM_VERSION)'!=''">$(ZLIB_MM_VERSION)</ZLibVersion>
+    <zlib Condition="'$(ZLIB_DIR)'==''">zlib-1.2.11</zlib>
+    <zlib Condition="'$(ZLIB_DIR)'!=''">$(ZLIB_DIR)</zlib>
+  </PropertyGroup>
+
+  <PropertyGroup Label="ZLibGuids " Condition="'$(ZLIB_FILE_VERSION)' == '1_2_11'">
+    <ZlibFileVersion>$(ZLIB_FILE_VERSION)</ZlibFileVersion>
+    <!-- Change the 4 components below iff ZlibFileVersion changes -->
+    <Zlib32Component>{D10691C0-E1D1-4CF6-BDDD-9F14B7DEAED1}</Zlib32Component>
+    <Zlib32Componentd>{D81C8108-F83F-4621-96C8-F48464E184AA}</Zlib32Componentd>
+    <Zlib64Component>{65F8ED60-06A0-4C50-B208-8B9900CC981A}</Zlib64Component>
+    <Zlib64Componentd>{4FEB4C6E-E96E-4C63-94C6-6EE4C84AC0C5}</Zlib64Componentd>
   </PropertyGroup>
 
 

@@ -28,18 +28,8 @@ XercesInstallDir=Install64\VC15
 !endif
 
 !Include ..\env.make
+ZLIB_SHAREDLIB=zlib$(ZLIB_FILE_VERSION)
 
-!if "$(ZLIB_DIR)" == ""
-!error ZLIB_DIR not defined
-!endif
-
-!if "$(ZLIB_SHAREDLIB)" == ""
-!error ZLIB_SHAREDLIB not defined
-!endif
-
-!if "$(ZLIB_IMPLIB)" == ""
-!error ZLIB_IMPLIB not defined
-!endif
 
 !if "$(LOGSHIB_DIR)" == ""
 !error LOGSHIB_DIR not defined

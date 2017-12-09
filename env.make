@@ -73,6 +73,23 @@ SED=sed
 !error APACHE_24_ROOT64 not defined
 	!endif
 
+!if "$(ZLIB_DIR)" == ""
+!error ZLIB_DIR not defined
+!endif
+
+!if "$(ZLIB_FILE_VERSION)" == ""
+!error ZLIB_FILE_VERSION not defined
+!endif
+
+!if "$(ZLIB_IMPLIB)" == ""
+!error ZLIB_IMPLIB not defined
+!endif
+
+!if "$(ZLIB_MM_VERSION)" == ""
+!error ZLIB_MM_VERSION not defined
+!endif
+
+
 environment:
 	@echo ROOT_DIR	 			$(ROOT_DIR)
 	@echo SED             		$(SED)
@@ -101,4 +118,3 @@ environment:
     @echo LOG4SHIB_DIR          $(LOG4SHIB_DIR)
     @echo LOG4SHIB_FILE_VERSION $(LOG4SHIB_FILE_VERSION)
     @echo LOG4SHIB_MM_VERSION   $(LOG4SHIB_MM_VERSION)
-
