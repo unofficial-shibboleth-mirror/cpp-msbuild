@@ -5,7 +5,8 @@
 
     <MsVCVersion>vc15</MsVCVersion>
     <!-- NO TRAILING '\' for the following.  Default value is C:\Program Files (x86)\Common Files\Merge Modules -->
-    <CppMmDir>D:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Redist\MSVC\14.11.25325\MergeModules</CppMmDir>
+    <CppMmDir Condition="'$(CPP_MM_DIR))'==''">d:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Redist\MSVC\14.11.25325\MergeModules</CppMmDir>
+    <CppMmDir Condition="'$(CPP_MM_DIR)'!=''">$(CPP_MM_DIR)</CppMmDir>
     <CppVCVersion>VC141</CppVCVersion>
 
     <CxxTestRoot>$(BuildRoot)\cxxtest</CxxTestRoot>
