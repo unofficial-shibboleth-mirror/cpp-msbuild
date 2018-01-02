@@ -137,7 +137,7 @@
     <ZlibVersion Condition="'$(ZLIB_MM_VERSION)'==''">1.2.11</ZlibVersion>
     <ZLibVersion Condition="'$(ZLIB_MM_VERSION)'!=''">$(ZLIB_MM_VERSION)</ZLibVersion>
     <zlib Condition="'$(ZLIB_DIR)'==''">zlib-1.2.11</zlib>
-    <zlib Condition="'$(ZLIB_DIR)'!=''">'$(ZLIB_DIR)</zlib>
+    <zlib Condition="'$(ZLIB_DIR)'!=''">$(ZLIB_DIR)</zlib>
   </PropertyGroup>
 
   <PropertyGroup Label="ZLibGuids " Condition="'$(ZLIB_FILE_VERSION)' == '1_2_11'">
