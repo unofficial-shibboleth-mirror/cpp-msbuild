@@ -41,7 +41,7 @@
     <curl Condition="'$(LIBCURL_DIR)'!=''">$(LIBCURL_DIR)</curl>
     <curl Condition="'$(LIBCURL_DIR)'==''">curl-$(CurlVersion)</curl>
 
-    <boost>boost_1_65_1</boost>
+    <boost>boost_1_66_0</boost>
     
     <OpenSAMLVersion>3.0.0</OpenSAMLVersion>
     <OpenSAMLFileVersion>3_0</OpenSAMLFileVersion>
