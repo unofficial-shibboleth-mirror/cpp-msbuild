@@ -36,11 +36,6 @@
     <!-- NEVER CHANGE THE UPGRADE CODE UNLESS YOU REALLY REALLY KNOW WHAT YOU ARE DOING -->
     <ShibbolethUpgradeCode>{28A4EB62-E860-49CA-BE43-44ADEB91DBF6}</ShibbolethUpgradeCode>
 
-    <CurlVersion Condition="'$(LIBCURL_DIR)'!=''">$(LIBCURL_VERSION)</CurlVersion>
-    <CurlVersion Condition="'$(LIBCURL_DIR)'==''">7.57.0</CurlVersion>
-    <curl Condition="'$(LIBCURL_DIR)'!=''">$(LIBCURL_DIR)</curl>
-    <curl Condition="'$(LIBCURL_DIR)'==''">curl-$(CurlVersion)</curl>
-
     <boost>boost_1_66_0</boost>
     
     <OpenSAMLVersion>3.0.0</OpenSAMLVersion>
@@ -82,6 +77,22 @@
 
   </PropertyGroup>
 
+  <PropertyGroup Label="CurlGuidsBad" Condition="'$(LIBCURL_FILE_VERSION)' != '7_57'">
+    <CurlFileVersion>BAD_LIBCURL_FILE_VERSION</CurlFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Label="CurlGuids" Condition="'$(LIBCURL_FILE_VERSION)' == '7_57'">
+    <CurlVersion Condition="'$(LIBCURL_DIR)'!=''">$(LIBCURL_VERSION)</CurlVersion>
+    <CurlVersion Condition="'$(LIBCURL_DIR)'==''">7.57.0</CurlVersion>
+    <curl Condition="'$(LIBCURL_DIR)'!=''">$(LIBCURL_DIR)</curl>
+    <curl Condition="'$(LIBCURL_DIR)'==''">curl-$(CurlVersion)</curl>
+
+    <CurlFileVersion>$(LIBCURL_FILE_VERSION)</CurlFileVersion>
+    <LibCurlGuid32>{3E44FDF9-7367-49A4-926E-EF8A204B19A4}</LibCurlGuid32>
+    <LibCurlGuid64>{9C2D8BAF-DD21-4EC8-A243-C6B6137D158A}</LibCurlGuid64>
+    <LibCurlGuid32d>{59EFE4A8-E29C-4712-874D-70E3564F28C0}</LibCurlGuid32d>
+    <LibCurlGuid64d>{05FD66BA-25DD-4FD9-991F-FD7B18409637}</LibCurlGuid64d>
+  </PropertyGroup>
+
   <PropertyGroup Label="Apache">
         <Apache13Root Condition="'$(Apache13Root)'==''">$(APACHE_13_ROOT)</Apache13Root>
         <Apache20Root Condition="'$(Apache20Root)'==''">$(APACHE_20_ROOT)</Apache20Root>
@@ -99,17 +110,20 @@
     <openssl Condition="'$(OPENSSL_DIR)'!=''">$(OPENSSL_DIR)</openssl>
   </PropertyGroup>
 
-  <PropertyGroup Label="OpenSSLGuids " Condition="'$(OPENSSL_FILE_VERSION)' == '1_1'">
+  <PropertyGroup Label="OpenSSLGuidsBad" Condition="'$(OPENSSL_FILE_VERSION)' != '1_1_0'">
+    <OpenSSLFileVersion>BAD_OPENSSL_FILE_VERSION</OpenSSLFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Label="OpenSSLGuids" Condition="'$(OPENSSL_FILE_VERSION)' == '1_1_0'">
     <OpenSSLFileVersion>$(OPENSSL_FILE_VERSION)</OpenSSLFileVersion>
     <!-- Change the 8 components below iff OpenSSLFileVersion changes -->
-    <LibEay32Component>{1E2D9B00-84CD-4fc4-9CE4-BEBE390AE692}</LibEay32Component>
-    <SSlEay32Component>{94DE34A7-B404-494a-AAF1-EF5D4A8A448F}</SSlEay32Component>
-    <LibEay32Componentd>{21E6CA27-1B37-4c7d-AEB1-68A45702B56E}</LibEay32Componentd>
-    <SSlEay32Componentd>{F5EB9E01-BE1E-4d68-97F5-504A0673F896}</SSlEay32Componentd>
-    <LibEay64Component>{E0522445-DA09-43dc-BEEF-46823B19BB48}</LibEay64Component>
-    <SSlEay64Component>{2676AE3A-941F-4eff-AEFD-9649AD70C919}</SSlEay64Component>
-    <LibEay64Componentd>{00A10097-8FF3-44f8-AFEC-2399A0958CD9}</LibEay64Componentd>
-    <SSlEay64Componentd>{2512F0D0-CD50-4071-BECD-530EA83A4CCA}</SSlEay64Componentd>
+    <LibEay32Component>{2F270B9B-A68A-42EC-B817-068FEFD4F36D}</LibEay32Component>
+    <SSlEay32Component>{9BF58918-75A5-4F6C-A69A-F298EE502756}</SSlEay32Component>
+    <LibEay32Componentd>{BEC421FA-33EE-4BAE-8913-61ED6CCAB5E0}</LibEay32Componentd>
+    <SSlEay32Componentd>{AF64EEAC-398D-46B5-ACC1-2AF6EC5AD043}</SSlEay32Componentd>
+    <LibEay64Component>{EC689DCE-C907-4138-B0BB-0A85312ADC18}</LibEay64Component>
+    <SSlEay64Component>{88C83F53-D6F2-4C1D-B445-FC1F431864B8}</SSlEay64Component>
+    <LibEay64Componentd>{9440BD3A-941A-4B24-A5D6-742B79681362}</LibEay64Componentd>
+    <SSlEay64Componentd>{ED3D1584-77E9-4A37-95B5-D83881A1BF44}</SSlEay64Componentd>
   </PropertyGroup>
 
   <PropertyGroup Label="XSecGeneral">
@@ -121,7 +135,11 @@
     <xmlsec Condition="'$(XSEC_DIR)'!=''">$(XSEC_DIR)</xmlsec>
   </PropertyGroup>
 
-  <PropertyGroup Label="XSecGuids " Condition="'$(XSEC_FILE_VERSION)' == '2_0'">
+  <PropertyGroup Label="XSecGuidsBad" Condition="'$(XSEC_FILE_VERSION)' != '2_0'">
+    <XmlSecFileVersion>BAD_XSEC_FILE_VERSION</XmlSecFileVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Label="XSecGuids" Condition="'$(XSEC_FILE_VERSION)' == '2_0'">
     <XmlSecFileVersion>$(XSEC_FILE_VERSION)</XmlSecFileVersion>
 
     <!-- Change the 4 components below iff XmlSecFileVersion changes -->
@@ -140,6 +158,9 @@
     <zlib Condition="'$(ZLIB_DIR)'!=''">$(ZLIB_DIR)</zlib>
   </PropertyGroup>
 
+  <PropertyGroup Label="ZLibGuidsBad" Condition="'$(ZLIB_FILE_VERSION)' != '1_2_11'">
+    <ZlibFileVersion>BAD_ZLIB_FILE_VERSION</ZlibFileVersion>
+  </PropertyGroup>
   <PropertyGroup Label="ZLibGuids " Condition="'$(ZLIB_FILE_VERSION)' == '1_2_11'">
     <ZlibFileVersion>$(ZLIB_FILE_VERSION)</ZlibFileVersion>
     <!-- Change the 4 components below iff ZlibFileVersion changes -->
@@ -158,6 +179,9 @@
     <xerces Condition="'$(XERCES_DIR)'!=''">$(XERCES_DIR)</xerces>
   </PropertyGroup>
 
+  <PropertyGroup Label="XercesGuidsBad" Condition="'$(XERCES_FILE_VERSION)' != '3_2'">
+    <XercesFileVersion>BAD_XERCES_FILE_VERSION</XercesFileVersion>
+  </PropertyGroup>
   <PropertyGroup Label="XercesGuids " Condition="'$(XERCES_FILE_VERSION)' == '3_2'">
     <XercesFileVersion>$(XERCES_FILE_VERSION)</XercesFileVersion>
     <!-- Change the 4 components below iff XercesFileVersion changes -->
@@ -174,6 +198,9 @@
     <Log4ShibVersion Condition="'$(LOG4SHIB_MM_VERSION)' != ''">$(LOG4SHIB_MM_VERSION)</Log4ShibVersion>
   </PropertyGroup>
 
+  <PropertyGroup Label="Log4ShibGuidsBad" Condition="'$(LOG4SHIB_FILE_VERSION)' != '1_0'">
+    <Log4ShibFileVersion>BAD_LOG4SHIB_FILE_VERSION</Log4ShibFileVersion>
+  </PropertyGroup>
   <PropertyGroup Label="Log4ShibGuids" Condition="'$(LOG4SHIB_FILE_VERSION)' == '1_0'">
     <Log4ShibFileVersion>$(LOG4SHIB_FILE_VERSION)</Log4ShibFileVersion>
     <!-- Change the 4 components below if the Log4ShibFileVersion name changes -->

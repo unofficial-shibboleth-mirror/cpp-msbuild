@@ -170,10 +170,10 @@ $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)\include\openssl\opensslconf.h:
 $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)Debug\include\openssl\opensslconf.h: 
 	nmake /f dependency.make openssl-clean-configure openssl-debug-configure openssl-build
 
-openssl-release-configure: openssl-test $(ROOT_DIR)\$(OPENSSL_DIR)\Configure
+openssl-release-configure: openssl-test $(ROOT_DIR)\$(OPENSSL_DIR)\ConfigureR
 	title Build OpenSSL $(VSCMD_ARG_TGT_ARCH) Release
 	cd $(ROOT_DIR)\$(OPENSSL_DIR)
-	$(PERL) Configure VC-$(OpenSSLName) --prefix=$(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)
+	$(PERL) ConfigureR VC-$(OpenSSLName) --prefix=$(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)
 
 openssl-debug-configure: openssl-test $(ROOT_DIR)\$(OPENSSL_DIR)\ConfigureD
 	title Build OpenSSL $(VSCMD_ARG_TGT_ARCH) Debug
@@ -258,7 +258,7 @@ curl-debug: test-env openssl-debug zlib-debug
 			ZLIB_LFLAGS=/libpath:$(ROOT_DIR)$(ZLIB_DIR)\$(ZlibTargetDir)\DEBUG 						\
 			ZLIB_CFLAGS="/DHAVE_ZLIB_H /DHAVE_ZLIB /DHAVE_LIBZ /I$(ROOT_DIR)$(ZLIB_DIR)" 			\
 			ZLIB_LIBS=$(ZLIB_IMPLIB)D.lib SSL_LIBS="libcrypto.lib libssl.lib" 						\
-			BASE_NAME=libcurl5 BASE_NAME_DEBUG=libcurl5d
+			BASE_NAME=libcurl$(LIBCURL_FILE_VERSION) BASE_NAME_DEBUG=libcurl$(LIBCURL_FILE_VERSION)d
 
 curl-release: test-env openssl-release zlib-release
 	title Build curl $(VSCMD_ARG_TGT_ARCH) Release
@@ -268,7 +268,7 @@ curl-release: test-env openssl-release zlib-release
 			ZLIB_LFLAGS=/libpath:$(ROOT_DIR)$(ZLIB_DIR)\$(ZlibTargetDir)\Release					\
 			ZLIB_CFLAGS="/DHAVE_ZLIB_H /DHAVE_ZLIB /DHAVE_LIBZ /I$(ROOT_DIR)$(ZLIB_DIR)" 			\
 			ZLIB_LIBS=$(ZLIB_IMPLIB).lib SSL_LIBS="libcrypto.lib libssl.lib" 						\
-			BASE_NAME=libcurl5 BASE_NAME_DEBUG=libcurl5d
+			BASE_NAME=libcurl$(LIBCURL_FILE_VERSION) BASE_NAME_DEBUG=libcurl$(LIBCURL_FILE_VERSION)d
 
 
 curl-clean: curl-test

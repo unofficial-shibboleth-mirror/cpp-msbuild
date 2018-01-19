@@ -67,7 +67,7 @@ goto path_done
 ##                      if it changes you *MUST* change Version.props
 set OPENSSL_DIR=openssl-1.1.0g
 set OPENSSL_MM_VERSION=1.1.0.7
-set OPENSSL_FILE_VERSION=1_1
+set OPENSSL_FILE_VERSION=1_1_0
 
 ##
 ## CURL CONFIG
@@ -77,6 +77,7 @@ set OPENSSL_FILE_VERSION=1_1
 ##
 Set LIBCURL_VERSION=7.57.0
 set LIBCURL_DIR=curl-%LIBCURL_VERSION%
+set LIBCURL_FILE_VERSION=7_57
 
 ##
 ## XML SECURITY CONFIG
