@@ -128,6 +128,7 @@ $(ROOT_DIR)\$(ZLIB_DIR)\$(ZlibTargetDir)\release\$(ZLIB_SHAREDLIB).dll: $(ROOT_D
 	nmake/f win32\makefile.shib
 	copy $(@F) $@
 	copy $(ROOT_DIR)\$(ZLIB_DIR)\$(ZLIB_IMPLIB).lib $(@D)
+	copy $(ROOT_DIR)\$(ZLIB_DIR)\*.pdb $(@D)
 
 $(ROOT_DIR)\$(ZLIB_DIR)\$(ZlibTargetDir)\debug\$(ZLIB_SHAREDLIB)D.dll: $(ROOT_DIR)\$(ZLIB_DIR)\win32\makefile.shib.debug
 	title Build zlib $(VSCMD_ARG_TGT_ARCH) Debug
@@ -136,6 +137,7 @@ $(ROOT_DIR)\$(ZLIB_DIR)\$(ZlibTargetDir)\debug\$(ZLIB_SHAREDLIB)D.dll: $(ROOT_DI
 	nmake/f win32\makefile.shib.debug
 	copy $(@F) $@
 	copy $(ROOT_DIR)\$(ZLIB_DIR)\$(ZLIB_IMPLIB)D.lib $(@D)
+	copy $(ROOT_DIR)\$(ZLIB_DIR)\*.pdb $(@D)
 
 #
 # OpenSSL
