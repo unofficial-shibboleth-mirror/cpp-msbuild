@@ -26,7 +26,7 @@ goto path_done
 :ROD
 set ROOT_DIR=H:\Perforce\VS2017\
 set SED=sed
-set CPP_MM_DIR=D:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Redist\MSVC\14.11.25325\MergeModules
+set CPP_MM_DIR=D:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Redist\MSVC\14.12.25810\MergeModules
 
 ##
 ## Apache Config
