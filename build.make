@@ -40,7 +40,7 @@ cleansaml:
 
 msi32: exe32 mergemodules32 msi32only
 
-msi64: exe64 mergemodules64 msi64only
+msi64: exe64 mergemodules64 exe32 mergemodules32 msi64only
 
 msi32only:
 	cd $(SPROOT)\Projects\$(VCVERSION)
@@ -53,21 +53,23 @@ msi64only:
 	msbuild  /property:Platform=x64;Configuration=Release /maxcpucount .\Shibboleth.sln /t:Installers\MergeModules;Installers\Installer
 
 mergemodules32: xmltooling32 saml32 shibsp32
+        title MSM Build 32 bit
+	msbuild  /property:Platform=Win32;Configuration=Release /maxcpucount .\Shibboleth.sln /t:Installers\Installer
 
 mergemodules64: xmltooling64 saml64 shibsp64
 
 shibsp32: saml32
 	cd $(SPROOT)\Projects\$(VCVERSION)
-        title SP Release Build - 32 bit
+        title SP-Dll Release Build - 32 bit
 	msbuild  /property:Platform=Win32;Configuration=Release /maxcpucount .\shibboleth.sln /t:shibsp;shibsp-lite
-        title SP Debug Build - 64 bit
+        title SP-Dll Debug Build - 32 bit
 	msbuild  /property:Platform=Win32;Configuration=Debug /maxcpucount .\shibboleth.sln /t:shibsp;shibsp-lite
 
 shibsp64: saml64
 	cd $(SPROOT)\Projects\$(VCVERSION)
-        title SP Release Build - 64 bit
+        title SP-Dll Release Build - 64 bit
 	msbuild  /property:Platform=x64;Configuration=Release /maxcpucount .\shibboleth.sln /t:shibsp;shibsp-lite
-        title SP Debug Build - 64 bit
+        title SP-Dll Debug Build - 64 bit
 	msbuild  /property:Platform=x64;Configuration=Debug /maxcpucount .\shibboleth.sln /t:shibsp;shibsp-lite
 
 saml32: xmltooling32
@@ -101,12 +103,16 @@ xmltooling64:
 
 exe32: shibsp32
 	cd $(SPROOT)\Projects\$(VCVERSION)
+        title SP Release Build - 32 bit
 	msbuild /property:Platform=Win32;Configuration=Release /maxcpucount .\shibboleth.sln /t:utilities\messages;utilities\resolvertest;utilities\mdquery;Extensions\adfs;Extensions\adfs-lite;Extensions\odbc-store;Extensions\plugins;Extensions\plugins-lite;$(SERVER_MODULES_32)
+        title SP Release Build - 32 bit
 	msbuild   /property:Platform=Win32;Configuration=Debug /maxcpucount .\shibboleth.sln /t:utilities\messages;utilities\resolvertest;utilities\mdquery;Extensions\adfs;Extensions\adfs-lite;Extensions\odbc-store;Extensions\plugins;Extensions\plugins-lite;$(SERVER_MODULES_32)
 
 
 exe64: shibsp64
 	cd $(SPROOT)\Projects\$(VCVERSION)
+        title SP Release Build - 64 bit
 	msbuild /property:Platform=x64;Configuration=Release /maxcpucount .\shibboleth.sln /t:utilities\messages;utilities\resolvertest;utilities\mdquery;Extensions\adfs;Extensions\adfs-lite;Extensions\odbc-store;Extensions\plugins;Extensions\plugins-lite;$(SERVER_MODULES_64)
+        title SP Debug Build - 64 bit
 	msbuild   /property:Platform=x64;Configuration=Debug /maxcpucount .\shibboleth.sln /t:utilities\resolvertest;utilities\messages;utilities\mdquery;Extensions\adfs;Extensions\adfs-lite;Extensions\odbc-store;Extensions\plugins;Extensions\plugins-lite;$(SERVER_MODULES_64)
 
