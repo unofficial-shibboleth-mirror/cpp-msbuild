@@ -175,7 +175,7 @@
 	<XERCES_FILE_VERSION Condition="'$(XERCES_FILE_VERSION)' == ''">3_2</XERCES_FILE_VERSION>
     <XercesVersion Condition="'$(XERCES_MM_VERSION)'==''">1.2.11</XercesVersion>
     <XercesVersion Condition="'$(XERCES_MM_VERSION)'!=''">$(ZLIB_MM_VERSION)</XercesVersion>
-    <xerces Condition="'$(XERCES_DIR)'==''">xerces-c-3.2.0</xerces>
+    <xerces Condition="'$(XERCES_DIR)'==''">xerces-c-3.2.1</xerces>
     <xerces Condition="'$(XERCES_DIR)'!=''">$(XERCES_DIR)</xerces>
   </PropertyGroup>
 

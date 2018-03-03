@@ -6,7 +6,7 @@ if "%1" NEQ "" goto %1%
 # DEFAULT SETTINGS (for Scott)
 #
 
-set ROOT_DIR=C:\Users\cantor.2\Shibboleth\
+set ROOT_DIR=C:\Users\scantor\Shibboleth\
 set CPP_MM_DIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Redist\MSVC\14.11.25325\MergeModules
 set SED=C:\cygwin64\bin\sed.exe
 
@@ -108,9 +108,9 @@ set LOG4SHIB_FILE_VERSION=1_0
 ##
 ## XERCES CONFIG
 ##
-set XERCES_DIR=xerces-c-3.2.0
+set XERCES_DIR=xerces-c-3.2.1
 set XERCES_FILE_VERSION=3_2
-set XERCES_MM_VERSION=3.2.0
+set XERCES_MM_VERSION=3.2.1
 
 
 SET MsVCVersionNum=15
