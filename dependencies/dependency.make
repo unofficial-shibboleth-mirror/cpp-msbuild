@@ -53,6 +53,10 @@ test-env:
 #
 # Zlib
 #
+!if "$(ZLIB_FILE_VERSION)" != "1_2_11"
+!error review zlib1.rc for changes with respect to https://issues.shibboleth.net/jira/browse/SSPCPP-785
+!endif
+
 zlib: zlib-debug zlib-release
 
 zlib-release: zlib-test zlib-release-configure zlib-release-build
@@ -124,6 +128,7 @@ $(ROOT_DIR)\$(ZLIB_DIR)\$(ZlibTargetDir)\Debug\$(ZLIB_IMPLIB)D.lib: $$(@D)\$(ZLI
 $(ROOT_DIR)\$(ZLIB_DIR)\$(ZlibTargetDir)\release\$(ZLIB_SHAREDLIB).dll: $(ROOT_DIR)\$(ZLIB_DIR)\win32\makefile.shib
 	title Build zlib $(VSCMD_ARG_TGT_ARCH) Release
 	cd $(ROOT_DIR)\$(ZLIB_DIR)
+    copy /y $(ROOT_DIR)\cpp-msbuild\dependencies\zlib1.rc $(ROOT_DIR)\$(ZLIB_DIR)\win32
 	nmake/f win32\makefile.shib clean
 	nmake/f win32\makefile.shib
 	copy $(@F) $@
@@ -133,6 +138,7 @@ $(ROOT_DIR)\$(ZLIB_DIR)\$(ZlibTargetDir)\release\$(ZLIB_SHAREDLIB).dll: $(ROOT_D
 $(ROOT_DIR)\$(ZLIB_DIR)\$(ZlibTargetDir)\debug\$(ZLIB_SHAREDLIB)D.dll: $(ROOT_DIR)\$(ZLIB_DIR)\win32\makefile.shib.debug
 	title Build zlib $(VSCMD_ARG_TGT_ARCH) Debug
 	cd $(ROOT_DIR)\$(ZLIB_DIR)
+    copy /y $(ROOT_DIR)\cpp-msbuild\dependencies\zlib1.rc $(ROOT_DIR)\$(ZLIB_DIR)\win32
 	nmake/f win32\makefile.shib.debug clean
 	nmake/f win32\makefile.shib.debug
 	copy $(@F) $@
