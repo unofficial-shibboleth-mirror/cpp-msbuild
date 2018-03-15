@@ -79,6 +79,7 @@
 
   <PropertyGroup Label="CurlGuidsBad" Condition="'$(LIBCURL_FILE_VERSION)' != '7_58'">
     <CurlFileVersion>BAD_LIBCURL_FILE_VERSION</CurlFileVersion>
+    <!-- Changing LIBCURL_FILE_VERSION version requires changing the GUIDs since it is garnish on the name -->
   </PropertyGroup>
   <PropertyGroup Label="CurlGuids" Condition="'$(LIBCURL_FILE_VERSION)' == '7_58'">
     <CurlVersion Condition="'$(LIBCURL_DIR)'!=''">$(LIBCURL_VERSION)</CurlVersion>
@@ -87,10 +88,10 @@
     <curl Condition="'$(LIBCURL_DIR)'==''">curl-$(CurlVersion)</curl>
 
     <CurlFileVersion>$(LIBCURL_FILE_VERSION)</CurlFileVersion>
-    <LibCurlGuid32>{3E44FDF9-7367-49A4-926E-EF8A204B19A4}</LibCurlGuid32>
-    <LibCurlGuid64>{9C2D8BAF-DD21-4EC8-A243-C6B6137D158A}</LibCurlGuid64>
-    <LibCurlGuid32d>{59EFE4A8-E29C-4712-874D-70E3564F28C0}</LibCurlGuid32d>
-    <LibCurlGuid64d>{05FD66BA-25DD-4FD9-991F-FD7B18409637}</LibCurlGuid64d>
+    <LibCurlGuid32>{6776E638-553C-462a-9A02-325959466949}</LibCurlGuid32>
+    <LibCurlGuid64>{1238EFBD-6C88-45e0-8ABB-343A2B3E4303}</LibCurlGuid64>
+    <LibCurlGuid32d>{D383D9F8-106E-4940-B05E-B670DB823E64}</LibCurlGuid32d>
+    <LibCurlGuid64d>{976F36F0-927B-4ca9-9ADB-9AFACD6858BB}</LibCurlGuid64d>
   </PropertyGroup>
 
   <PropertyGroup Label="Apache">
@@ -112,6 +113,7 @@
 
   <PropertyGroup Label="OpenSSLGuidsBad" Condition="'$(OPENSSL_FILE_VERSION)' != '1_1_0'">
     <OpenSSLFileVersion>BAD_OPENSSL_FILE_VERSION</OpenSSLFileVersion>
+    <!-- Changing OPENSSL_FILE_VERSION version requires changing the GUIDs since it is garnish on the name -->
   </PropertyGroup>
   <PropertyGroup Label="OpenSSLGuids" Condition="'$(OPENSSL_FILE_VERSION)' == '1_1_0'">
     <OpenSSLFileVersion>$(OPENSSL_FILE_VERSION)</OpenSSLFileVersion>
@@ -137,6 +139,7 @@
 
   <PropertyGroup Label="XSecGuidsBad" Condition="'$(XSEC_FILE_VERSION)' != '2_0'">
     <XmlSecFileVersion>BAD_XSEC_FILE_VERSION</XmlSecFileVersion>
+    <!-- Changing XSEC_FILE_VERSION version requires changing the GUIDs since it is garnish on the name -->
   </PropertyGroup>
 
   <PropertyGroup Label="XSecGuids" Condition="'$(XSEC_FILE_VERSION)' == '2_0'">
@@ -160,6 +163,7 @@
 
   <PropertyGroup Label="ZLibGuidsBad" Condition="'$(ZLIB_FILE_VERSION)' != '1_2_11'">
     <ZlibFileVersion>BAD_ZLIB_FILE_VERSION</ZlibFileVersion>
+    <!-- Changing ZLIB_FILE_VERSION version requires changing the GUIDs since it is garnish on the name -->
   </PropertyGroup>
   <PropertyGroup Label="ZLibGuids " Condition="'$(ZLIB_FILE_VERSION)' == '1_2_11'">
     <ZlibFileVersion>$(ZLIB_FILE_VERSION)</ZlibFileVersion>
@@ -200,6 +204,7 @@
 
   <PropertyGroup Label="Log4ShibGuidsBad" Condition="'$(LOG4SHIB_FILE_VERSION)' != '1_0'">
     <Log4ShibFileVersion>BAD_LOG4SHIB_FILE_VERSION</Log4ShibFileVersion>
+    <!-- Changing LOG4SHIB_FILE_VERSION version requires changing the GUIDs since it is garnish on the name -->
   </PropertyGroup>
   <PropertyGroup Label="Log4ShibGuids" Condition="'$(LOG4SHIB_FILE_VERSION)' == '1_0'">
     <Log4ShibFileVersion>$(LOG4SHIB_FILE_VERSION)</Log4ShibFileVersion>
