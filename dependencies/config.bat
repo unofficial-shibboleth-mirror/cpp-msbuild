@@ -9,7 +9,7 @@ if "%1" NEQ "" goto %1%
 set ROOT_DIR=C:\Users\scantor\Shibboleth\
 set CPP_MM_DIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Redist\MSVC\14.11.25325\MergeModules
 set SED=C:\cygwin64\bin\sed.exe
-
+rem set DEBUG_INSTALLER=YES
 
 #
 # Apache Config
@@ -27,6 +27,8 @@ goto path_done
 set ROOT_DIR=H:\Perforce\VS2017\
 set SED=sed
 set CPP_MM_DIR=D:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Redist\MSVC\14.12.25810\MergeModules
+set DEBUG_INSTALLER=YES
+
 
 ##
 ## Apache Config
