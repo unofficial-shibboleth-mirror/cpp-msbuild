@@ -12,8 +12,8 @@
     <CxxTestRoot>$(BuildRoot)\cxxtest</CxxTestRoot>
 
     <!-- These control the version of the installer -->
-    <ShibbolethVersion>2.9.9</ShibbolethVersion>
-    <ShibbolethPatchVersion>255</ShibbolethPatchVersion>
+    <ShibbolethVersion>3.0.0</ShibbolethVersion>
+    <ShibbolethPatchVersion>0</ShibbolethPatchVersion>
 
     <!-- These control the versions in the DLLs and Executables.
          Note that the PatchVersion is left to the individual resource file.
