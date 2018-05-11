@@ -88,9 +88,10 @@ saml32: xmltooling32
         title SAML Release Build - 32 bit
 	cd $(SAMLROOT)\Projects\$(VCVERSION)
 	msbuild  /property:Platform=Win32;Configuration=Release /maxcpucount cpp-opensaml2.sln /t:saml;samlsign
+!if "$(DEBUG_INSTALLER)" != ""
         title SAML Debug Build - 32 bit
 	msbuild  /property:Platform=Win32;Configuration=Debug /maxcpucount cpp-opensaml2.sln /t:saml;samlsign
-
+!endif
 
 saml64: xmltooling64
 	cd $(SAMLROOT)\Projects\$(VCVERSION)
@@ -124,7 +125,7 @@ exe32: shibsp32
         title SP Release Build - 32 bit
 	msbuild /property:Platform=Win32;Configuration=Release /maxcpucount .\shibboleth.sln /t:utilities\messages;utilities\resolvertest;utilities\mdquery;Extensions\adfs;Extensions\adfs-lite;Extensions\odbc-store;Extensions\plugins;Extensions\plugins-lite;$(SERVER_MODULES_32)
 !if "$(DEBUG_INSTALLER)" != ""
-        title SP Release Build - 32 bit
+        title SP Debug Build - 32 bit
 	msbuild   /property:Platform=Win32;Configuration=Debug /maxcpucount .\shibboleth.sln /t:utilities\messages;utilities\resolvertest;utilities\mdquery;Extensions\adfs;Extensions\adfs-lite;Extensions\odbc-store;Extensions\plugins;Extensions\plugins-lite;$(SERVER_MODULES_32)
 !endif
 
