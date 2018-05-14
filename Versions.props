@@ -21,7 +21,7 @@
       -->
     <SPFileVersion>3,0,0</SPFileVersion>       <!-- FILEVERSION in the SP projects -->
     <SPFileVersionSP>3,0,0</SPFileVersionSP>   <!-- Special for ShibSp.dll -->
-    <SPProductVersion>3,0,0</SPProductVersion> <!-- PRODUCTVERSION  in the SP projects -->
+    <SPProductVersion>3,0,0</SPProductVersion> <!-- PRODUCTVERSION  in the SP projects (but overidden by resourceCommon.rci on output-->
 
     <!-- XML Tooling only has one RC file.  Edit that by hand -->
     <!-- OpemSAML has two RC files (saml.rc and samlsign.rc).  Edit them by hand -->
