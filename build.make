@@ -87,19 +87,19 @@ shibsp64: saml64
 saml32: xmltooling32
         title SAML Release Build - 32 bit
 	cd $(SAMLROOT)\Projects\$(VCVERSION)
-	msbuild  /property:Platform=Win32;Configuration=Release /maxcpucount cpp-opensaml2.sln /t:saml;samlsign
+	msbuild  /property:Platform=Win32;Configuration=Release /maxcpucount cpp-opensaml.sln /t:saml;samlsign
 !if "$(DEBUG_INSTALLER)" != ""
         title SAML Debug Build - 32 bit
-	msbuild  /property:Platform=Win32;Configuration=Debug /maxcpucount cpp-opensaml2.sln /t:saml;samlsign
+	msbuild  /property:Platform=Win32;Configuration=Debug /maxcpucount cpp-opensaml.sln /t:saml;samlsign
 !endif
 
 saml64: xmltooling64
 	cd $(SAMLROOT)\Projects\$(VCVERSION)
         title SAML Release Build - 64 bit
-	msbuild  /property:Platform=x64;Configuration=Release /maxcpucount cpp-opensaml2.sln /t:saml;samlsign
+	msbuild  /property:Platform=x64;Configuration=Release /maxcpucount cpp-opensaml.sln /t:saml;samlsign
 !if "$(DEBUG_INSTALLER)" != ""
         title SAML Debug Build - 64 bit
-	msbuild  /property:Platform=x64;Configuration=Debug /maxcpucount cpp-opensaml2.sln /t:saml;samlsign
+	msbuild  /property:Platform=x64;Configuration=Debug /maxcpucount cpp-opensaml.sln /t:saml;samlsign
 !endif
 
 xmltooling32:
