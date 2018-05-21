@@ -17,7 +17,7 @@ rem set DEBUG_INSTALLER=YES
 SET APACHE_13_ROOT=C:\Apache
 SET APACHE_20_ROOT=C:\Apache2.0.63\Apache
 SET APACHE_22_ROOT=C:\Apache2
-SET APACHE_22_ROOT64=C:\Apache22-64
+SET APACHE_22_ROOT64=C:\Apache2-64
 SET APACHE_24_ROOT=C:\Apache24
 SET APACHE_24_ROOT64=C:\Apache24-64
 
@@ -67,8 +67,8 @@ goto path_done
 ## OPENSSL_MM_VERSION   is the Merge Module version (and so have to be 3 or 4 dot separated numbers)
 ## OPENSSL_FILE_VERSION is the distinction on the name of the DLLS
 ##                      if it changes you *MUST* change Version.props
-set OPENSSL_DIR=openssl-1.1.0g
-set OPENSSL_MM_VERSION=1.1.0.7
+set OPENSSL_DIR=openssl-1.1.0h
+set OPENSSL_MM_VERSION=1.1.0.8
 set OPENSSL_FILE_VERSION=1_1_0
 
 ##
@@ -77,9 +77,9 @@ set OPENSSL_FILE_VERSION=1_1_0
 ## CURL_DIR             is the directory name
 ## CURL_VERSION         is the version
 ##
-Set LIBCURL_VERSION=7.58.0
+Set LIBCURL_VERSION=7.60.0
 set LIBCURL_DIR=curl-%LIBCURL_VERSION%
-set LIBCURL_FILE_VERSION=7_58
+set LIBCURL_FILE_VERSION=7_60
 
 ##
 ## XML SECURITY CONFIG

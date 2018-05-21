@@ -77,21 +77,21 @@
 
   </PropertyGroup>
 
-  <PropertyGroup Label="CurlGuidsBad" Condition="'$(LIBCURL_FILE_VERSION)' != '7_58'">
+  <PropertyGroup Label="CurlGuidsBad" Condition="'$(LIBCURL_FILE_VERSION)' != '7_60'">
     <CurlFileVersion>BAD_LIBCURL_FILE_VERSION</CurlFileVersion>
     <!-- Changing LIBCURL_FILE_VERSION version requires changing the GUIDs since it is garnish on the name -->
   </PropertyGroup>
-  <PropertyGroup Label="CurlGuids" Condition="'$(LIBCURL_FILE_VERSION)' == '7_58'">
+  <PropertyGroup Label="CurlGuids" Condition="'$(LIBCURL_FILE_VERSION)' == '7_60'">
     <CurlVersion Condition="'$(LIBCURL_DIR)'!=''">$(LIBCURL_VERSION)</CurlVersion>
-    <CurlVersion Condition="'$(LIBCURL_DIR)'==''">7.58.0</CurlVersion>
+    <CurlVersion Condition="'$(LIBCURL_DIR)'==''">7.60.0</CurlVersion>
     <curl Condition="'$(LIBCURL_DIR)'!=''">$(LIBCURL_DIR)</curl>
     <curl Condition="'$(LIBCURL_DIR)'==''">curl-$(CurlVersion)</curl>
 
     <CurlFileVersion>$(LIBCURL_FILE_VERSION)</CurlFileVersion>
-    <LibCurlGuid32>{6776E638-553C-462a-9A02-325959466949}</LibCurlGuid32>
-    <LibCurlGuid64>{1238EFBD-6C88-45e0-8ABB-343A2B3E4303}</LibCurlGuid64>
-    <LibCurlGuid32d>{D383D9F8-106E-4940-B05E-B670DB823E64}</LibCurlGuid32d>
-    <LibCurlGuid64d>{976F36F0-927B-4ca9-9ADB-9AFACD6858BB}</LibCurlGuid64d>
+    <LibCurlGuid32>{CB071587-2CD1-4143-A330-030A09C98C23}</LibCurlGuid32>
+    <LibCurlGuid64>{0C42C9A5-6CFC-41EF-8BA1-2C4222DBA564}</LibCurlGuid64>
+    <LibCurlGuid32d>{F4625619-BC37-4D29-A4EA-B1D6F6B0D0E0}</LibCurlGuid32d>
+    <LibCurlGuid64d>{00417DC2-952F-43C1-9D06-3A70F11E6CB5}</LibCurlGuid64d>
   </PropertyGroup>
 
   <PropertyGroup Label="Apache">
@@ -107,7 +107,7 @@
     <!-- Just for now -->
     <OPENSSL_FILE_VERSION Condition="'$(OPENSSL_FILE_VERSION)' == ''">1_1</OPENSSL_FILE_VERSION>
 
-    <openssl Condition="'$(OPENSSL_DIR)'==''">openssl-1.1.0g</openssl>
+    <openssl Condition="'$(OPENSSL_DIR)'==''">openssl-1.1.0h</openssl>
     <openssl Condition="'$(OPENSSL_DIR)'!=''">$(OPENSSL_DIR)</openssl>
   </PropertyGroup>
 
