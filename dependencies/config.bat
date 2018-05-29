@@ -7,7 +7,7 @@ if "%1" NEQ "" goto %1%
 #
 
 set ROOT_DIR=C:\Users\scantor\Shibboleth\
-set CPP_MM_DIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Redist\MSVC\14.11.25325\MergeModules
+set CPP_MM_DIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Redist\MSVC\14.14.26405
 set SED=C:\cygwin64\bin\sed.exe
 rem set DEBUG_INSTALLER=YES
 
