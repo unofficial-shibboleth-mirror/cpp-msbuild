@@ -13,7 +13,7 @@
 PERL=perl
 !endif
 
-!if "$(SED)" == ""
+!if $(SED) == ""
 SED=sed
 !endif
 
