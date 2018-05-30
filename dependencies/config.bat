@@ -11,6 +11,14 @@ set CPP_MM_DIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\
 set SED=C:\cygwin64\bin\sed.exe
 rem set DEBUG_INSTALLER=YES
 
+:BUILDVM
+
+set ROOT_DIR=C:\Users\Administrator\Shibboleth\3.0\
+set CPP_MM_DIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Redist\MSVC\14.14.26405
+set SED=C:\Program Files\Git\mingw64\bin\sed.exe
+set PERL=C:\Perl64\bin\perl.exe
+rem set DEBUG_INSTALLER=YES
+
 #
 # Apache Config
 #
