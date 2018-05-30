@@ -26,7 +26,6 @@ SET APACHE_24_ROOT64=C:\Apache24-64
 set ROOT_DIR=C:\Users\Administrator\Shibboleth\
 set CPP_MM_DIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Redist\MSVC\14.14.26405
 set SED="C:\Program Files\Git\usr\bin\sed.exe"
-set PERL=C:\Perl64\bin\perl.exe
 rem set DEBUG_INSTALLER=YES
 
 REM
