@@ -21,6 +21,8 @@ SET APACHE_22_ROOT64=C:\Apache2-64
 SET APACHE_24_ROOT=C:\Apache24
 SET APACHE_24_ROOT64=C:\Apache24-64
 
+goto path_done
+
 :BUILDVM
 
 set ROOT_DIR=C:\Users\Administrator\Shibboleth\
