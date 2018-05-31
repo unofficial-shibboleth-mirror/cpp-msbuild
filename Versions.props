@@ -77,21 +77,21 @@
 
   </PropertyGroup>
 
-  <PropertyGroup Label="CurlGuidsBad" Condition="'$(LIBCURL_FILE_VERSION)' != '7_60'">
+  <PropertyGroup Label="CurlGuidsBad" Condition="'$(LIBCURL_FILE_VERSION)' != '7'">
     <CurlFileVersion>BAD_LIBCURL_FILE_VERSION</CurlFileVersion>
     <!-- Changing LIBCURL_FILE_VERSION version requires changing the GUIDs since it is garnish on the name -->
   </PropertyGroup>
-  <PropertyGroup Label="CurlGuids" Condition="'$(LIBCURL_FILE_VERSION)' == '7_60'">
+  <PropertyGroup Label="CurlGuids" Condition="'$(LIBCURL_FILE_VERSION)' == '7'">
     <CurlVersion Condition="'$(LIBCURL_DIR)'!=''">$(LIBCURL_VERSION)</CurlVersion>
     <CurlVersion Condition="'$(LIBCURL_DIR)'==''">7.60.0</CurlVersion>
     <curl Condition="'$(LIBCURL_DIR)'!=''">$(LIBCURL_DIR)</curl>
     <curl Condition="'$(LIBCURL_DIR)'==''">curl-$(CurlVersion)</curl>
 
     <CurlFileVersion>$(LIBCURL_FILE_VERSION)</CurlFileVersion>
-    <LibCurlGuid32>{CB071587-2CD1-4143-A330-030A09C98C23}</LibCurlGuid32>
-    <LibCurlGuid64>{0C42C9A5-6CFC-41EF-8BA1-2C4222DBA564}</LibCurlGuid64>
-    <LibCurlGuid32d>{F4625619-BC37-4D29-A4EA-B1D6F6B0D0E0}</LibCurlGuid32d>
-    <LibCurlGuid64d>{00417DC2-952F-43C1-9D06-3A70F11E6CB5}</LibCurlGuid64d>
+    <LibCurlGuid32>{85A6D974-DDCC-4FAC-A149-28CF48D4F984}</LibCurlGuid32>
+    <LibCurlGuid64>{2F393A88-3FC7-48C9-81AC-BCA36952EDE7}</LibCurlGuid64>
+    <LibCurlGuid32d>{317A94EF-42BC-4A58-8679-B97CBB271610}</LibCurlGuid32d>
+    <LibCurlGuid64d>{AC569E3D-38F6-4C18-BA90-3E7D8B9AA14A}</LibCurlGuid64d>
   </PropertyGroup>
 
   <PropertyGroup Label="Apache">
