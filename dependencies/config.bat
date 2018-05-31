@@ -7,7 +7,7 @@ REM DEFAULT SETTINGS (for Scott)
 REM
 
 set ROOT_DIR=C:\Users\scantor\Shibboleth\
-set CPP_MM_DIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Redist\MSVC\14.14.26405
+set CPP_MM_DIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Redist\MSVC\14.14.26405\MergeModules
 set SED=C:\cygwin64\bin\sed.exe
 rem set DEBUG_INSTALLER=YES
 
@@ -26,7 +26,7 @@ goto path_done
 :BUILDVM
 
 set ROOT_DIR=C:\Users\Administrator\Shibboleth\
-set CPP_MM_DIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Redist\MSVC\14.14.26405
+set CPP_MM_DIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Redist\MSVC\14.14.26405\MergeModules
 set SED="C:\Program Files\Git\usr\bin\sed.exe"
 rem set DEBUG_INSTALLER=YES
 
