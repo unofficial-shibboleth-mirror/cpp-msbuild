@@ -111,21 +111,21 @@
     <openssl Condition="'$(OPENSSL_DIR)'!=''">$(OPENSSL_DIR)</openssl>
   </PropertyGroup>
 
-  <PropertyGroup Label="OpenSSLGuidsBad" Condition="'$(OPENSSL_FILE_VERSION)' != '1_1_0'">
+  <PropertyGroup Label="OpenSSLGuidsBad" Condition="'$(OPENSSL_FILE_VERSION)' != '1_1'">
     <OpenSSLFileVersion>BAD_OPENSSL_FILE_VERSION</OpenSSLFileVersion>
     <!-- Changing OPENSSL_FILE_VERSION version requires changing the GUIDs since it is garnish on the name -->
   </PropertyGroup>
-  <PropertyGroup Label="OpenSSLGuids" Condition="'$(OPENSSL_FILE_VERSION)' == '1_1_0'">
+  <PropertyGroup Label="OpenSSLGuids" Condition="'$(OPENSSL_FILE_VERSION)' == '1_1'">
     <OpenSSLFileVersion>$(OPENSSL_FILE_VERSION)</OpenSSLFileVersion>
     <!-- Change the 8 components below iff OpenSSLFileVersion changes -->
-    <LibEay32Component>{2F270B9B-A68A-42EC-B817-068FEFD4F36D}</LibEay32Component>
-    <SSlEay32Component>{9BF58918-75A5-4F6C-A69A-F298EE502756}</SSlEay32Component>
-    <LibEay32Componentd>{BEC421FA-33EE-4BAE-8913-61ED6CCAB5E0}</LibEay32Componentd>
-    <SSlEay32Componentd>{AF64EEAC-398D-46B5-ACC1-2AF6EC5AD043}</SSlEay32Componentd>
-    <LibEay64Component>{EC689DCE-C907-4138-B0BB-0A85312ADC18}</LibEay64Component>
-    <SSlEay64Component>{88C83F53-D6F2-4C1D-B445-FC1F431864B8}</SSlEay64Component>
-    <LibEay64Componentd>{9440BD3A-941A-4B24-A5D6-742B79681362}</LibEay64Componentd>
-    <SSlEay64Componentd>{ED3D1584-77E9-4A37-95B5-D83881A1BF44}</SSlEay64Componentd>
+    <LibEay32Component>{7A957445-FFD2-432B-B5B4-A5654CF650AC}</LibEay32Component>
+    <SSlEay32Component>{13E90A03-1ED7-44C7-9FA6-050CF64554FC}</SSlEay32Component>
+    <LibEay32Componentd>{7F8E06E2-57ED-4AFA-A880-A7A89CFA7999}</LibEay32Componentd>
+    <SSlEay32Componentd>{1A4551CD-9322-4448-971E-BBC52E2979B4}</SSlEay32Componentd>
+    <LibEay64Component>{C37ED1D6-E69E-4390-BC6A-102CA512C93E}</LibEay64Component>
+    <SSlEay64Component>{9891EA30-4BA6-496D-9191-9C16DE2CAFB4}</SSlEay64Component>
+    <LibEay64Componentd>{FC069121-1C7D-4962-9636-0174FE918320}</LibEay64Componentd>
+    <SSlEay64Componentd>{9194934A-B3DE-4DF2-A804-7C3BFEFF27A1}</SSlEay64Componentd>
   </PropertyGroup>
 
   <PropertyGroup Label="XSecGeneral">

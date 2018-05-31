@@ -88,7 +88,7 @@ REM OPENSSL_FILE_VERSION is the distinction on the name of the DLLS
 REM                      if it changes you *MUST* change Version.props
 set OPENSSL_DIR=openssl-1.1.0h
 set OPENSSL_MM_VERSION=1.1.0.8
-set OPENSSL_FILE_VERSION=1_1_0
+set OPENSSL_FILE_VERSION=1_1
 
 REM
 REM CURL CONFIG
