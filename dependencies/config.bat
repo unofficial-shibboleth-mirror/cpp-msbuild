@@ -45,7 +45,7 @@ goto path_done
 :ROD
 set ROOT_DIR=H:\Perforce\VS2017\
 set SED=sed
-set CPP_MM_DIR=D:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Redist\MSVC\14.13.26020\MergeModules
+set CPP_MM_DIR=D:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Redist\MSVC\14.14.26405\MergeModules
 set DEBUG_INSTALLER=YES
 
 
