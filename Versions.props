@@ -197,22 +197,22 @@
 
   <PropertyGroup Label="Log4ShibGeneral">
     <!-- Just for now -->
-	<LOG4SHIB_FILE_VERSION Condition="'$(LOG4SHIB_FILE_VERSION)' == ''">1_0</LOG4SHIB_FILE_VERSION>
-    <Log4ShibVersion Condition="'$(LOG4SHIB_MM_VERSION)' == ''">1.0.10</Log4ShibVersion>
+	<LOG4SHIB_FILE_VERSION Condition="'$(LOG4SHIB_FILE_VERSION)' == ''">2_0</LOG4SHIB_FILE_VERSION>
+    <Log4ShibVersion Condition="'$(LOG4SHIB_MM_VERSION)' == ''">2.0.0</Log4ShibVersion>
     <Log4ShibVersion Condition="'$(LOG4SHIB_MM_VERSION)' != ''">$(LOG4SHIB_MM_VERSION)</Log4ShibVersion>
   </PropertyGroup>
 
-  <PropertyGroup Label="Log4ShibGuidsBad" Condition="'$(LOG4SHIB_FILE_VERSION)' != '1_0'">
+  <PropertyGroup Label="Log4ShibGuidsBad" Condition="'$(LOG4SHIB_FILE_VERSION)' != '2_0'">
     <Log4ShibFileVersion>BAD_LOG4SHIB_FILE_VERSION</Log4ShibFileVersion>
     <!-- Changing LOG4SHIB_FILE_VERSION version requires changing the GUIDs since it is garnish on the name -->
   </PropertyGroup>
-  <PropertyGroup Label="Log4ShibGuids" Condition="'$(LOG4SHIB_FILE_VERSION)' == '1_0'">
+  <PropertyGroup Label="Log4ShibGuids" Condition="'$(LOG4SHIB_FILE_VERSION)' == '2_0'">
     <Log4ShibFileVersion>$(LOG4SHIB_FILE_VERSION)</Log4ShibFileVersion>
     <!-- Change the 4 components below if the Log4ShibFileVersion name changes -->
-    <Log4ShibComponent32>{2FDE8ED0-774A-4F44-88D5-C7089350D895}</Log4ShibComponent32>
-    <Log4ShibComponent32d>{B8D2E797-F5A8-4E0D-B57F-9A7D4E699942}</Log4ShibComponent32d>
-    <Log4ShibComponent64>{DA7E5213-363E-4E13-B05D-90905BE9FB94}</Log4ShibComponent64>
-    <Log4ShibComponent64d>{792E6762-70FE-418A-9336-39DDF1A6BAE7}</Log4ShibComponent64d>
+    <Log4ShibComponent32>{4A96D4F3-51DD-4FBD-9478-8EC2197FAF70}</Log4ShibComponent32>
+    <Log4ShibComponent32d>{08A406FB-D426-40A6-B5C1-9FFBC9A085B2}</Log4ShibComponent32d>
+    <Log4ShibComponent64>{AED2A19A-D47E-41B4-A4FB-5F23601F989D}</Log4ShibComponent64>
+    <Log4ShibComponent64d>{A30DBD49-6717-44CB-9A38-349D4F8DF149}</Log4ShibComponent64d>
     <log4shib>cpp-log4shib</log4shib>
   </PropertyGroup>
 
