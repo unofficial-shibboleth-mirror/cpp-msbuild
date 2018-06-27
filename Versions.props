@@ -133,7 +133,7 @@
     <XSEC_FILE_VERSION Condition="'$(XSEC_FILE_VERSION)' == ''">2_0</XSEC_FILE_VERSION>
     <XmlSecVersion Condition="'$(XSEC_MM_VERSION)'==''">2.0.0</XmlSecVersion>
     <XmlSecVersion Condition="'$(XSEC_MM_VERSION)'!=''">$(XSEC_MM_VERSION)</XmlSecVersion>
-    <xmlsec Condition="'$(XSEC_DIR)'==''">xml-security-cpp</xmlsec>
+    <xmlsec Condition="'$(XSEC_DIR)'==''">xml-security-c-2.0.0</xmlsec>
     <xmlsec Condition="'$(XSEC_DIR)'!=''">$(XSEC_DIR)</xmlsec>
   </PropertyGroup>
 
