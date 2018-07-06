@@ -213,7 +213,7 @@
     <Log4ShibComponent32d>{08A406FB-D426-40A6-B5C1-9FFBC9A085B2}</Log4ShibComponent32d>
     <Log4ShibComponent64>{AED2A19A-D47E-41B4-A4FB-5F23601F989D}</Log4ShibComponent64>
     <Log4ShibComponent64d>{A30DBD49-6717-44CB-9A38-349D4F8DF149}</Log4ShibComponent64d>
-    <log4shib>cpp-log4shib</log4shib>
+    <log4shib>log4shib-2.0.0</log4shib>
   </PropertyGroup>
 
 </Project>
