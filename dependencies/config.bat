@@ -1,3 +1,4 @@
+@echo off
 rem ROOT_DIR HAS TO HAVE TRAILING SLASH
 
 if "%1" NEQ "" goto %1%
@@ -107,9 +108,9 @@ REM XSEC_DIR              is the directory name
 REM XSEC_MM_VERSION       is the Merge Module version (and so have to be 3 or 4 dot separated numbers)
 REM XSEC_FILE_VERSION     is the distinction on the name of the DLLS
 REM                       if it changes you *MUST* change Version.props
-set XSEC_DIR=xml-security-c-2.0.0
+set XSEC_DIR=xml-security-c-2.0.1
 SET XSEC_FILE_VERSION=2_0
-SET XSEC_MM_VERSION=2.0.0
+SET XSEC_MM_VERSION=2.0.1
 
 REM
 REM ZLIB CONFIG
@@ -144,8 +145,6 @@ set MsVCVersion=VC%MsVCVersionNum%
 set ForceImportBeforeCppTargets=%SCRIPTS_DIR%\xsec.props
 set SCRIPTS_DIR=%ROOT_DIR%cpp-msbuild\dependencies
 
-
 rem 
 rem The following is only needed if you want to run things.
 rem set path=%PATH%;%ROOT_DIR%%OPENSSL_DIR%\out32dll.dbg;%ROOT_DIR%%XERCES_DIR%\BUILD\WIN32\VC10\DEBUG;%ROOT_DIR%%XSEC_DIR%\Build\Win32\VC10\Debug No Xalan;%ROOT_DIR%%libcurl_dir%\lib\debug-dll-ssl-dll-zlib-dll;%ROOT_DIR%%LOGSHIB_DIR%\msvc10\Debug;%ROOT_DIR%%ZLIB_DIR%\Debug
-

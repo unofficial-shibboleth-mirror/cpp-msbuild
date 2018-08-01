@@ -12,16 +12,16 @@
     <CxxTestRoot>$(BuildRoot)\cxxtest</CxxTestRoot>
 
     <!-- These control the version of the installer -->
-    <ShibbolethVersion>3.0.1</ShibbolethVersion>
+    <ShibbolethVersion>3.0.2</ShibbolethVersion>
     <ShibbolethPatchVersion>0</ShibbolethPatchVersion>
 
     <!-- These control the versions in the DLLs and Executables.
          Note that the PatchVersion is left to the individual resource file.
          If you change this you probably need to change ../cpp-sp/util/resourceCommon.rci
       -->
-    <SPFileVersion>3,0,1</SPFileVersion>       <!-- FILEVERSION in the SP projects -->
-    <SPFileVersionSP>3,0,1</SPFileVersionSP>   <!-- Special for ShibSp.dll -->
-    <SPProductVersion>3,0,1</SPProductVersion> <!-- PRODUCTVERSION  in the SP projects (but overidden by resourceCommon.rci on output-->
+    <SPFileVersion>3,0,2</SPFileVersion>       <!-- FILEVERSION in the SP projects -->
+    <SPFileVersionSP>3,0,2</SPFileVersionSP>   <!-- Special for ShibSp.dll -->
+    <SPProductVersion>3,0,2</SPProductVersion> <!-- PRODUCTVERSION  in the SP projects (but overidden by resourceCommon.rci on output-->
 
     <!-- XML Tooling only has one RC file.  Edit that by hand -->
     <!-- OpemSAML has two RC files (saml.rc and samlsign.rc).  Edit them by hand -->
@@ -46,7 +46,7 @@
     <SamlComponent64>{E935A801-7D01-4996-A69D-46AF25D8C817}</SamlComponent64>
     <SamlComponent64d>{C453CD74-4CAE-4506-9695-F2BF0649CD9D}</SamlComponent64d>
 
-    <XmlToolingVersion>3.0.1</XmlToolingVersion>
+    <XmlToolingVersion>3.0.2</XmlToolingVersion>
     <XmlToolingFileVersion>3_0</XmlToolingFileVersion>
     <!-- Change the 8 components below iff the XmlToolingFileVersion name changes -->
     <XMLToolingComponent32>{07395646-06CE-436E-B57A-1420924257BC}</XMLToolingComponent32>
@@ -59,7 +59,7 @@
     <XMLToolingLiteComponent64d>{356BA4A0-2C00-489F-8274-18692A237DDB}</XMLToolingLiteComponent64d>
 
 
-    <ShibbolethDllVersion>3.0.1</ShibbolethDllVersion>
+    <ShibbolethDllVersion>3.0.2</ShibbolethDllVersion>
     <ShibbolethDllFileVersion>3_0</ShibbolethDllFileVersion>
     <!-- Change the 8 components below iff ShibbolethDllFileVersion changes -->
     <ShibDll32Component>{94B5CADC-299E-41A3-9653-DFD948800E0F}</ShibDll32Component>
@@ -131,9 +131,9 @@
   <PropertyGroup Label="XSecGeneral">
     <!-- Just for now -->
     <XSEC_FILE_VERSION Condition="'$(XSEC_FILE_VERSION)' == ''">2_0</XSEC_FILE_VERSION>
-    <XmlSecVersion Condition="'$(XSEC_MM_VERSION)'==''">2.0.0</XmlSecVersion>
+    <XmlSecVersion Condition="'$(XSEC_MM_VERSION)'==''">2.0.1</XmlSecVersion>
     <XmlSecVersion Condition="'$(XSEC_MM_VERSION)'!=''">$(XSEC_MM_VERSION)</XmlSecVersion>
-    <xmlsec Condition="'$(XSEC_DIR)'==''">xml-security-c-2.0.0</xmlsec>
+    <xmlsec Condition="'$(XSEC_DIR)'==''">xml-security-c-2.0.1</xmlsec>
     <xmlsec Condition="'$(XSEC_DIR)'!=''">$(XSEC_DIR)</xmlsec>
   </PropertyGroup>
 
