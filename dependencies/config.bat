@@ -87,9 +87,9 @@ REM OPENSSL_DIR          is the directory name
 REM OPENSSL_MM_VERSION   is the Merge Module version (and so have to be 3 or 4 dot separated numbers)
 REM OPENSSL_FILE_VERSION is the distinction on the name of the DLLS
 REM                      if it changes you *MUST* change Version.props
-set OPENSSL_DIR=openssl-1.1.0h
-set OPENSSL_MM_VERSION=1.1.0.8
-set OPENSSL_FILE_VERSION=1_1_0
+set OPENSSL_DIR=openssl-1.1.1
+set OPENSSL_MM_VERSION=1.1.1.0
+set OPENSSL_FILE_VERSION=1_1_1
 
 REM
 REM CURL CONFIG
@@ -97,7 +97,7 @@ REM
 REM CURL_DIR             is the directory name
 REM CURL_VERSION         is the version
 REM
-Set LIBCURL_VERSION=7.60.0
+Set LIBCURL_VERSION=7.62.0
 set LIBCURL_DIR=curl-%LIBCURL_VERSION%
 set LIBCURL_FILE_VERSION=7
 
@@ -147,4 +147,4 @@ set SCRIPTS_DIR=%ROOT_DIR%cpp-msbuild\dependencies
 
 rem 
 rem The following is only needed if you want to run things.
-rem set path=%PATH%;%ROOT_DIR%%OPENSSL_DIR%\out32dll.dbg;%ROOT_DIR%%XERCES_DIR%\BUILD\WIN32\VC10\DEBUG;%ROOT_DIR%%XSEC_DIR%\Build\Win32\VC10\Debug No Xalan;%ROOT_DIR%%libcurl_dir%\lib\debug-dll-ssl-dll-zlib-dll;%ROOT_DIR%%LOGSHIB_DIR%\msvc10\Debug;%ROOT_DIR%%ZLIB_DIR%\Debug
+rem set path=%PATH%;%ROOT_DIR%%OPENSSL_DIR%\out32dll.dbg;%ROOT_DIR%%XERCES_DIR%\BUILD\WIN32\VC15\DEBUG;%ROOT_DIR%%XSEC_DIR%\Buildx86\Win32\VC15\Debug No Xalan;%ROOT_DIR%%libcurl_dir%\lib\debug-dll-ssl-dll-zlib-dll;%ROOT_DIR%%LOG4SHIB_DIR%\msvc15\Debug;%ROOT_DIR%%ZLIB_DIR%\Debug;%ROOT_DIR%\cpp-xmltooling\debug
