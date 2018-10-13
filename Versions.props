@@ -12,16 +12,16 @@
     <CxxTestRoot>$(BuildRoot)\cxxtest</CxxTestRoot>
 
     <!-- These control the version of the installer -->
-    <ShibbolethVersion>3.0.2</ShibbolethVersion>
+    <ShibbolethVersion>3.0.3</ShibbolethVersion>
     <ShibbolethPatchVersion>0</ShibbolethPatchVersion>
 
     <!-- These control the versions in the DLLs and Executables.
          Note that the PatchVersion is left to the individual resource file.
          If you change this you probably need to change ../cpp-sp/util/resourceCommon.rci
       -->
-    <SPFileVersion>3,0,2</SPFileVersion>       <!-- FILEVERSION in the SP projects -->
-    <SPFileVersionSP>3,0,2</SPFileVersionSP>   <!-- Special for ShibSp.dll -->
-    <SPProductVersion>3,0,2</SPProductVersion> <!-- PRODUCTVERSION  in the SP projects (but overidden by resourceCommon.rci on output-->
+    <SPFileVersion>3,0,3</SPFileVersion>       <!-- FILEVERSION in the SP projects -->
+    <SPFileVersionSP>3,0,3</SPFileVersionSP>   <!-- Special for ShibSp.dll -->
+    <SPProductVersion>3,0,3</SPProductVersion> <!-- PRODUCTVERSION  in the SP projects (but overidden by resourceCommon.rci on output-->
 
     <!-- XML Tooling only has one RC file.  Edit that by hand -->
     <!-- OpemSAML has two RC files (saml.rc and samlsign.rc).  Edit them by hand -->
