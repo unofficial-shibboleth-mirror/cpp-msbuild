@@ -178,15 +178,15 @@ $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)\include\openssl\opensslconf.h:
 $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)Debug\include\openssl\opensslconf.h: 
 	nmake /f dependency.make openssl-clean-configure openssl-debug-configure openssl-build
 
-openssl-release-configure: openssl-test $(ROOT_DIR)\$(OPENSSL_DIR)\ConfigureR
+openssl-release-configure: openssl-test
 	title Build OpenSSL $(VSCMD_ARG_TGT_ARCH) Release
 	cd $(ROOT_DIR)\$(OPENSSL_DIR)
-	$(PERL) ConfigureR VC-$(OpenSSLName) --prefix=$(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)
+	$(PERL) Configure VC-$(OpenSSLName) --prefix=$(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)
 
-openssl-debug-configure: openssl-test $(ROOT_DIR)\$(OPENSSL_DIR)\ConfigureD
+openssl-debug-configure: openssl-test
 	title Build OpenSSL $(VSCMD_ARG_TGT_ARCH) Debug
 	cd $(ROOT_DIR)\$(OPENSSL_DIR)
-	$(PERL) ConfigureD debug-VC-$(OpenSSLName) --prefix=$(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)Debug
+	$(PERL) Configure debug-VC-$(OpenSSLName)D --prefix=$(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)Debug
 
 openssl-build: $(ROOT_DIR)\$(OPENSSL_DIR)\makefile
 	cd $(ROOT_DIR)\$(OPENSSL_DIR)
