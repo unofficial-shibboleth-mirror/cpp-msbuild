@@ -8,7 +8,9 @@ REM DEFAULT SETTINGS (for Scott)
 REM
 
 set ROOT_DIR=C:\Users\scantor\Shibboleth\
-set CPP_MM_DIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Redist\MSVC\14.14.26405\MergeModules
+
+REM CPP_MM_DIR need not be set if vcvars is called prior to loading Visual studio or running msbuild
+rem set CPP_MM_DIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Redist\MSVC\14.14.26405\MergeModules
 set SED=C:\cygwin64\bin\sed.exe
 rem set DEBUG_INSTALLER=YES
 
@@ -27,7 +29,8 @@ goto path_done
 :BUILDVM
 
 set ROOT_DIR=C:\Users\Administrator\Shibboleth\
-set CPP_MM_DIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Redist\MSVC\14.14.26405\MergeModules
+REM CPP_MM_DIR need not be set if vcvars is called prior to loading Visual studio or running msbuild
+rem set CPP_MM_DIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Redist\MSVC\14.14.26405\MergeModules
 set SED="C:\Program Files\Git\usr\bin\sed.exe"
 rem set DEBUG_INSTALLER=YES
 
@@ -46,7 +49,8 @@ goto path_done
 :ROD
 set ROOT_DIR=H:\Perforce\VS2017\
 set SED=sed
-set CPP_MM_DIR=D:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Redist\MSVC\14.14.26405\MergeModules
+REM CPP_MM_DIR need not be set if vcvars is called prior to loading Visual studio or running msbuild
+rem set CPP_MM_DIR=D:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Redist\MSVC\14.14.26405\MergeModules
 set DEBUG_INSTALLER=YES
 
 
@@ -65,7 +69,8 @@ goto path_done
 set ROOT_DIR=H:\Perforce\VS2017\
 set SED=D:\downloads\cygwin\bin\sed.exe
 set PERL=C:\Strawberry\perl\bin\perl.exe
-set CPP_MM_DIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Redist\MSVC\14.11.25325\MergeModules
+REM CPP_MM_DIR need not be set if vcvars is called prior to loading Visual studio or running msbuild
+rem set CPP_MM_DIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Redist\MSVC\14.11.25325\MergeModules
 
 REM
 REM Apache Config
