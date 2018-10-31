@@ -113,9 +113,9 @@ REM XSEC_DIR              is the directory name
 REM XSEC_MM_VERSION       is the Merge Module version (and so have to be 3 or 4 dot separated numbers)
 REM XSEC_FILE_VERSION     is the distinction on the name of the DLLS
 REM                       if it changes you *MUST* change Version.props
-set XSEC_DIR=xml-security-c-2.0.1
+set XSEC_DIR=xml-security-c-2.0.2
 SET XSEC_FILE_VERSION=2_0
-SET XSEC_MM_VERSION=2.0.1
+SET XSEC_MM_VERSION=2.0.2
 
 REM
 REM ZLIB CONFIG
@@ -135,9 +135,9 @@ set LOG4SHIB_FILE_VERSION=2_0
 REM
 REM XERCES CONFIG
 REM
-set XERCES_DIR=xerces-c-3.2.1
+set XERCES_DIR=xerces-c-3.2.2
 set XERCES_FILE_VERSION=3_2
-set XERCES_MM_VERSION=3.2.1
+set XERCES_MM_VERSION=3.2.2
 
 
 SET MsVCVersionNum=15

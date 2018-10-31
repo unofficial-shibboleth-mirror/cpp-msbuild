@@ -37,7 +37,7 @@
 
     <boost>boost_1_67_0</boost>
     
-    <OpenSAMLVersion>3.0.1</OpenSAMLVersion>
+    <OpenSAMLVersion>3.0.0</OpenSAMLVersion>
     <OpenSAMLFileVersion>3_0</OpenSAMLFileVersion>
     <!-- Change the 4 components below iff the OpenSAMLFileVersion name changes -->
     <SamlComponent32>{3444DBA9-C1E9-4F64-83AB-8C808E783F38}</SamlComponent32>
@@ -58,7 +58,7 @@
     <XMLToolingLiteComponent64d>{356BA4A0-2C00-489F-8274-18692A237DDB}</XMLToolingLiteComponent64d>
 
 
-    <ShibbolethDllVersion>3.0.2</ShibbolethDllVersion>
+    <ShibbolethDllVersion>3.0.3</ShibbolethDllVersion>
     <ShibbolethDllFileVersion>3_0</ShibbolethDllFileVersion>
     <!-- Change the 8 components below iff ShibbolethDllFileVersion changes -->
     <ShibDll32Component>{94B5CADC-299E-41A3-9653-DFD948800E0F}</ShibDll32Component>
@@ -90,7 +90,7 @@
   </PropertyGroup>
   <PropertyGroup Label="CurlGuids" Condition="'$(LIBCURL_FILE_VERSION)' == '7'">
     <CurlVersion Condition="'$(LIBCURL_DIR)'!=''">$(LIBCURL_VERSION)</CurlVersion>
-    <CurlVersion Condition="'$(LIBCURL_DIR)'==''">7.60.0</CurlVersion>
+    <CurlVersion Condition="'$(LIBCURL_DIR)'==''">7.62.0</CurlVersion>
     <curl Condition="'$(LIBCURL_DIR)'!=''">$(LIBCURL_DIR)</curl>
     <curl Condition="'$(LIBCURL_DIR)'==''">curl-$(CurlVersion)</curl>
 
@@ -114,7 +114,7 @@
     <!-- Just for now -->
     <OPENSSL_FILE_VERSION Condition="'$(OPENSSL_FILE_VERSION)' == ''">1_1_1</OPENSSL_FILE_VERSION>
 
-    <openssl Condition="'$(OPENSSL_DIR)'==''">openssl-1.1.0h</openssl>
+    <openssl Condition="'$(OPENSSL_DIR)'==''">openssl-1.1.1</openssl>
     <openssl Condition="'$(OPENSSL_DIR)'!=''">$(OPENSSL_DIR)</openssl>
   </PropertyGroup>
 
@@ -138,9 +138,9 @@
   <PropertyGroup Label="XSecGeneral">
     <!-- Just for now -->
     <XSEC_FILE_VERSION Condition="'$(XSEC_FILE_VERSION)' == ''">2_0</XSEC_FILE_VERSION>
-    <XmlSecVersion Condition="'$(XSEC_MM_VERSION)'==''">2.0.1</XmlSecVersion>
+    <XmlSecVersion Condition="'$(XSEC_MM_VERSION)'==''">2.0.2</XmlSecVersion>
     <XmlSecVersion Condition="'$(XSEC_MM_VERSION)'!=''">$(XSEC_MM_VERSION)</XmlSecVersion>
-    <xmlsec Condition="'$(XSEC_DIR)'==''">xml-security-c-2.0.1</xmlsec>
+    <xmlsec Condition="'$(XSEC_DIR)'==''">xml-security-c-2.0.2</xmlsec>
     <xmlsec Condition="'$(XSEC_DIR)'!=''">$(XSEC_DIR)</xmlsec>
   </PropertyGroup>
 
@@ -186,7 +186,7 @@
 	<XERCES_FILE_VERSION Condition="'$(XERCES_FILE_VERSION)' == ''">3_2</XERCES_FILE_VERSION>
     <XercesVersion Condition="'$(XERCES_MM_VERSION)'==''">1.2.11</XercesVersion>
     <XercesVersion Condition="'$(XERCES_MM_VERSION)'!=''">$(ZLIB_MM_VERSION)</XercesVersion>
-    <xerces Condition="'$(XERCES_DIR)'==''">xerces-c-3.2.1</xerces>
+    <xerces Condition="'$(XERCES_DIR)'==''">xerces-c-3.2.2</xerces>
     <xerces Condition="'$(XERCES_DIR)'!=''">$(XERCES_DIR)</xerces>
   </PropertyGroup>
 
