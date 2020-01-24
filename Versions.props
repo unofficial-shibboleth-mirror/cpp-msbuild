@@ -12,7 +12,7 @@
 
     <!-- These control the version of the installer -->
     <ShibbolethVersion>3.0.4</ShibbolethVersion>
-    <ShibbolethPatchVersion>1</ShibbolethPatchVersion>
+    <ShibbolethPatchVersion>2</ShibbolethPatchVersion>
 
     <!-- These control the versions in the DLLs and Executables.
          Note that the PatchVersion is left to the individual resource file.
@@ -45,7 +45,7 @@
     <SamlComponent64>{E935A801-7D01-4996-A69D-46AF25D8C817}</SamlComponent64>
     <SamlComponent64d>{C453CD74-4CAE-4506-9695-F2BF0649CD9D}</SamlComponent64d>
 
-    <XmlToolingVersion>3.0.4</XmlToolingVersion>
+    <XmlToolingVersion>3.0.5</XmlToolingVersion>
     <XmlToolingFileVersion>3_0</XmlToolingFileVersion>
     <!-- Change the 8 components below iff the XmlToolingFileVersion name changes -->
     <XMLToolingComponent32>{07395646-06CE-436E-B57A-1420924257BC}</XMLToolingComponent32>
