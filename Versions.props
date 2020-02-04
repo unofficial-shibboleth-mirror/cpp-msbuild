@@ -11,16 +11,16 @@
     <CxxTestRoot>$(BuildRoot)\cxxtest</CxxTestRoot>
 
     <!-- These control the version of the installer -->
-    <ShibbolethVersion>3.0.4</ShibbolethVersion>
-    <ShibbolethPatchVersion>2</ShibbolethPatchVersion>
+    <ShibbolethVersion>3.1.0</ShibbolethVersion>
+    <ShibbolethPatchVersion>0</ShibbolethPatchVersion>
 
     <!-- These control the versions in the DLLs and Executables.
          Note that the PatchVersion is left to the individual resource file.
          If you change this you probably need to change ../cpp-sp/util/resourceCommon.rci
       -->
-    <SPFileVersion>3,0,4</SPFileVersion>       <!-- FILEVERSION in the SP projects -->
-    <SPFileVersionSP>3,0,4</SPFileVersionSP>   <!-- Special for ShibSp.dll -->
-    <SPProductVersion>3,0,4</SPProductVersion> <!-- PRODUCTVERSION  in the SP projects (but overidden by resourceCommon.rci on output-->
+    <SPFileVersion>3,1,0</SPFileVersion>       <!-- FILEVERSION in the SP projects -->
+    <SPFileVersionSP>3,1,0</SPFileVersionSP>   <!-- Special for ShibSp.dll -->
+    <SPProductVersion>3,1,0</SPProductVersion> <!-- PRODUCTVERSION  in the SP projects (but overidden by resourceCommon.rci on output-->
 
     <!-- XML Tooling only has one RC file.  Edit that by hand -->
     <!-- OpemSAML has two RC files (saml.rc and samlsign.rc).  Edit them by hand -->
@@ -37,38 +37,38 @@
 
     <boost>boost_1_67_0</boost>
     
-    <OpenSAMLVersion>3.0.1</OpenSAMLVersion>
-    <OpenSAMLFileVersion>3_0</OpenSAMLFileVersion>
+    <OpenSAMLVersion>3.1.0</OpenSAMLVersion>
+    <OpenSAMLFileVersion>3_1</OpenSAMLFileVersion>
     <!-- Change the 4 components below iff the OpenSAMLFileVersion name changes -->
-    <SamlComponent32>{3444DBA9-C1E9-4F64-83AB-8C808E783F38}</SamlComponent32>
-    <SamlComponent32d>{A9D338B1-CE63-43C4-A4DA-27BD62836F59}</SamlComponent32d>
-    <SamlComponent64>{E935A801-7D01-4996-A69D-46AF25D8C817}</SamlComponent64>
-    <SamlComponent64d>{C453CD74-4CAE-4506-9695-F2BF0649CD9D}</SamlComponent64d>
+    <SamlComponent32>{38948569-F806-4CC6-8EF3-2ED88AB8AAB1}</SamlComponent32>
+    <SamlComponent32d>{2711FB1C-70D4-44F0-995A-81D9A4D50520}</SamlComponent32d>
+    <SamlComponent64>{9B5CF0B9-F862-4E91-B0C3-3C74EBEB0141}</SamlComponent64>
+    <SamlComponent64d>{66110EB5-96E5-4939-8234-476234224667}</SamlComponent64d>
 
-    <XmlToolingVersion>3.0.5</XmlToolingVersion>
-    <XmlToolingFileVersion>3_0</XmlToolingFileVersion>
+    <XmlToolingVersion>3.1.0</XmlToolingVersion>
+    <XmlToolingFileVersion>3_1</XmlToolingFileVersion>
     <!-- Change the 8 components below iff the XmlToolingFileVersion name changes -->
-    <XMLToolingComponent32>{07395646-06CE-436E-B57A-1420924257BC}</XMLToolingComponent32>
-    <XMLToolingLiteComponent32>{EA3788D6-B903-4E33-A276-05C421B1852A}</XMLToolingLiteComponent32>
-    <XMLToolingComponent32d>{FEEFF5D3-1670-416B-AC58-28B48B7862EF}</XMLToolingComponent32d>
-    <XMLToolingLiteComponent32d>{4F6B3BF4-2656-4F62-B911-A48EB98A354C}</XMLToolingLiteComponent32d>
-    <XMLToolingComponent64>{FE37924D-0968-4932-B1E2-CB9C7412DC7C}</XMLToolingComponent64>
-    <XMLToolingLiteComponent64>{613F3CC7-C11F-4FFE-884E-E5A19C0DE4F7}</XMLToolingLiteComponent64>
-    <XMLToolingComponent64d>{E4A7E0DE-7A88-4617-88A5-7FE499664B61}</XMLToolingComponent64d>
-    <XMLToolingLiteComponent64d>{356BA4A0-2C00-489F-8274-18692A237DDB}</XMLToolingLiteComponent64d>
+    <XMLToolingComponent32>{A3FF78A4-8C51-444B-BD35-3C9FE45F101F}</XMLToolingComponent32>
+    <XMLToolingLiteComponent32>{144D4BB8-90EC-46FE-9751-0022D5EFE9F1}</XMLToolingLiteComponent32>
+    <XMLToolingComponent32d>{AE527176-54F8-493B-A523-ADCAC1CE609E}</XMLToolingComponent32d>
+    <XMLToolingLiteComponent32d>{AD5ECF99-D0E3-4EE6-93F2-1271A8EFD646}</XMLToolingLiteComponent32d>
+    <XMLToolingComponent64>{B07F4F58-926E-4148-A02C-4B22199663C0}</XMLToolingComponent64>
+    <XMLToolingLiteComponent64>{36611301-BB85-470A-BDF5-DD4B9D077627}</XMLToolingLiteComponent64>
+    <XMLToolingComponent64d>{62660CAF-11B4-4FEB-8732-4955E6F9A031}</XMLToolingComponent64d>
+    <XMLToolingLiteComponent64d>{899B93C7-34D6-4D80-B005-5843EDEB38BF}</XMLToolingLiteComponent64d>
 
 
-    <ShibbolethDllVersion>3.0.4</ShibbolethDllVersion>
-    <ShibbolethDllFileVersion>3_0</ShibbolethDllFileVersion>
+    <ShibbolethDllVersion>3.1.0</ShibbolethDllVersion>
+    <ShibbolethDllFileVersion>3_1</ShibbolethDllFileVersion>
     <!-- Change the 8 components below iff ShibbolethDllFileVersion changes -->
-    <ShibDll32Component>{94B5CADC-299E-41A3-9653-DFD948800E0F}</ShibDll32Component>
-    <ShibDllLite32Component>{1C544100-7BD3-4531-A35B-0CD3020B0F3F}</ShibDllLite32Component>
-    <ShibDll32Componentd>{36B94560-F162-4036-B043-973B9905D8B0}</ShibDll32Componentd>
-    <ShibDllLite32Componentd>{3C63638D-747F-4CA1-BA97-8550A637F473}</ShibDllLite32Componentd>
-    <ShibDll64Component>{19E720DA-9B02-4082-BE3D-87E6DC296044}</ShibDll64Component>
-    <ShibDllLite64Component>{D4674F0B-3B58-47AD-8155-45CCBD44CFAA}</ShibDllLite64Component>
-    <ShibDll64Componentd>{53AE4EDF-5E73-4728-81B6-532E383FE2E0}</ShibDll64Componentd>
-    <ShibDllLite64Componentd>{DE702022-B4A3-47B0-8DEF-664897127808}</ShibDllLite64Componentd>
+    <ShibDll32Component>{230A874F-FD3F-47A0-A298-7E3394ADD3C7}</ShibDll32Component>
+    <ShibDllLite32Component>{CEC30D6E-531F-4DBF-B2F7-FEC40D8916BA}</ShibDllLite32Component>
+    <ShibDll32Componentd>{F3220913-59C8-4F02-A7EC-A7F9BCC1F4CC}</ShibDll32Componentd>
+    <ShibDllLite32Componentd>{5FEC2A66-5183-4AB9-B476-07D6CB68CE55}</ShibDllLite32Componentd>
+    <ShibDll64Component>{D8C6C787-92F4-4519-B5DB-085A96FA901A}</ShibDll64Component>
+    <ShibDllLite64Component>{34147C08-026F-4EEF-A284-F2594015F4D8}</ShibDllLite64Component>
+    <ShibDll64Componentd>{8859501A-A305-49A2-8596-DC8213FDA18F}</ShibDll64Componentd>
+    <ShibDllLite64Componentd>{82514AA6-4228-4082-A5F8-7B68B7754639}</ShibDllLite64Componentd>
 
 
     <FastCGIVersion>2.4.0</FastCGIVersion>
