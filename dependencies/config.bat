@@ -48,11 +48,12 @@ goto path_done
 
 :ROD
 set ROOT_DIR=H:\Perforce\VS2017\
-set SED=sed
+set SED=S:\cygwin64\bin\sed.exe
 REM CPP_MM_DIR need not be set if vcvars is called prior to loading Visual studio or running msbuild
 rem set CPP_MM_DIR=D:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\VC\Redist\MSVC\14.14.26405\MergeModules
 set DEBUG_INSTALLER=YES
-
+set PERL=c:\Strawberry\perl\bin\perl.exe
+set PATH=%PATH%;D:\Downloads\nasm-2.13.01\
 
 REM
 REM Apache Config
@@ -92,8 +93,8 @@ REM OPENSSL_DIR          is the directory name
 REM OPENSSL_MM_VERSION   is the Merge Module version (and so have to be 3 or 4 dot separated numbers)
 REM OPENSSL_FILE_VERSION is the distinction on the name of the DLLS
 REM                      if it changes you *MUST* change Version.props
-set OPENSSL_DIR=openssl-1.1.1a
-set OPENSSL_MM_VERSION=1.1.1.1
+set OPENSSL_DIR=openssl-1.1.1d
+set OPENSSL_MM_VERSION=1.1.1.4
 set OPENSSL_FILE_VERSION=1_1_1
 
 REM
@@ -102,7 +103,7 @@ REM
 REM CURL_DIR             is the directory name
 REM CURL_VERSION         is the version
 REM
-Set LIBCURL_VERSION=7.63.0
+Set LIBCURL_VERSION=7.68.0
 set LIBCURL_DIR=curl-%LIBCURL_VERSION%
 set LIBCURL_FILE_VERSION=7
 
