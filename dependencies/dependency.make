@@ -266,7 +266,7 @@ curl-debug: test-env openssl-debug zlib-debug
 			ZLIB_LFLAGS=/libpath:$(ROOT_DIR)$(ZLIB_DIR)\$(ZlibTargetDir)\DEBUG 						\
 			ZLIB_CFLAGS="/DHAVE_ZLIB_H /DHAVE_ZLIB /DHAVE_LIBZ /I$(ROOT_DIR)$(ZLIB_DIR)" 			\
 			ZLIB_LIBS=$(ZLIB_IMPLIB)D.lib SSL_LIBS="libcrypto.lib libssl.lib" 						\
-			BASE_NAME=libcurl$(LIBCURL_FILE_VERSION) BASE_NAME_DEBUG=libcurl$(LIBCURL_FILE_VERSION)d
+			BASE_NAME=libcurl$(LIBCURL_FILE_VERSION) BASE_NAME_DEBUG=libcurl$(LIBCURL_FILE_VERSION)d GEN_PDB=true
 
 curl-release: test-env openssl-release zlib-release
 	title Build curl $(VSCMD_ARG_TGT_ARCH) Release
@@ -276,7 +276,7 @@ curl-release: test-env openssl-release zlib-release
 			ZLIB_LFLAGS=/libpath:$(ROOT_DIR)$(ZLIB_DIR)\$(ZlibTargetDir)\Release					\
 			ZLIB_CFLAGS="/DHAVE_ZLIB_H /DHAVE_ZLIB /DHAVE_LIBZ /I$(ROOT_DIR)$(ZLIB_DIR)" 			\
 			ZLIB_LIBS=$(ZLIB_IMPLIB).lib SSL_LIBS="libcrypto.lib libssl.lib" 						\
-			BASE_NAME=libcurl$(LIBCURL_FILE_VERSION) BASE_NAME_DEBUG=libcurl$(LIBCURL_FILE_VERSION)d
+			BASE_NAME=libcurl$(LIBCURL_FILE_VERSION) BASE_NAME_DEBUG=libcurl$(LIBCURL_FILE_VERSION)d GEN_PDB=true
 
 
 curl-clean: curl-test
