@@ -13,12 +13,14 @@ MsBuildArch=Win32
 XsecBuildArch=Win32
 CMakeArch=Visual Studio 15 2017
 XercesBuildDir=Buildx86
+OpenSSLNameGarnish=
 XercesInstallDir=Install32\VC15
 !elseif "$(VSCMD_ARG_TGT_ARCH)" == "x64"
 !message Building x64
 OpenSSLName=WIN64A
 ZlibTargetDir=x64
 CMakeArch=Visual Studio 15 2017 Win64
+OpenSSLNameGarnish=-x64
 MsBuildArch=x64
 XsecBuildArch=Win64
 XercesBuildDir=Buildx64
@@ -150,9 +152,16 @@ $(ROOT_DIR)\$(ZLIB_DIR)\$(ZlibTargetDir)\debug\$(ZLIB_SHAREDLIB)D.dll: $(ROOT_DI
 #
 openssl: openssl-debug openssl-release
 
-openssl-release: openssl-test $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)\include\openssl\opensslconf.h
+openssl-release: openssl-test \
+	$(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)\include\openssl\opensslconf.h \
+	$(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)\bin\libssl-$(OPENSSL_FILE_VERSION)$(OpenSSLNameGarnish).pdb-sv \
+	$(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)\bin\libcrypto-$(OPENSSL_FILE_VERSION)$(OpenSSLNameGarnish).pdb-sv
 
-openssl-debug: openssl-test $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)Debug\include\openssl\opensslconf.h
+
+openssl-debug: openssl-test \
+	$(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)Debug\include\openssl\opensslconf.h \
+	$(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)Debug\bin\libssl-$(OPENSSL_FILE_VERSION)D$(OpenSSLNameGarnish).pdb-sv \
+	$(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)Debug\bin\libcrypto-$(OPENSSL_FILE_VERSION)D$(OpenSSLNameGarnish).pdb-sv
 
 openssl-test: test-env $(ROOT_DIR)\$(OPENSSL_DIR)
 
@@ -175,8 +184,32 @@ openssl-clean-configure: openssl-test
 $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)\include\openssl\opensslconf.h:
 	nmake /f dependency.make openssl-clean-configure openssl-release-configure openssl-build
 
+$(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)\bin\libssl-$(OPENSSL_FILE_VERSION)$(OpenSSLNameGarnish).pdb-sv: \
+		$(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)\include\openssl\opensslconf.h \
+		$(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)\bin\libssl-$(OPENSSL_FILE_VERSION)$(OpenSSLNameGarnish).pdb
+	copy /y $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)\bin\libssl-$(OPENSSL_FILE_VERSION)$(OpenSSLNameGarnish).pdb \
+                $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)\bin\libssl-$(OPENSSL_FILE_VERSION)$(OpenSSLNameGarnish).pdb-sv
+
+$(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)\bin\libcrypto-$(OPENSSL_FILE_VERSION)$(OpenSSLNameGarnish).pdb-sv: \
+		$(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)\include\openssl\opensslconf.h \
+		$(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)\bin\libcrypto-$(OPENSSL_FILE_VERSION)$(OpenSSLNameGarnish).pdb
+	copy /y $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)\bin\libcrypto-$(OPENSSL_FILE_VERSION)$(OpenSSLNameGarnish).pdb \
+                $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)\bin\libcrypto-$(OPENSSL_FILE_VERSION)$(OpenSSLNameGarnish).pdb-sv
+
 $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)Debug\include\openssl\opensslconf.h: 
 	nmake /f dependency.make openssl-clean-configure openssl-debug-configure openssl-build
+
+$(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)Debug\bin\libssl-$(OPENSSL_FILE_VERSION)D$(OpenSSLNameGarnish).pdb-sv: \
+		$(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)Debug\include\openssl\opensslconf.h \
+		$(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)Debug\bin\libssl-$(OPENSSL_FILE_VERSION)D$(OpenSSLNameGarnish).pdb
+	copy /y $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)Debug\bin\libssl-$(OPENSSL_FILE_VERSION)D$(OpenSSLNameGarnish).pdb \
+                $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)Debug\bin\libssl-$(OPENSSL_FILE_VERSION)D$(OpenSSLNameGarnish).pdb-sv
+
+$(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)Debug\bin\libcrypto-$(OPENSSL_FILE_VERSION)D$(OpenSSLNameGarnish).pdb-sv: \
+		$(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)Debug\include\openssl\opensslconf.h \
+		$(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)Debug\bin\libcrypto-$(OPENSSL_FILE_VERSION)D$(OpenSSLNameGarnish).pdb
+	copy /y $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)Debug\bin\libcrypto-$(OPENSSL_FILE_VERSION)D$(OpenSSLNameGarnish).pdb \
+                $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)Debug\bin\libcrypto-$(OPENSSL_FILE_VERSION)D$(OpenSSLNameGarnish).pdb-sv
 
 openssl-release-configure: openssl-test
 	title Build OpenSSL $(VSCMD_ARG_TGT_ARCH) Release
