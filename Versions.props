@@ -35,7 +35,7 @@
     <!-- NEVER CHANGE THE UPGRADE CODE UNLESS YOU REALLY REALLY KNOW WHAT YOU ARE DOING -->
     <ShibbolethUpgradeCode>{28A4EB62-E860-49CA-BE43-44ADEB91DBF6}</ShibbolethUpgradeCode>
 
-    <boost>boost_1_67_0</boost>
+    <boost>boost_1_72_0</boost>
     
     <OpenSAMLVersion>3.1.0</OpenSAMLVersion>
     <OpenSAMLFileVersion>3_1</OpenSAMLFileVersion>
