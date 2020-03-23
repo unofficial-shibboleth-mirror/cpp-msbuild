@@ -11,7 +11,7 @@ set ROOT_DIR=C:\Users\scantor\Shibboleth\
 
 REM CPP_MM_DIR need not be set if vcvars is called prior to loading Visual studio or running msbuild
 rem set CPP_MM_DIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Redist\MSVC\14.14.26405\MergeModules
-set SED=C:\cygwin64\bin\sed.exe
+set SED="C:\Program Files\Git\usr\bin\sed.exe"
 rem set DEBUG_INSTALLER=YES
 
 REM
@@ -93,9 +93,9 @@ REM OPENSSL_DIR          is the directory name
 REM OPENSSL_MM_VERSION   is the Merge Module version (and so have to be 3 or 4 dot separated numbers)
 REM OPENSSL_FILE_VERSION is the distinction on the name of the DLLS
 REM                      if it changes you *MUST* change Version.props
-set OPENSSL_DIR=openssl-1.1.1d
-set OPENSSL_MM_VERSION=1.1.1.4
-set OPENSSL_FILE_VERSION=1_1_1
+set OPENSSL_DIR=openssl-1.1.1e
+set OPENSSL_MM_VERSION=1.1.1.5
+set OPENSSL_FILE_VERSION=1_1_1_5
 
 REM
 REM CURL CONFIG

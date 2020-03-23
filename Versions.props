@@ -112,27 +112,27 @@
 
   <PropertyGroup Label="OpenSSLGeneral">
     <!-- Just for now -->
-    <OPENSSL_FILE_VERSION Condition="'$(OPENSSL_FILE_VERSION)' == ''">1_1_1</OPENSSL_FILE_VERSION>
+    <OPENSSL_FILE_VERSION Condition="'$(OPENSSL_FILE_VERSION)' == ''">1_1_1_5</OPENSSL_FILE_VERSION>
 
-    <openssl Condition="'$(OPENSSL_DIR)'==''">openssl-1.1.1a</openssl>
+    <openssl Condition="'$(OPENSSL_DIR)'==''">openssl-1.1.1e</openssl>
     <openssl Condition="'$(OPENSSL_DIR)'!=''">$(OPENSSL_DIR)</openssl>
   </PropertyGroup>
 
-  <PropertyGroup Label="OpenSSLGuidsBad" Condition="'$(OPENSSL_FILE_VERSION)' != '1_1_1'">
+  <PropertyGroup Label="OpenSSLGuidsBad" Condition="'$(OPENSSL_FILE_VERSION)' != '1_1_1_5'">
     <OpenSSLFileVersion>BAD_OPENSSL_FILE_VERSION</OpenSSLFileVersion>
     <!-- Changing OPENSSL_FILE_VERSION version requires changing the GUIDs since it is garnish on the name -->
   </PropertyGroup>
-  <PropertyGroup Label="OpenSSLGuids" Condition="'$(OPENSSL_FILE_VERSION)' == '1_1_1'">
+  <PropertyGroup Label="OpenSSLGuids" Condition="'$(OPENSSL_FILE_VERSION)' == '1_1_1_5'">
     <OpenSSLFileVersion>$(OPENSSL_FILE_VERSION)</OpenSSLFileVersion>
     <!-- Change the 8 components below iff OpenSSLFileVersion changes -->
-    <LibEay32Component>{71ED68DD-CEF3-4DC6-AAC8-8C188B6AD6D0}</LibEay32Component>
-    <SSlEay32Component>{8806A325-FF3C-479E-B183-53F59AA709CC}</SSlEay32Component>
-    <LibEay32Componentd>{958B984A-D489-4A17-A5FE-3F13E8496D27}</LibEay32Componentd>
-    <SSlEay32Componentd>{77E2C1B7-4280-41AC-A358-FA46CE9071A2}</SSlEay32Componentd>
-    <LibEay64Component>{40243802-5AF2-40F6-BB5F-C0BE865114D0}</LibEay64Component>
-    <SSlEay64Component>{878A2513-92C6-4F1D-B64D-244172C57667}</SSlEay64Component>
-    <LibEay64Componentd>{710880C6-5F78-44FA-B463-CDCF9794298A}</LibEay64Componentd>
-    <SSlEay64Componentd>{80429F87-1CD4-457A-8891-1E163FF0F61C}</SSlEay64Componentd>
+    <LibEay32Component>{8AABC12C-75FB-4A43-99A9-0F173820C1FD}</LibEay32Component>
+    <SSlEay32Component>{9548E1CF-88CF-4E7B-8E8B-41FC89A40386}</SSlEay32Component>
+    <LibEay32Componentd>{4D6B0CB1-3482-48A0-BB02-2A50A8862C55}</LibEay32Componentd>
+    <SSlEay32Componentd>{2FDB80A2-9217-4E17-AAB1-338562B6A373}</SSlEay32Componentd>
+    <LibEay64Component>{07057DA7-13BA-4011-876D-A3568B5D9899}</LibEay64Component>
+    <SSlEay64Component>{2AADE8B3-C07F-4069-8FAA-CFF9DBCF74A9}</SSlEay64Component>
+    <LibEay64Componentd>{A6F3C217-33DD-4677-9D21-BB6D0F17B6F5}</LibEay64Componentd>
+    <SSlEay64Componentd>{69046336-38C0-4B94-966D-ECB7E196A933}</SSlEay64Componentd>
   </PropertyGroup>
 
   <PropertyGroup Label="XSecGeneral">
