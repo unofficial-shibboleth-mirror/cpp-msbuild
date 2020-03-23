@@ -84,21 +84,21 @@
     <CppMmDir>$(VCToolsRedistDir)MergeModules</CppMmDir>
   </PropertyGroup>
 
-  <PropertyGroup Label="CurlGuidsBad" Condition="'$(LIBCURL_FILE_VERSION)' != '7'">
+  <PropertyGroup Label="CurlGuidsBad" Condition="'$(LIBCURL_FILE_VERSION)' != '8'">
     <CurlFileVersion>BAD_LIBCURL_FILE_VERSION</CurlFileVersion>
     <!-- Changing LIBCURL_FILE_VERSION version requires changing the GUIDs since it is garnish on the name -->
   </PropertyGroup>
-  <PropertyGroup Label="CurlGuids" Condition="'$(LIBCURL_FILE_VERSION)' == '7'">
+  <PropertyGroup Label="CurlGuids" Condition="'$(LIBCURL_FILE_VERSION)' == '8'">
     <CurlVersion Condition="'$(LIBCURL_DIR)'!=''">$(LIBCURL_VERSION)</CurlVersion>
     <CurlVersion Condition="'$(LIBCURL_DIR)'==''">7.69.1</CurlVersion>
     <curl Condition="'$(LIBCURL_DIR)'!=''">$(LIBCURL_DIR)</curl>
     <curl Condition="'$(LIBCURL_DIR)'==''">curl-$(CurlVersion)</curl>
 
     <CurlFileVersion>$(LIBCURL_FILE_VERSION)</CurlFileVersion>
-    <LibCurlGuid32>{85A6D974-DDCC-4FAC-A149-28CF48D4F984}</LibCurlGuid32>
-    <LibCurlGuid64>{2F393A88-3FC7-48C9-81AC-BCA36952EDE7}</LibCurlGuid64>
-    <LibCurlGuid32d>{317A94EF-42BC-4A58-8679-B97CBB271610}</LibCurlGuid32d>
-    <LibCurlGuid64d>{AC569E3D-38F6-4C18-BA90-3E7D8B9AA14A}</LibCurlGuid64d>
+    <LibCurlGuid32>{38EADA7E-C40A-41C2-B2FE-F4314F27717B}</LibCurlGuid32>
+    <LibCurlGuid64>{546B07E0-397B-4E7D-9383-338373A01569}</LibCurlGuid64>
+    <LibCurlGuid32d>{B140C6FC-8C84-4370-BA94-AF9CB4EB48C1}</LibCurlGuid32d>
+    <LibCurlGuid64d>{6B93229A-E408-4DB4-893B-BA649ABB4624}</LibCurlGuid64d>
   </PropertyGroup>
 
   <PropertyGroup Label="Apache">
