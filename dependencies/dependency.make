@@ -180,18 +180,30 @@ openssl-clean: openssl-test
 openssl-clean-configure: openssl-test
 	cd $(ROOT_DIR)\$(OPENSSL_DIR)
 	-2 nmake distclean
-	if exist $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)\bin \
-	copy /y $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)\bin\libssl-$(OPENSSL_FILE_VERSION)$(OpenSSLNameGarnish).sv-pdb \
-                $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)\bin\libssl-$(OPENSSL_FILE_VERSION)$(OpenSSLNameGarnish).pdb
-	if exist $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)\bin \
-	copy /y $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)\bin\libcrypto-$(OPENSSL_FILE_VERSION)$(OpenSSLNameGarnish).sv-pdb \
-                $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)\bin\libcrypto-$(OPENSSL_FILE_VERSION)$(OpenSSLNameGarnish).pdb
-	if exist $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)Debug\bin \
-	copy /y $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)Debug\bin\libssl-$(OPENSSL_FILE_VERSION)D$(OpenSSLNameGarnish).sv-pdb \
-                $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)Debug\bin\libssl-$(OPENSSL_FILE_VERSION)D$(OpenSSLNameGarnish).pdb
-	if exist $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)Debug\bin \
-	copy /y $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)Debug\bin\libcrypto-$(OPENSSL_FILE_VERSION)D$(OpenSSLNameGarnish).sv-pdb \
-                $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)Debug\bin\libcrypto-$(OPENSSL_FILE_VERSION)D$(OpenSSLNameGarnish).pdb
+	if exist $(ROOT_DIR)\$(OPENSSL_DIR)\x86\bin \
+	copy /y $(ROOT_DIR)\$(OPENSSL_DIR)\x86\bin\libssl-$(OPENSSL_FILE_VERSION)$(OpenSSLNameGarnish).sv-pdb \
+                $(ROOT_DIR)\$(OPENSSL_DIR)\x86\bin\libssl-$(OPENSSL_FILE_VERSION)$(OpenSSLNameGarnish).pdb
+	if exist $(ROOT_DIR)\$(OPENSSL_DIR)\x86\bin \
+	copy /y $(ROOT_DIR)\$(OPENSSL_DIR)\x86\bin\libcrypto-$(OPENSSL_FILE_VERSION)$(OpenSSLNameGarnish).sv-pdb \
+                $(ROOT_DIR)\$(OPENSSL_DIR)\x86\bin\libcrypto-$(OPENSSL_FILE_VERSION)$(OpenSSLNameGarnish).pdb
+	if exist $(ROOT_DIR)\$(OPENSSL_DIR)\x86Debug\bin \
+	copy /y $(ROOT_DIR)\$(OPENSSL_DIR)\x86Debug\bin\libssl-$(OPENSSL_FILE_VERSION)D$(OpenSSLNameGarnish).sv-pdb \
+                $(ROOT_DIR)\$(OPENSSL_DIR)\x86Debug\bin\libssl-$(OPENSSL_FILE_VERSION)D$(OpenSSLNameGarnish).pdb
+	if exist $(ROOT_DIR)\$(OPENSSL_DIR)\x86Debug\bin \
+	copy /y $(ROOT_DIR)\$(OPENSSL_DIR)\x86Debug\bin\libcrypto-$(OPENSSL_FILE_VERSION)D$(OpenSSLNameGarnish).sv-pdb \
+                $(ROOT_DIR)\$(OPENSSL_DIR)\x86Debug\bin\libcrypto-$(OPENSSL_FILE_VERSION)D$(OpenSSLNameGarnish).pdb
+	if exist $(ROOT_DIR)\$(OPENSSL_DIR)\x64\bin \
+	copy /y $(ROOT_DIR)\$(OPENSSL_DIR)\x64\bin\libssl-$(OPENSSL_FILE_VERSION)$(OpenSSLNameGarnish).sv-pdb \
+                $(ROOT_DIR)\$(OPENSSL_DIR)\x64\bin\libssl-$(OPENSSL_FILE_VERSION)$(OpenSSLNameGarnish).pdb
+	if exist $(ROOT_DIR)\$(OPENSSL_DIR)\x64\bin \
+	copy /y $(ROOT_DIR)\$(OPENSSL_DIR)\x64\bin\libcrypto-$(OPENSSL_FILE_VERSION)$(OpenSSLNameGarnish).sv-pdb \
+                $(ROOT_DIR)\$(OPENSSL_DIR)\x64\bin\libcrypto-$(OPENSSL_FILE_VERSION)$(OpenSSLNameGarnish).pdb
+	if exist $(ROOT_DIR)\$(OPENSSL_DIR)\x64Debug\bin \
+	copy /y $(ROOT_DIR)\$(OPENSSL_DIR)\x64Debug\bin\libssl-$(OPENSSL_FILE_VERSION)D$(OpenSSLNameGarnish).sv-pdb \
+                $(ROOT_DIR)\$(OPENSSL_DIR)\x64Debug\bin\libssl-$(OPENSSL_FILE_VERSION)D$(OpenSSLNameGarnish).pdb
+	if exist $(ROOT_DIR)\$(OPENSSL_DIR)\x64Debug\bin \
+	copy /y $(ROOT_DIR)\$(OPENSSL_DIR)\x64Debug\bin\libcrypto-$(OPENSSL_FILE_VERSION)D$(OpenSSLNameGarnish).sv-pdb \
+                $(ROOT_DIR)\$(OPENSSL_DIR)\x64Debug\bin\libcrypto-$(OPENSSL_FILE_VERSION)D$(OpenSSLNameGarnish).pdb
 
 
 $(ROOT_DIR)\$(OPENSSL_DIR)\$(VSCMD_ARG_TGT_ARCH)\include\openssl\opensslconf.h:
