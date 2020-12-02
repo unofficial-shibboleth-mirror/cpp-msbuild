@@ -11,16 +11,16 @@
     <CxxTestRoot>$(BuildRoot)\cxxtest</CxxTestRoot>
 
     <!-- These control the version of the installer -->
-    <ShibbolethVersion>3.1.0</ShibbolethVersion>
-    <ShibbolethPatchVersion>2</ShibbolethPatchVersion>
+    <ShibbolethVersion>3.2.0</ShibbolethVersion>
+    <ShibbolethPatchVersion>0</ShibbolethPatchVersion>
 
     <!-- These control the versions in the DLLs and Executables.
          Note that the PatchVersion is left to the individual resource file.
          If you change this you probably need to change ../cpp-sp/util/resourceCommon.rci
       -->
-    <SPFileVersion>3,1,0</SPFileVersion>       <!-- FILEVERSION in the SP projects -->
-    <SPFileVersionSP>3,1,0</SPFileVersionSP>   <!-- Special for ShibSp.dll -->
-    <SPProductVersion>3,1,0</SPProductVersion> <!-- PRODUCTVERSION  in the SP projects (but overidden by resourceCommon.rci on output-->
+    <SPFileVersion>3,2,0</SPFileVersion>       <!-- FILEVERSION in the SP projects -->
+    <SPFileVersionSP>3,2,0</SPFileVersionSP>   <!-- Special for ShibSp.dll -->
+    <SPProductVersion>3,2,0</SPProductVersion> <!-- PRODUCTVERSION  in the SP projects (but overidden by resourceCommon.rci on output-->
 
     <!-- XML Tooling only has one RC file.  Edit that by hand -->
     <!-- OpemSAML has two RC files (saml.rc and samlsign.rc).  Edit them by hand -->
@@ -35,40 +35,39 @@
     <!-- NEVER CHANGE THE UPGRADE CODE UNLESS YOU REALLY REALLY KNOW WHAT YOU ARE DOING -->
     <ShibbolethUpgradeCode>{28A4EB62-E860-49CA-BE43-44ADEB91DBF6}</ShibbolethUpgradeCode>
 
-    <boost>boost_1_72_0</boost>
+    <boost>boost_1_74_0</boost>
     
-    <OpenSAMLVersion>3.1.0</OpenSAMLVersion>
-    <OpenSAMLFileVersion>3_1</OpenSAMLFileVersion>
+    <OpenSAMLVersion>3.2.0</OpenSAMLVersion>
+    <OpenSAMLFileVersion>3_2</OpenSAMLFileVersion>
     <!-- Change the 4 components below iff the OpenSAMLFileVersion name changes -->
-    <SamlComponent32>{38948569-F806-4CC6-8EF3-2ED88AB8AAB1}</SamlComponent32>
-    <SamlComponent32d>{2711FB1C-70D4-44F0-995A-81D9A4D50520}</SamlComponent32d>
-    <SamlComponent64>{9B5CF0B9-F862-4E91-B0C3-3C74EBEB0141}</SamlComponent64>
-    <SamlComponent64d>{66110EB5-96E5-4939-8234-476234224667}</SamlComponent64d>
+    <SamlComponent32>{1596DD3A-D1A1-44B5-99DC-9C5955BA5993}</SamlComponent32>
+    <SamlComponent32d>{8FD9AA7C-2F89-4A28-BD74-7C7ED4B5AAC1}</SamlComponent32d>
+    <SamlComponent64>{6D212A60-B212-4210-A81D-CE23CC0E49F6}</SamlComponent64>
+    <SamlComponent64d>{219F3410-646F-4164-92AA-3A8B252EEDC1}</SamlComponent64d>
 
-    <XmlToolingVersion>3.1.0</XmlToolingVersion>
-    <XmlToolingFileVersion>3_1</XmlToolingFileVersion>
+    <XmlToolingVersion>3.2.0</XmlToolingVersion>
+    <XmlToolingFileVersion>3_2</XmlToolingFileVersion>
     <!-- Change the 8 components below iff the XmlToolingFileVersion name changes -->
-    <XMLToolingComponent32>{A3FF78A4-8C51-444B-BD35-3C9FE45F101F}</XMLToolingComponent32>
-    <XMLToolingLiteComponent32>{144D4BB8-90EC-46FE-9751-0022D5EFE9F1}</XMLToolingLiteComponent32>
-    <XMLToolingComponent32d>{AE527176-54F8-493B-A523-ADCAC1CE609E}</XMLToolingComponent32d>
-    <XMLToolingLiteComponent32d>{AD5ECF99-D0E3-4EE6-93F2-1271A8EFD646}</XMLToolingLiteComponent32d>
-    <XMLToolingComponent64>{B07F4F58-926E-4148-A02C-4B22199663C0}</XMLToolingComponent64>
-    <XMLToolingLiteComponent64>{36611301-BB85-470A-BDF5-DD4B9D077627}</XMLToolingLiteComponent64>
-    <XMLToolingComponent64d>{62660CAF-11B4-4FEB-8732-4955E6F9A031}</XMLToolingComponent64d>
-    <XMLToolingLiteComponent64d>{899B93C7-34D6-4D80-B005-5843EDEB38BF}</XMLToolingLiteComponent64d>
+    <XMLToolingComponent32>{9A96B3EF-6B3F-4E7A-9508-F7DEB1143979}</XMLToolingComponent32>
+    <XMLToolingLiteComponent32>{6298E2F7-FCAC-4A85-AFC3-2E5317F3B179}</XMLToolingLiteComponent32>
+    <XMLToolingComponent32d>{6C78CD12-834C-4609-902D-C779604335EF}</XMLToolingComponent32d>
+    <XMLToolingLiteComponent32d>{5B787AFD-5414-489C-8AA9-1783B831CFC2}</XMLToolingLiteComponent32d>
+    <XMLToolingComponent64>{08492C4A-1D3E-4357-95CF-C7E96165A262}</XMLToolingComponent64>
+    <XMLToolingLiteComponent64>{B62E45B2-EE25-4DC3-97F7-2536C785F933}</XMLToolingLiteComponent64>
+    <XMLToolingComponent64d>{6A5E813D-E21B-4794-9C5B-09ABC9123B83}</XMLToolingComponent64d>
+    <XMLToolingLiteComponent64d>{3451714B-8FDC-40B4-ADA1-D35088ED9C78}</XMLToolingLiteComponent64d>
 
-
-    <ShibbolethDllVersion>3.1.0</ShibbolethDllVersion>
-    <ShibbolethDllFileVersion>3_1</ShibbolethDllFileVersion>
+    <ShibbolethDllVersion>3.2.0</ShibbolethDllVersion>
+    <ShibbolethDllFileVersion>3_2</ShibbolethDllFileVersion>
     <!-- Change the 8 components below iff ShibbolethDllFileVersion changes -->
-    <ShibDll32Component>{230A874F-FD3F-47A0-A298-7E3394ADD3C7}</ShibDll32Component>
-    <ShibDllLite32Component>{CEC30D6E-531F-4DBF-B2F7-FEC40D8916BA}</ShibDllLite32Component>
-    <ShibDll32Componentd>{F3220913-59C8-4F02-A7EC-A7F9BCC1F4CC}</ShibDll32Componentd>
-    <ShibDllLite32Componentd>{5FEC2A66-5183-4AB9-B476-07D6CB68CE55}</ShibDllLite32Componentd>
-    <ShibDll64Component>{D8C6C787-92F4-4519-B5DB-085A96FA901A}</ShibDll64Component>
-    <ShibDllLite64Component>{34147C08-026F-4EEF-A284-F2594015F4D8}</ShibDllLite64Component>
-    <ShibDll64Componentd>{8859501A-A305-49A2-8596-DC8213FDA18F}</ShibDll64Componentd>
-    <ShibDllLite64Componentd>{82514AA6-4228-4082-A5F8-7B68B7754639}</ShibDllLite64Componentd>
+    <ShibDll32Component>{C245DC26-D2D6-4413-A8EE-9EA686941A5D}</ShibDll32Component>
+    <ShibDllLite32Component>{336E6D4C-57C1-4B15-BA0E-B5B3A3F1E386}</ShibDllLite32Component>
+    <ShibDll32Componentd>{1898B4C8-AFE3-41E9-8473-35BF6C3F20EC}</ShibDll32Componentd>
+    <ShibDllLite32Componentd>{77A01F0C-D9F1-4AAD-8A1B-0209048F0F32}</ShibDllLite32Componentd>
+    <ShibDll64Component>{042CE3ED-69EB-48EB-9611-74FC50C29ABB}</ShibDll64Component>
+    <ShibDllLite64Component>{3E740FC6-C3BB-4B07-9C49-E265EDB6331B}</ShibDllLite64Component>
+    <ShibDll64Componentd>{0E8E1E80-0AE9-4B72-8183-B167915E2D48}</ShibDll64Componentd>
+    <ShibDllLite64Componentd>{C3162E03-FC11-431D-B619-FD097D06DFD8}</ShibDllLite64Componentd>
 
 
     <FastCGIVersion>2.4.0</FastCGIVersion>
