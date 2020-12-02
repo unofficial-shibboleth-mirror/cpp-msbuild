@@ -40,22 +40,23 @@
     <OpenSAMLVersion>3.2.0</OpenSAMLVersion>
     <OpenSAMLFileVersion>3_2</OpenSAMLFileVersion>
     <!-- Change the 4 components below iff the OpenSAMLFileVersion name changes -->
-    <SamlComponent32>{1596DD3A-D1A1-44B5-99DC-9C5955BA5993}</SamlComponent32>
-    <SamlComponent32d>{8FD9AA7C-2F89-4A28-BD74-7C7ED4B5AAC1}</SamlComponent32d>
-    <SamlComponent64>{6D212A60-B212-4210-A81D-CE23CC0E49F6}</SamlComponent64>
-    <SamlComponent64d>{219F3410-646F-4164-92AA-3A8B252EEDC1}</SamlComponent64d>
+    <SamlComponent32>{BC96A8F8-3912-4EC2-B50D-070A79CF435D}</SamlComponent32>
+    <SamlComponent32d>{CDC62F9A-C799-4B1D-B7B1-8C6C63EEC473}</SamlComponent32d>
+    <SamlComponent64>{736A2364-9438-4202-A45C-7BA09FF904E8}</SamlComponent64>
+    <SamlComponent64d>{6999381F-B18B-4F49-B414-DB9FB97EEEF8}</SamlComponent64d>
 
     <XmlToolingVersion>3.2.0</XmlToolingVersion>
     <XmlToolingFileVersion>3_2</XmlToolingFileVersion>
     <!-- Change the 8 components below iff the XmlToolingFileVersion name changes -->
-    <XMLToolingComponent32>{9A96B3EF-6B3F-4E7A-9508-F7DEB1143979}</XMLToolingComponent32>
-    <XMLToolingLiteComponent32>{6298E2F7-FCAC-4A85-AFC3-2E5317F3B179}</XMLToolingLiteComponent32>
-    <XMLToolingComponent32d>{6C78CD12-834C-4609-902D-C779604335EF}</XMLToolingComponent32d>
-    <XMLToolingLiteComponent32d>{5B787AFD-5414-489C-8AA9-1783B831CFC2}</XMLToolingLiteComponent32d>
-    <XMLToolingComponent64>{08492C4A-1D3E-4357-95CF-C7E96165A262}</XMLToolingComponent64>
-    <XMLToolingLiteComponent64>{B62E45B2-EE25-4DC3-97F7-2536C785F933}</XMLToolingLiteComponent64>
-    <XMLToolingComponent64d>{6A5E813D-E21B-4794-9C5B-09ABC9123B83}</XMLToolingComponent64d>
-    <XMLToolingLiteComponent64d>{3451714B-8FDC-40B4-ADA1-D35088ED9C78}</XMLToolingLiteComponent64d>
+    <XMLToolingComponent32>{A7D6E8D5-34DA-477A-A5C6-B887FE960C86}</XMLToolingComponent32>
+    <XMLToolingLiteComponent32>{BFD0C0CC-AC83-4780-B32E-54D6E02AAADA}</XMLToolingLiteComponent32>
+    <XMLToolingComponent32d>{4AB60FC3-3637-47D7-8ED5-BEE47636A917}</XMLToolingComponent32d>
+    <XMLToolingLiteComponent32d>{FECAF47E-D39B-4395-B61E-37E37AA30D24}</XMLToolingLiteComponent32d>
+    <XMLToolingComponent64>{7284C104-8319-43F5-9F25-3D65D6E577B4}</XMLToolingComponent64>
+    <XMLToolingLiteComponent64>{0850D30D-3892-4C86-9BCC-5BA66E89F53C}</XMLToolingLiteComponent64>
+    <XMLToolingComponent64d>{773087DE-F788-4A72-B2FE-A2E7067F1C62}</XMLToolingComponent64d>
+    <XMLToolingLiteComponent64d>{44B1284A-2AB9-4DA8-BDD9-C83EF3E3EAE0}</XMLToolingLiteComponent64d>
+
 
     <ShibbolethDllVersion>3.2.0</ShibbolethDllVersion>
     <ShibbolethDllFileVersion>3_2</ShibbolethDllFileVersion>
@@ -68,7 +69,6 @@
     <ShibDllLite64Component>{3E740FC6-C3BB-4B07-9C49-E265EDB6331B}</ShibDllLite64Component>
     <ShibDll64Componentd>{0E8E1E80-0AE9-4B72-8183-B167915E2D48}</ShibDll64Componentd>
     <ShibDllLite64Componentd>{C3162E03-FC11-431D-B619-FD097D06DFD8}</ShibDllLite64Componentd>
-
 
     <FastCGIVersion>2.4.0</FastCGIVersion>
     <fcgi>fcgi-$(FastCGIVersion)-VC10</fcgi>
@@ -83,21 +83,21 @@
     <CppMmDir>$(VCToolsRedistDir)MergeModules</CppMmDir>
   </PropertyGroup>
 
-  <PropertyGroup Label="CurlGuidsBad" Condition="'$(LIBCURL_FILE_VERSION)' != '8'">
+  <PropertyGroup Label="CurlGuidsBad" Condition="'$(LIBCURL_FILE_VERSION)' != '9'">
     <CurlFileVersion>BAD_LIBCURL_FILE_VERSION</CurlFileVersion>
     <!-- Changing LIBCURL_FILE_VERSION version requires changing the GUIDs since it is garnish on the name -->
   </PropertyGroup>
-  <PropertyGroup Label="CurlGuids" Condition="'$(LIBCURL_FILE_VERSION)' == '8'">
+  <PropertyGroup Label="CurlGuids" Condition="'$(LIBCURL_FILE_VERSION)' == '9'">
     <CurlVersion Condition="'$(LIBCURL_DIR)'!=''">$(LIBCURL_VERSION)</CurlVersion>
-    <CurlVersion Condition="'$(LIBCURL_DIR)'==''">7.69.1</CurlVersion>
+    <CurlVersion Condition="'$(LIBCURL_DIR)'==''">7.73.0</CurlVersion>
     <curl Condition="'$(LIBCURL_DIR)'!=''">$(LIBCURL_DIR)</curl>
     <curl Condition="'$(LIBCURL_DIR)'==''">curl-$(CurlVersion)</curl>
 
     <CurlFileVersion>$(LIBCURL_FILE_VERSION)</CurlFileVersion>
-    <LibCurlGuid32>{38EADA7E-C40A-41C2-B2FE-F4314F27717B}</LibCurlGuid32>
-    <LibCurlGuid64>{546B07E0-397B-4E7D-9383-338373A01569}</LibCurlGuid64>
-    <LibCurlGuid32d>{B140C6FC-8C84-4370-BA94-AF9CB4EB48C1}</LibCurlGuid32d>
-    <LibCurlGuid64d>{6B93229A-E408-4DB4-893B-BA649ABB4624}</LibCurlGuid64d>
+    <LibCurlGuid32>{C5DA388E-C39C-4164-98EF-CB5660F9ABB4}</LibCurlGuid32>
+    <LibCurlGuid64>{38B92986-C5BA-4CB1-BFFD-E031FF22BE4C}</LibCurlGuid64>
+    <LibCurlGuid32d>{42951E00-7863-41B6-A770-BB3711588BDD}</LibCurlGuid32d>
+    <LibCurlGuid64d>{8C610CA1-DDA8-45AA-A9C4-914420824D84}</LibCurlGuid64d>
   </PropertyGroup>
 
   <PropertyGroup Label="Apache">
@@ -111,27 +111,27 @@
 
   <PropertyGroup Label="OpenSSLGeneral">
     <!-- Just for now -->
-    <OPENSSL_FILE_VERSION Condition="'$(OPENSSL_FILE_VERSION)' == ''">1_1_1_5</OPENSSL_FILE_VERSION>
+    <OPENSSL_FILE_VERSION Condition="'$(OPENSSL_FILE_VERSION)' == ''">1_1_1_9</OPENSSL_FILE_VERSION>
 
     <openssl Condition="'$(OPENSSL_DIR)'==''">openssl-1.1.1f</openssl>
     <openssl Condition="'$(OPENSSL_DIR)'!=''">$(OPENSSL_DIR)</openssl>
   </PropertyGroup>
 
-  <PropertyGroup Label="OpenSSLGuidsBad" Condition="'$(OPENSSL_FILE_VERSION)' != '1_1_1_5'">
+  <PropertyGroup Label="OpenSSLGuidsBad" Condition="'$(OPENSSL_FILE_VERSION)' != '1_1_1_9'">
     <OpenSSLFileVersion>BAD_OPENSSL_FILE_VERSION</OpenSSLFileVersion>
     <!-- Changing OPENSSL_FILE_VERSION version requires changing the GUIDs since it is garnish on the name -->
   </PropertyGroup>
-  <PropertyGroup Label="OpenSSLGuids" Condition="'$(OPENSSL_FILE_VERSION)' == '1_1_1_5'">
+  <PropertyGroup Label="OpenSSLGuids" Condition="'$(OPENSSL_FILE_VERSION)' == '1_1_1_9'">
     <OpenSSLFileVersion>$(OPENSSL_FILE_VERSION)</OpenSSLFileVersion>
     <!-- Change the 8 components below iff OpenSSLFileVersion changes -->
-    <LibEay32Component>{8AABC12C-75FB-4A43-99A9-0F173820C1FD}</LibEay32Component>
-    <SSlEay32Component>{9548E1CF-88CF-4E7B-8E8B-41FC89A40386}</SSlEay32Component>
-    <LibEay32Componentd>{4D6B0CB1-3482-48A0-BB02-2A50A8862C55}</LibEay32Componentd>
-    <SSlEay32Componentd>{2FDB80A2-9217-4E17-AAB1-338562B6A373}</SSlEay32Componentd>
-    <LibEay64Component>{07057DA7-13BA-4011-876D-A3568B5D9899}</LibEay64Component>
-    <SSlEay64Component>{2AADE8B3-C07F-4069-8FAA-CFF9DBCF74A9}</SSlEay64Component>
-    <LibEay64Componentd>{A6F3C217-33DD-4677-9D21-BB6D0F17B6F5}</LibEay64Componentd>
-    <SSlEay64Componentd>{69046336-38C0-4B94-966D-ECB7E196A933}</SSlEay64Componentd>
+    <LibEay32Component>{E5CDA78B-1024-4DF7-9F11-8532B6F55E21}</LibEay32Component>
+    <SSlEay32Component>{6AD1215B-E983-4823-A363-6127420408E4}</SSlEay32Component>
+    <LibEay32Componentd>{E3B837AE-B103-45F7-AC98-72BE66B76746}</LibEay32Componentd>
+    <SSlEay32Componentd>{C7454E2E-DAEA-487B-AB1C-9339E5E390C0}</SSlEay32Componentd>
+    <LibEay64Component>{6E57A83F-E67E-4E8D-B24B-ACDDFC7FDA5E}</LibEay64Component>
+    <SSlEay64Component>{73702736-2A6F-43DC-BB08-663641C1798C}</SSlEay64Component>
+    <LibEay64Componentd>{DBA7EF27-C817-43EC-B2E6-A4E945355F0A}</LibEay64Componentd>
+    <SSlEay64Componentd>{96350A7E-15DA-4CF4-B90D-F3E670AF9D36}</SSlEay64Componentd>
   </PropertyGroup>
 
   <PropertyGroup Label="XSecGeneral">

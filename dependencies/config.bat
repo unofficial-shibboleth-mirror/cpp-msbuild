@@ -93,9 +93,9 @@ REM OPENSSL_DIR          is the directory name
 REM OPENSSL_MM_VERSION   is the Merge Module version (and so have to be 3 or 4 dot separated numbers)
 REM OPENSSL_FILE_VERSION is the distinction on the name of the DLLS
 REM                      if it changes you *MUST* change Version.props
-set OPENSSL_DIR=openssl-1.1.1f
-set OPENSSL_MM_VERSION=1.1.1.5
-set OPENSSL_FILE_VERSION=1_1_1_5
+set OPENSSL_DIR=openssl-1.1.1i
+set OPENSSL_MM_VERSION=1.1.1.9
+set OPENSSL_FILE_VERSION=1_1_1_9
 
 REM
 REM CURL CONFIG
@@ -103,9 +103,9 @@ REM
 REM CURL_DIR             is the directory name
 REM CURL_VERSION         is the version
 REM
-Set LIBCURL_VERSION=7.69.1
+Set LIBCURL_VERSION=7.73.0
 set LIBCURL_DIR=curl-%LIBCURL_VERSION%
-set LIBCURL_FILE_VERSION=8
+set LIBCURL_FILE_VERSION=9
 
 REM
 REM XML SECURITY CONFIG
