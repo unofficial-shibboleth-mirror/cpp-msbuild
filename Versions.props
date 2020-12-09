@@ -89,7 +89,7 @@
   </PropertyGroup>
   <PropertyGroup Label="CurlGuids" Condition="'$(LIBCURL_FILE_VERSION)' == '9'">
     <CurlVersion Condition="'$(LIBCURL_DIR)'!=''">$(LIBCURL_VERSION)</CurlVersion>
-    <CurlVersion Condition="'$(LIBCURL_DIR)'==''">7.73.0</CurlVersion>
+    <CurlVersion Condition="'$(LIBCURL_DIR)'==''">7.74.0</CurlVersion>
     <curl Condition="'$(LIBCURL_DIR)'!=''">$(LIBCURL_DIR)</curl>
     <curl Condition="'$(LIBCURL_DIR)'==''">curl-$(CurlVersion)</curl>
 
@@ -113,7 +113,7 @@
     <!-- Just for now -->
     <OPENSSL_FILE_VERSION Condition="'$(OPENSSL_FILE_VERSION)' == ''">1_1_1_9</OPENSSL_FILE_VERSION>
 
-    <openssl Condition="'$(OPENSSL_DIR)'==''">openssl-1.1.1f</openssl>
+    <openssl Condition="'$(OPENSSL_DIR)'==''">openssl-1.1.1i</openssl>
     <openssl Condition="'$(OPENSSL_DIR)'!=''">$(OPENSSL_DIR)</openssl>
   </PropertyGroup>
 
