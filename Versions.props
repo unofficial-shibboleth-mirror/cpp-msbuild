@@ -58,7 +58,7 @@
     <XMLToolingLiteComponent64d>{44B1284A-2AB9-4DA8-BDD9-C83EF3E3EAE0}</XMLToolingLiteComponent64d>
 
 
-    <ShibbolethDllVersion>3.2.0</ShibbolethDllVersion>
+    <ShibbolethDllVersion>3.2.1</ShibbolethDllVersion>
     <ShibbolethDllFileVersion>3_2</ShibbolethDllFileVersion>
     <!-- Change the 8 components below iff ShibbolethDllFileVersion changes -->
     <ShibDll32Component>{C245DC26-D2D6-4413-A8EE-9EA686941A5D}</ShibDll32Component>
@@ -89,7 +89,7 @@
   </PropertyGroup>
   <PropertyGroup Label="CurlGuids" Condition="'$(LIBCURL_FILE_VERSION)' == '9'">
     <CurlVersion Condition="'$(LIBCURL_DIR)'!=''">$(LIBCURL_VERSION)</CurlVersion>
-    <CurlVersion Condition="'$(LIBCURL_DIR)'==''">7.74.0</CurlVersion>
+    <CurlVersion Condition="'$(LIBCURL_DIR)'==''">7.76.0</CurlVersion>
     <curl Condition="'$(LIBCURL_DIR)'!=''">$(LIBCURL_DIR)</curl>
     <curl Condition="'$(LIBCURL_DIR)'==''">curl-$(CurlVersion)</curl>
 
@@ -113,7 +113,7 @@
     <!-- Just for now -->
     <OPENSSL_FILE_VERSION Condition="'$(OPENSSL_FILE_VERSION)' == ''">1_1_1_9</OPENSSL_FILE_VERSION>
 
-    <openssl Condition="'$(OPENSSL_DIR)'==''">openssl-1.1.1i</openssl>
+    <openssl Condition="'$(OPENSSL_DIR)'==''">openssl-1.1.1k</openssl>
     <openssl Condition="'$(OPENSSL_DIR)'!=''">$(OPENSSL_DIR)</openssl>
   </PropertyGroup>
 
