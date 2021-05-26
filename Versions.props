@@ -12,7 +12,7 @@
 
     <!-- These control the version of the installer -->
     <ShibbolethVersion>3.2.2</ShibbolethVersion>
-    <ShibbolethPatchVersion>0</ShibbolethPatchVersion>
+    <ShibbolethPatchVersion>1</ShibbolethPatchVersion>
 
     <!-- These control the versions in the DLLs and Executables.
          Note that the PatchVersion is left to the individual resource file.
@@ -89,7 +89,7 @@
   </PropertyGroup>
   <PropertyGroup Label="CurlGuids" Condition="'$(LIBCURL_FILE_VERSION)' == '9'">
     <CurlVersion Condition="'$(LIBCURL_DIR)'!=''">$(LIBCURL_VERSION)</CurlVersion>
-    <CurlVersion Condition="'$(LIBCURL_DIR)'==''">7.76.0</CurlVersion>
+    <CurlVersion Condition="'$(LIBCURL_DIR)'==''">7.77.0</CurlVersion>
     <curl Condition="'$(LIBCURL_DIR)'!=''">$(LIBCURL_DIR)</curl>
     <curl Condition="'$(LIBCURL_DIR)'==''">curl-$(CurlVersion)</curl>
 
