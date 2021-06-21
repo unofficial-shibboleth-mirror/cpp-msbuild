@@ -12,7 +12,7 @@
 
     <!-- These control the version of the installer -->
     <ShibbolethVersion>3.2.2</ShibbolethVersion>
-    <ShibbolethPatchVersion>1</ShibbolethPatchVersion>
+    <ShibbolethPatchVersion>2</ShibbolethPatchVersion>
 
     <!-- These control the versions in the DLLs and Executables.
          Note that the PatchVersion is left to the individual resource file.
