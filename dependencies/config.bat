@@ -103,7 +103,7 @@ REM
 REM CURL_DIR             is the directory name
 REM CURL_VERSION         is the version
 REM
-Set LIBCURL_VERSION=7.79.1
+Set LIBCURL_VERSION=7.77.0
 set LIBCURL_DIR=curl-%LIBCURL_VERSION%
 set LIBCURL_FILE_VERSION=9
 
